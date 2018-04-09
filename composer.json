@@ -1,0 +1,16 @@
+{
+  "name": "codelight-eu/wordpress-gdpr-framework",
+  "type": "wordpress-plugin",
+  "description": "The GDPR Framework",
+  "homepage": "https://codelight.eu",
+	"autoload": {
+    "psr-4": {
+      "Codelight\\GDPR\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.6.4",
+    "illuminate/container": "5.4.36",
+    "illuminate/config": "5.4"
+  }
+}
