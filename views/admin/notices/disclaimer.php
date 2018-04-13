@@ -10,7 +10,7 @@
     For compliance audit or further help <a href="<?= gdpr('helpers')->docs('wordpress-gdpr-consultation'); ?>">contact legal professionals</a>.
     As each business and situation is unique, you might need to modify, add or delete information in these templates.
     In addition to this, you will need audit all your processing activities for achieving compliance to GDPR.
-    Compliance to GDPR is risk based ongoing task.
+    Compliance to GDPR is risk based ongoing process.
     We are here to get you started.
 </p>
 <a class="button button-primary" href="<?= esc_url($acceptUrl); ?>">I accept</a>

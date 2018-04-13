@@ -2,7 +2,7 @@
 === The GDPR Framework ===
 Contributors: codelight
 Tags: gdpr
-Requires at least: 4.3
+Requires at least: 4.7
 Tested up to: 4.9.4
 Requires PHP: 5.6.33
 License: GPLv3
@@ -18,13 +18,14 @@ GDPR is a whopping 88 pages of legal text. Becoming compliant takes a lot more t
 
 You don't need to drown your customers in pointless acceptance checkboxes if you know what you're doing!
 
+## Disclaimer
+Using The GDPR Framework does NOT guarantee compliance to GDPR. This plugin gives you general information and tools, but is NOT meant to serve as complete compliance package. Compliance to GDPR is risk-based ongoing process that involves your whole business. Codelight is not eligible for any claim or action based on any information or functionality provided by this plugin.
+
 ### Documentation
 Full documentation: [The WordPress Site Owner's Guide to GDPR](https://codelight.eu/wordpress-gdpr-framework/wordpress-site-owners-guide-to-gdpr/)
 For developers: [Developer Docs](https://codelight.eu/wordpress-gdpr-framework/developer-docs/)
 
 ### Features
-The GDPR Framework covers all the base requirements for making your WordPress site GDPR-compliant.
-
 &#9745; Allow both users and visitors without an account to view, export and delete their personal data;
 &#9745; Configure the plugin to delete or anonymize personal data automatically or send a notification and allow admins to do it manually;
 &#9745; Track, manage and withdraw consent;
@@ -40,14 +41,18 @@ The GDPR Framework currently works with the following plugins
 &#9745; Contact Form 7
 &#9745; WPML
 
- Coming in April 2018:
- &#9744; Gravity Forms (Release: 10.04)
- &#9744; WooCommerce (Release: 13.04)
- &#9744; Easy Digital Downloads (Release: 18.04)
- &#9744; Ninja Forms (Release: 18.04)
- &#9744; Contact Form 7 Flamingo
- &#9744; other form builders
+Coming in April 2018:
+&#9744; Gravity Forms (Release: 17.04)
+&#9744; Ninja Forms (Release: 25.04)
+&#9744; Contact Form 7 Flamingo
+&#9744; WP Rocket
 
-All free and open-source.
+Still free and open-source.
+
+Other integrations coming soon:
+&#9744; Formidable Form Builder
+&#9744; WP Migrate DB
+&#9744; WooCommerce (postponed until the launch of their own compliance toolkit)
+&#9744; Easy Digital Downloads
 
 We're happy to add support for other major plugins as well. If you have a request, get in touch!
