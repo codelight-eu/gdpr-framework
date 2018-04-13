@@ -231,7 +231,7 @@
 </ul>
 
 <p>
-    You can remove cookies stored in your computer via your browser settings. Alternatively, you can control some 3rd party cookies by using a privacy enhancement platform such as <a href="http://optout.aboutads.info/#!/" target="_blank">optout.aboutads.info</a> or <a href="http://www.youronlinechoices.com/en/your-ad-choices" target="_blank">youronlinechoices.com</a>. For more information about cookies, visit <a href="http://www.allaboutcookies.org" target="_blank">allaboutcookies.org</a>.
+    You can remove cookies stored in your computer via your browser settings. Alternatively, you can control some 3rd party cookies by using a privacy enhancement platform such as <a href="http://optout.aboutads.info/#!/" target="_blank">optout.aboutads.info</a> or <a href="http://www.youronlinechoices.com/" target="_blank">youronlinechoices.com</a>. For more information about cookies, visit <a href="http://www.allaboutcookies.org" target="_blank">allaboutcookies.org</a>.
 </p>
 
 <p>
