@@ -183,6 +183,7 @@ class PrivacyToolsPageController
     {
         // Let's not allow admins to delete themselves
         if (current_user_can('manage_options')) {
+            echo gdpr('view')->render("privacy-tools/notice-admin-role");
             return;
         }
 
