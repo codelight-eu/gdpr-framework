@@ -31,6 +31,8 @@ class Setup
      */
     public function __construct()
     {
+        load_plugin_textdomain('gdpr', false, gdpr('config')->get('plugin.path') . '/languages/');
+        
         $this->registerComponents();
         $this->runComponents();
 
