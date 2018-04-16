@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The GDPR Framework 1.0\n"
 "Report-Msgid-Bugs-To: gdpr@codelight.eu\n"
-"POT-Creation-Date: 2018-04-16 09:26+0000\n"
+"POT-Creation-Date: 2018-04-16 10:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,83 +74,93 @@ msgctxt "(Admin)"
 msgid "General"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:37
+#: src/Admin/AdminTabGeneral.php:38
 msgctxt "(Admin)"
 msgid "General Settings"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:42
+#: src/Admin/AdminTabGeneral.php:43
 msgctxt "(Admin)"
 msgid "Enable Privacy Tools"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:52
+#: src/Admin/AdminTabGeneral.php:53
 msgctxt "(Admin)"
 msgid "Pages"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:57 src/Admin/WordpressAdmin.php:151
+#: src/Admin/AdminTabGeneral.php:58 src/Admin/WordpressAdmin.php:151
 msgctxt "(Admin)"
 msgid "Privacy Tools Page"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:64 src/Admin/WordpressAdmin.php:147
+#: src/Admin/AdminTabGeneral.php:65 src/Admin/WordpressAdmin.php:147
 msgctxt "(Admin)"
 msgid "Privacy Policy Page"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:71
+#: src/Admin/AdminTabGeneral.php:72
 msgctxt "(Admin)"
 msgid "Terms & Conditions Page"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:81
+#: src/Admin/AdminTabGeneral.php:82
 msgctxt "(Admin)"
 msgid "View & Export Data"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:86
+#: src/Admin/AdminTabGeneral.php:87
 msgctxt "(Admin)"
 msgid "Export action"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:93 src/Admin/AdminTabGeneral.php:132
+#: src/Admin/AdminTabGeneral.php:94 src/Admin/AdminTabGeneral.php:133
 msgctxt "(Admin)"
 msgid "Email to notify"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:104
+#: src/Admin/AdminTabGeneral.php:105
 msgctxt "(Admin)"
 msgid "Delete & Anonymize Data"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:109
+#: src/Admin/AdminTabGeneral.php:110
 msgctxt "(Admin)"
 msgid "Delete action"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:116
+#: src/Admin/AdminTabGeneral.php:117
 msgctxt "(Admin)"
 msgid "Delete or reassign content?"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:124
+#: src/Admin/AdminTabGeneral.php:125
 msgctxt "(Admin)"
 msgid "Reassign content to"
 msgstr ""
 
 #: src/Admin/AdminTabGeneral.php:145
 msgctxt "(Admin)"
-msgid "Compatibility"
+msgid "Styling"
 msgstr ""
 
 #: src/Admin/AdminTabGeneral.php:150
 msgctxt "(Admin)"
+msgid "Enable basic styling on Privacy Tools page"
+msgstr ""
+
+#: src/Admin/AdminTabGeneral.php:162
+msgctxt "(Admin)"
+msgid "Compatibility"
+msgstr ""
+
+#: src/Admin/AdminTabGeneral.php:167
+msgctxt "(Admin)"
 msgid "Enable automatic theme compatibility"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:167 src/Admin/AdminTabGeneral.php:183
-#: src/Admin/AdminTabGeneral.php:196 src/Admin/AdminTabGeneral.php:235
+#: src/Admin/AdminTabGeneral.php:184 src/Admin/AdminTabGeneral.php:200
+#: src/Admin/AdminTabGeneral.php:213 src/Admin/AdminTabGeneral.php:252
 #: views/installer/steps/configuration-settings.php:62
 msgctxt "(Admin)"
 msgid "&mdash; Select &mdash;"
@@ -319,6 +329,11 @@ msgstr ""
 #: src/Components/PrivacyPolicy/AdminTabPrivacyPolicy.php:324
 msgctxt "(Admin)"
 msgid "DPO Name"
+msgstr ""
+
+#: src/Components/PrivacyPolicy/AdminTabPrivacyPolicy.php:420
+msgctxt "(Admin)"
+msgid "Save & Generate Policy"
 msgstr ""
 
 #: src/Components/PrivacyPolicy/PrivacyPolicy.php:82
@@ -1134,21 +1149,23 @@ msgid "Delete my data"
 msgstr ""
 
 #: views/modules/wordpress-user/dashboard/data-page/form-delete.php:15
-#: views/privacy-tools/form-delete.php:11
+#: views/privacy-tools/form-delete.php:13
 msgid "Delete all data we have gathered about you."
 msgstr ""
 
 #: views/modules/wordpress-user/dashboard/data-page/form-delete.php:16
-#: views/privacy-tools/form-delete.php:12
+#: views/privacy-tools/form-delete.php:14
 msgid "If you have a user account on our site, it will also be deleted."
 msgstr ""
 
 #: views/modules/wordpress-user/dashboard/data-page/form-delete.php:17
-#: views/privacy-tools/form-delete.php:13
+#: views/privacy-tools/form-delete.php:15
 msgid "Be careful - this action is permanent and CANNOT be undone."
 msgstr ""
 
 #: views/modules/wordpress-user/dashboard/data-page/form-delete.php:22
+#: views/modules/wordpress-user/dashboard/profile-page/form-delete.php:23
+msgctxt "(Admin)"
 msgid ""
 "You seem to have an administrator or equivalent role, so deleting/"
 "anonymizing via this page is disabled."
@@ -1160,12 +1177,12 @@ msgid "Download your data"
 msgstr ""
 
 #: views/modules/wordpress-user/dashboard/form-export.php:12
-#: views/privacy-tools/form-export.php:12
+#: views/privacy-tools/form-export.php:13
 msgid "Download as table"
 msgstr ""
 
 #: views/modules/wordpress-user/dashboard/form-export.php:15
-#: views/privacy-tools/form-export.php:19
+#: views/privacy-tools/form-export.php:22
 msgid "Export as JSON"
 msgstr ""
 
@@ -1187,13 +1204,6 @@ msgstr ""
 #: views/modules/wordpress-user/dashboard/profile-page/form-delete.php:14
 msgctxt "(Admin)"
 msgid "Anonymize user and all data"
-msgstr ""
-
-#: views/modules/wordpress-user/dashboard/profile-page/form-delete.php:23
-msgctxt "(Admin)"
-msgid ""
-"You seem to have an administrator or equivalent role, so deleting/"
-"anonymizing via this page is disabled."
 msgstr ""
 
 #: views/modules/wordpress-user/dashboard/profile-page/header.php:2
@@ -1225,24 +1235,29 @@ msgstr ""
 msgid "Delete my user and data"
 msgstr ""
 
-#: views/privacy-tools/form-delete.php:6
+#: views/privacy-tools/form-delete.php:7
 msgid "Delete my data"
 msgstr ""
 
-#: views/privacy-tools/form-identify.php:4
+#: views/privacy-tools/form-identify.php:8
+msgid "Back to Privacy Tools"
+msgstr ""
+
+#: views/privacy-tools/form-identify.php:14
 msgid "Identify yourself!"
 msgstr ""
 
-#: views/privacy-tools/form-identify.php:7
-#: views/privacy-tools/form-identify.php:10
+#: views/privacy-tools/form-identify.php:17
+#: views/privacy-tools/form-identify.php:20
 msgid "Enter your email address"
 msgstr ""
 
-#: views/privacy-tools/form-identify.php:13
+#: views/privacy-tools/form-identify.php:23
 msgid "Send email"
 msgstr ""
 
 #: views/privacy-tools/notice-admin-role.php:4
+msgctxt "(Admin)"
 msgid "Data deletion is disabled for administrative accounts."
 msgstr ""
 
@@ -1260,6 +1275,10 @@ msgstr ""
 msgid "Sorry - the link seems to have expired. Please try again!"
 msgstr ""
 
-#: views/privacy-tools/privacy-tools.php:4
+#: views/privacy-tools/notices.php:23
+msgid "Your personal data has been removed!"
+msgstr ""
+
+#: views/privacy-tools/privacy-tools.php:5
 msgid "You are identified as"
 msgstr ""
