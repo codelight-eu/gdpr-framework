@@ -5,15 +5,15 @@
         <?php if ($termsUrl): ?>
             <?= sprintf(
                 __('I accept the %sTerms and Conditions%s and the %sPrivacy Policy%s', 'gdpr'),
-                "<a href='{$privacyPolicyUrl}' target='_blank'>",
-                '</a>',
                 "<a href='{$termsUrl}' target='_blank'>",
+                '</a>',
+                "<a href='{$privacyPolicyUrl}' target='_blank'>",
                 '</a>'
             ); ?>
         <?php else: ?>
             <?= sprintf(
                 __('I accept the %sPrivacy Policy%s', 'gdpr'),
-                "<a href='{$termsUrl}' target='_blank'>",
+                "<a href='{$privacyPolicyUrl}' target='_blank'>",
                 '</a>'
             ); ?>
         <?php endif; ?>*
