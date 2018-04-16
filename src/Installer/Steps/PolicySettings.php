@@ -20,7 +20,7 @@ class PolicySettings extends InstallerStep implements InstallerStepInterface
         $policyPage         = gdpr('options')->get('policy_page');
         $policyPageSelector = wp_dropdown_pages([
             'name'              => 'gdpr_policy_page',
-            'show_option_none'  => __('&mdash; Create a new page &mdash;'),
+            'show_option_none'  => _x('&mdash; Create a new page &mdash;', '(Admin)', 'gdpr'),
             'option_none_value' => 'new',
             'selected'          => $policyPage ? $policyPage : 'new',
             'echo'              => false,
@@ -34,9 +34,10 @@ class PolicySettings extends InstallerStep implements InstallerStepInterface
         if (!$termsPage && get_option('woocommerce_terms_page_id')) {
             $hasTermsPage  = 'yes';
             $termsPage     = get_option('woocommerce_terms_page_id');
-            $termsPageNote = __(
+            $termsPageNote = _x(
                 'We have automatically selected your WooCommerce Terms & Conditions page.',
-                'gdpr-admin'
+                '(Admin)',
+                'gdpr'
             );
         } else {
             $termsPageNote = false;
@@ -44,7 +45,7 @@ class PolicySettings extends InstallerStep implements InstallerStepInterface
 
         $termsPageSelector = wp_dropdown_pages([
             'name'              => 'gdpr_terms_page',
-            'show_option_none'  => __('&mdash; Create a new page &mdash;'),
+            'show_option_none'  => _x('&mdash; Create a new page &mdash;', '(Admin)', 'gdpr'),
             'option_none_value' => 'new',
             'selected'          => $termsPage ? $termsPage : 'new',
             'echo'              => false,

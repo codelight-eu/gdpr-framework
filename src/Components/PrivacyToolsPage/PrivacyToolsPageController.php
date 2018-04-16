@@ -36,14 +36,14 @@ class PrivacyToolsPageController
         DataSubjectAuthenticator $dataSubjectAuthenticator,
         DataSubjectIdentificator $dataSubjectIdentificator,
         DataSubjectManager $dataSubjectManager,
-        DataExporter $dataExporter)
-    {
+        DataExporter $dataExporter
+    ) {
         $this->dataSubjectAuthenticator = $dataSubjectAuthenticator;
         $this->dataSubjectIdentificator = $dataSubjectIdentificator;
         $this->dataSubjectManager       = $dataSubjectManager;
         $this->dataExporter             = $dataExporter;
 
-        if (!gdpr('options')->get('enable')) {
+        if ( ! gdpr('options')->get('enable')) {
             return;
         }
 
@@ -52,6 +52,8 @@ class PrivacyToolsPageController
 
     protected function setup()
     {
+        add_action('wp_enqueue_scripts', [$this, 'enqueue']);
+
         // Listen to 'identify' action and send an email
         add_action('gdpr/frontend/action/identify', [$this, 'sendIdentificationEmail']);
 
@@ -64,13 +66,25 @@ class PrivacyToolsPageController
         add_action('gdpr/frontend/privacy-tools-page/action/forget', [$this, 'forget'], 10, 2);
     }
 
+    public function enqueue()
+    {
+        if ( ! gdpr('options')->get('enable_stylesheet') || ! is_page(gdpr('options')->get('tools_page'))) {
+            return;
+        }
+
+        wp_enqueue_style(
+            'gdpr-framework-privacy-tools',
+            gdpr('config')->get('plugin.url') . 'assets/privacy-tools.css'
+        );
+    }
+
     /**
      * If the given email address exists as a data subject, send an authentication email to that address
      */
     public function sendIdentificationEmail()
     {
         // Additional safety check
-        if (!is_email($_REQUEST['email'])) {
+        if ( ! is_email($_REQUEST['email'])) {
             $this->redirect(['gdpr_notice' => 'invalid_email']);
         }
 
@@ -105,7 +119,7 @@ class PrivacyToolsPageController
      */
     protected function renderNotices()
     {
-        if (!isset($_REQUEST['gdpr_notice'])) {
+        if ( ! isset($_REQUEST['gdpr_notice'])) {
             return;
         }
 
@@ -184,6 +198,7 @@ class PrivacyToolsPageController
         // Let's not allow admins to delete themselves
         if (current_user_can('manage_options')) {
             echo gdpr('view')->render("privacy-tools/notice-admin-role");
+
             return;
         }
 
@@ -217,7 +232,7 @@ class PrivacyToolsPageController
     {
         $data = $dataSubject->export($_REQUEST['gdpr_format']);
 
-        if (!is_null($data)) {
+        if ( ! is_null($data)) {
             // If there is data, download it
             $this->dataExporter->export($data, $dataSubject, $_REQUEST['gdpr_format']);
         } else {
@@ -237,6 +252,7 @@ class PrivacyToolsPageController
 
         if ($deleted) {
             $this->dataSubjectAuthenticator->deleteSession();
+            $this->redirect(['gdpr_notice' => 'data_deleted']);
         } else {
             // If request was sent to admin, then show notification
             $this->redirect(['gdpr_notice' => 'request_sent']);
@@ -252,7 +268,7 @@ class PrivacyToolsPageController
      */
     protected function redirect($args = [], $baseUrl = null)
     {
-        if (!$baseUrl) {
+        if ( ! $baseUrl) {
             $baseUrl = get_permalink(gdpr('options')->get('tools_page'));
         }
 

@@ -3,7 +3,7 @@
         <legend><?php echo sprintf(esc_html($description), $descLink); ?></legend>
     </fieldset>
     <p>
-        <?= __('This tag generates the default text for Terms & Conditions and/or Privacy Policy checkbox.', 'gdpr-admin'); ?> <br/>
+        <?= _x('This tag generates the default text for Terms & Conditions and/or Privacy Policy checkbox.', '(Admin)', 'gdpr'); ?> <br/>
     </p>
 </div>
 

@@ -1,9 +1,10 @@
 <p>
-    <?= __('A Privacy Policy page has been created, but it is empty. You can generate a policy template on this page.', 'gdpr-admin'); ?>
+    <?= _x('A Privacy Policy page has been created, but it is empty. You can generate a policy template on this page.', '(Admin)', 'gdpr'); ?>
 </p>
 <p>
-    <?= __(
+    <?= _x(
         sprintf('Read more %shere%s', "<a href='{$helpUrl}'>", "</a>"),
-        'gdpr-admin'
+        '(Admin)',
+        'gdpr'
     ); ?>
 </p>

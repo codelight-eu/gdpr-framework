@@ -18,4 +18,4 @@
     We are here to get you started.
 </p>
 <hr>
-<input type="submit" class="button button-gdpr button-large button-gdpr-large button-center" value="<?= __('I accept', 'gdpr-admin'); ?>" />
+<input type="submit" class="button button-gdpr button-large button-gdpr-large button-center" value="<?= _x('I accept', '(Admin)', 'gdpr'); ?>" />

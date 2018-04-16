@@ -5,7 +5,7 @@ Tags: gdpr
 Requires at least: 4.7
 Tested up to: 4.9.4
 Requires PHP: 5.6.33
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -44,6 +44,7 @@ The GDPR Framework currently works with the following plugins
 
 Coming in April 2018:
 &#9744; Gravity Forms (Release: 17.04)
+&#9744; Formidable Forms (Release: 19.04)
 &#9744; Ninja Forms (Release: 25.04)
 &#9744; Contact Form 7 Flamingo
 &#9744; WP Rocket
@@ -51,9 +52,25 @@ Coming in April 2018:
 Still free and open-source.
 
 Other integrations coming soon:
-&#9744; Formidable Form Builder
 &#9744; WP Migrate DB
 &#9744; WooCommerce (postponed until the launch of their own compliance toolkit)
 &#9744; Easy Digital Downloads
 
 We're happy to add support for other major plugins as well. If you have a request, get in touch!
+
+== Changelog ==
+
+= 1.0.2 =
+* Fix T&C and Privacy Policy URLs on registration and comments forms
+* Add basic styling and separate stylesheet for Privacy Tools page
+* Allow disabling styles for Privacy Tools page via admin
+* Add confirmation notice on deleting data via front-end Privacy Tools
+* Add support for translations
+* Change strings with 'gdpr-admin' domain back to 'gdpr'. Add context to all admin strings.
+* Add Portuguese translation (Thanks Vitor Lima!)
+
+= 1.0.1 =
+* Fix PHP notice on Privacy Tools frontend page if logged in as admin
+
+= 1.0.0 =
+* Initial release

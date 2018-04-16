@@ -1,11 +1,11 @@
 <div class="wrap gdpr-framework-wrap">
     <h2>
-        <?= __('The GDPR Framework', 'gdpr-admin'); ?>
+        <?= _x('The GDPR Framework', '(Admin)', 'gdpr'); ?>
     </h2>
 
     <?php if (!empty($_GET['updated'])) : ?>
         <div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible">
-            <p><strong><?php _e('GDPR settings saved!', 'gdpr-admin') ?></strong></p>
+            <p><strong><?php _ex('GDPR settings saved!', '(Admin)', 'gdpr') ?></strong></p>
         </div>
     <?php endif; ?>
 
@@ -28,7 +28,7 @@
         <p>
             <em>
                 <?= sprintf(
-                    __('The GDPR Framework. Built with &#9829; by %sCodelight%s.', 'gdpr-admin'),
+                    _x('The GDPR Framework. Built with &#9829; by %sCodelight%s.', '(Admin)', 'gdpr'),
                     '<a href="https://codelight.eu/" target="_blank">',
                         '</a>'
                 ); ?>

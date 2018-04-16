@@ -16,7 +16,7 @@ class AdminTabPrivacyPolicy extends AdminTab
     {
         $this->policyGenerator = $policyGenerator;
 
-        $this->title = __('Privacy Policy', 'gdpr-admin');
+        $this->title = _x('Privacy Policy', '(Admin)', 'gdpr');
 
         $this->registerSetting('gdpr_company_name');
         $this->registerSetting('gdpr_contact_email');
@@ -58,7 +58,7 @@ class AdminTabPrivacyPolicy extends AdminTab
          */
         $this->registerSettingSection(
             'gdpr_section_privacy_policy',
-            __('Privacy Policy', 'gdpr-admin'),
+            _x('Privacy Policy', '(Admin)', 'gdpr'),
             [$this, 'renderHeader']
         );
 
@@ -67,26 +67,26 @@ class AdminTabPrivacyPolicy extends AdminTab
          */
         $this->registerSettingSection(
             'gdpr_section_privacy_policy_company',
-            __('Company information', 'gdpr-admin')
+            _x('Company information', '(Admin)', 'gdpr')
         );
 
         $this->registerSettingField(
             'gdpr_company_name',
-            __('Company Name', 'gdpr-admin'),
+            _x('Company Name', '(Admin)', 'gdpr'),
             [$this, 'renderCompanyNameHtml'],
             'gdpr_section_privacy_policy_company'
         );
 
         $this->registerSettingField(
             'gdpr_company_email',
-            __('Company Email', 'gdpr-admin'),
+            _x('Company Email', '(Admin)', 'gdpr'),
             [$this, 'renderCompanyEmailHtml'],
             'gdpr_section_privacy_policy_company'
         );
 
         $this->registerSettingField(
             'gdpr_company_location',
-            __('Company Location', 'gdpr-admin'),
+            _x('Company Location', '(Admin)', 'gdpr'),
             [$this, 'renderCompanyLocationHtml'],
             'gdpr_section_privacy_policy_company'
         );
@@ -102,21 +102,21 @@ class AdminTabPrivacyPolicy extends AdminTab
 
         $this->registerSettingField(
             'gdpr_representative_contact_name',
-            __('Representative Contact Name', 'gdpr-admin'),
+            _x('Representative Contact Name', '(Admin)', 'gdpr'),
             [$this, 'renderRepresentativeContactName'],
             'gdpr_section_privacy_policy_representative'
         );
 
         $this->registerSettingField(
             'gdpr_representative_contact_email',
-            __('Representative Contact Email', 'gdpr-admin'),
+            _x('Representative Contact Email', '(Admin)', 'gdpr'),
             [$this, 'renderRepresentativeContactEmail'],
             'gdpr_section_privacy_policy_representative'
         );
 
         $this->registerSettingField(
             'gdpr_representative_contact_phone',
-            __('Representative Contact Phone', 'gdpr-admin'),
+            _x('Representative Contact Phone', '(Admin)', 'gdpr'),
             [$this, 'renderRepresentativeContactPhone'],
             'gdpr_section_privacy_policy_representative'
         );
@@ -132,27 +132,27 @@ class AdminTabPrivacyPolicy extends AdminTab
          */
         $this->registerSettingSection(
             'gdpr_section_privacy_policy_dpa',
-            __('Data Protection Authority', 'gdpr-admin'),
+            _x('Data Protection Authority', '(Admin)', 'gdpr'),
             [$this, 'renderDpaJS']
         );
 
         $this->registerSettingField(
             'gdpr_dpa_website',
-            __('Data Protection Authority Website', 'gdpr-admin'),
+            _x('Data Protection Authority Website', '(Admin)', 'gdpr'),
             [$this, 'renderDpaWebsite'],
             'gdpr_section_privacy_policy_dpa'
         );
 
         $this->registerSettingField(
             'gdpr_dpa_email',
-            __('Data Protection Authority Email', 'gdpr-admin'),
+            _x('Data Protection Authority Email', '(Admin)', 'gdpr'),
             [$this, 'renderDpaEmail'],
             'gdpr_section_privacy_policy_dpa'
         );
 
         $this->registerSettingField(
             'gdpr_dpa_phone',
-            __('Data Protection Authority Phone', 'gdpr-admin'),
+            _x('Data Protection Authority Phone', '(Admin)', 'gdpr'),
             [$this, 'renderDpaPhone'],
             'gdpr_section_privacy_policy_dpa'
         );
@@ -162,24 +162,24 @@ class AdminTabPrivacyPolicy extends AdminTab
          */
         $this->registerSettingSection(
             'gdpr_section_privacy_policy_dpo',
-            __('Data Protection Officer', 'gdpr-admin'),
+            _x('Data Protection Officer', '(Admin)', 'gdpr'),
             function() {
                 echo "<a href='https://codelight.eu/wordpress-gdpr-framework/knowledge-base/do-i-need-to-appoint-data-protection-officer-dpo/' target='_blank'>";
-                echo __('Knowledge base: Do I need to appoint a Data Protection Officer?');
+                echo _x('Knowledge base: Do I need to appoint a Data Protection Officer?', '(Admin)', 'gdpr');
                 echo "</a>";
             }
         );
 
         $this->registerSettingField(
             'gdpr_has_dpo',
-            __('Data Protection Officer', 'gdpr-admin'),
+            _x('Data Protection Officer', '(Admin)', 'gdpr'),
             [$this, 'renderHasDPOHtml'],
             'gdpr_section_privacy_policy_dpo'
         );
 
         $this->registerSettingField(
             'gdpr_dpo_name',
-            __('Data Protection Officer Name', 'gdpr-admin'),
+            _x('Data Protection Officer Name', '(Admin)', 'gdpr'),
             [$this, 'renderDPONameHtml'],
             'gdpr_section_privacy_policy_dpo',
             ['class' => 'gdpr-dpo hidden']
@@ -187,47 +187,12 @@ class AdminTabPrivacyPolicy extends AdminTab
 
         $this->registerSettingField(
             'gdpr_dpo_email',
-            __('Data Protection Officer Email', 'gdpr-admin'),
+            _x('Data Protection Officer Email', '(Admin)', 'gdpr'),
             [$this, 'renderDPOEmailHtml'],
             'gdpr_section_privacy_policy_dpo',
             ['class' => 'gdpr-dpo hidden']
         );
-
-        /**
-         * Policy contents
-         */
-
-        /*
-        $this->registerSettingSection(
-            'gdpr_section_privacy_policy_contents',
-            __('Policy Contents', 'gdpr-admin')
-        );
-
-        $this->registerSettingField(
-            'gdpr_pp_data_gathered_1',
-            __('Information you have provided us with', 'gdpr-admin'),
-            [$this, 'renderDataGathered1'],
-            'gdpr_section_privacy_policy_contents',
-            ['class' => 'gdpr-dpo hidden']
-        );
-        */
     }
-
-    /*
-    public function renderDataGathered1()
-    {
-        $contents = gdpr('options')->get('pp_data_gathered_1') ? gdpr('options')->get('pp_data_gathered_1') : 'default';
-
-        echo wp_editor(
-            $contents,
-            'pp_data_gathered_1',
-            [
-                'media_buttons' => false,
-                'editor_height' => 200,
-            ]
-        );
-    }
-    */
 
     public function renderHeader()
     {
@@ -241,14 +206,14 @@ class AdminTabPrivacyPolicy extends AdminTab
     public function renderCompanyNameHtml()
     {
         $value = gdpr('options')->get('company_name') ? esc_attr(gdpr('options')->get('company_name')) : '';
-        $placeholder = __('Company Name', 'gdpr-admin');
+        $placeholder = _x('Company Name', '(Admin)', 'gdpr');
         echo "<input name='gdpr_company_name' placeholder='{$placeholder}' value='{$value}'>";
     }
 
     public function renderCompanyEmailHtml()
     {
         $value = gdpr('options')->get('contact_email') ? esc_attr(gdpr('options')->get('contact_email')) : '';
-        $placeholder = __('Contact Email', 'gdpr-admin');
+        $placeholder = _x('Contact Email', '(Admin)', 'gdpr');
         echo "<input type='email' name='gdpr_contact_email' placeholder='{$placeholder}' value='{$value}'>";
     }
 
@@ -267,31 +232,31 @@ class AdminTabPrivacyPolicy extends AdminTab
     {
         echo "<span class='gdpr-representative hidden'>";
         echo "<h3>";
-        echo __('Representative Contact', 'gdpr-admin');
+        echo _x('Representative Contact', '(Admin)', 'gdpr');
         echo "</h3>";
         echo "<a href='https://codelight.eu/wordpress-gdpr-framework/knowledge-base/do-i-need-to-appoint-an-eu-based-representative/' target='_blank'>";
-        echo __('Knowledge base: Do I need to appoint an EU-based representative?');
+        echo _x('Knowledge base: Do I need to appoint an EU-based representative?', '(Admin)', 'gdpr');
         echo "</a>";
     }
 
     public function renderRepresentativeContactName()
     {
         $value = gdpr('options')->get('representative_contact_name') ? esc_attr(gdpr('options')->get('representative_contact_name')) : '';
-        $placeholder = __('Representative Contact Name', 'gdpr-admin');
+        $placeholder = _x('Representative Contact Name', '(Admin)', 'gdpr');
         echo "<input name='gdpr_representative_contact_name' placeholder='{$placeholder}' value='{$value}'>";
     }
 
     public function renderRepresentativeContactEmail()
     {
         $value = gdpr('options')->get('representative_contact_email') ? esc_attr(gdpr('options')->get('representative_contact_email')) : '';
-        $placeholder = __('Representative Contact Email', 'gdpr-admin');
+        $placeholder = _x('Representative Contact Email', '(Admin)', 'gdpr');
         echo "<input type='email' name='gdpr_representative_contact_email' placeholder='{$placeholder}' value='{$value}'>";
     }
 
     public function renderRepresentativeContactPhone()
     {
         $value = gdpr('options')->get('representative_contact_phone') ? esc_attr(gdpr('options')->get('representative_contact_phone')) : '';
-        $placeholder = __('Representative Contact Phone', 'gdpr-admin');
+        $placeholder = _x('Representative Contact Phone', '(Admin)', 'gdpr');
         echo "<input name='gdpr_representative_contact_phone' placeholder='{$placeholder}' value='{$value}'>";
     }
 
@@ -318,21 +283,21 @@ class AdminTabPrivacyPolicy extends AdminTab
     public function renderDpaWebsite()
     {
         $value = gdpr('options')->get('dpa_website') ? esc_attr(gdpr('options')->get('dpa_website')) : '';
-        $placeholder = __('Data Protection Authority Website', 'gdpr-admin');
+        $placeholder = _x('Data Protection Authority Website', '(Admin)', 'gdpr');
         echo "<input name='gdpr_dpa_website' id='gdpr_dpa_website' placeholder='{$placeholder}' value='{$value}' data-set='{$value}'>";
     }
 
     public function renderDpaEmail()
     {
         $value = gdpr('options')->get('dpa_email') ? esc_attr(gdpr('options')->get('dpa_email')) : '';
-        $placeholder = __('Data Protection Authority Email', 'gdpr-admin');
+        $placeholder = _x('Data Protection Authority Email', '(Admin)', 'gdpr');
         echo "<input type='email' name='gdpr_dpa_email' id='gdpr_dpa_email' placeholder='{$placeholder}' value='{$value}' data-set='{$value}'>";
     }
 
     public function renderDpaPhone()
     {
         $value = gdpr('options')->get('dpa_phone') ? esc_attr(gdpr('options')->get('dpa_phone')) : '';
-        $placeholder = __('Data Protection Authority Phone', 'gdpr-admin');
+        $placeholder = _x('Data Protection Authority Phone', '(Admin)', 'gdpr');
         echo "<input name='gdpr_dpa_phone' id='gdpr_dpa_phone' placeholder='{$placeholder}' value='{$value}' data-set='{$value}'>";
     }
 
@@ -349,14 +314,14 @@ class AdminTabPrivacyPolicy extends AdminTab
     public function renderDPONameHtml()
     {
         $value = gdpr('options')->get('dpo_name') ? esc_attr(gdpr('options')->get('dpo_name')) : '';
-        $placeholder = __('DPO Name', 'gdpr-admin');
+        $placeholder = _x('DPO Name', '(Admin)', 'gdpr');
         echo "<input name='gdpr_dpo_name' placeholder='{$placeholder}' value='{$value}'>";
     }
 
     public function renderDPOEmailHtml()
     {
         $value = gdpr('options')->get('dpo_email') ? esc_attr(gdpr('options')->get('dpo_email')) : '';
-        $placeholder = __('DPO Name', 'gdpr-admin');
+        $placeholder = _x('DPO Name', '(Admin)', 'gdpr');
         echo "<input type='email' name='gdpr_dpo_email' placeholder='{$placeholder}' value='{$value}'>";
     }
 
@@ -452,7 +417,7 @@ class AdminTabPrivacyPolicy extends AdminTab
      */
     public function renderSubmitButton()
     {
-        submit_button(__('Save & Generate Policy', 'gdpr-admin'));
+        submit_button(_x('Save & Generate Policy', '(Admin)', 'gdpr'));
     }
 
     /**

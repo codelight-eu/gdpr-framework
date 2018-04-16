@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>
-        <?php esc_html_e( 'WordPress GDPR &rsaquo; Setup Wizard', 'gdpr-admin' ); ?>
+        <?php echo esc_html_x( 'WordPress GDPR &rsaquo; Setup Wizard', '(Admin)', 'gdpr' ); ?>
     </title>
     <?php wp_print_scripts(['jquery']); ?>
     <?php do_action('admin_print_styles'); ?>
@@ -20,35 +20,35 @@
           </div>
           <div class="gdpr-header_right">
             <h1>
-              <?= __('The GDPR Framework', 'gdpr-admin'); ?>
+              <?= _x('The GDPR Framework', '(Admin)', 'gdpr'); ?>
             </h1>
             <a href="<?= gdpr('helpers')->docs('wordpress-gdpr-consultation'); ?>" class="button button-secondary button-side" target="_blank">
-              <?= __('I need help', 'gdpr-admin'); ?>
+              <?= _x('I need help', '(Admin)', 'gdpr'); ?>
             </a>
             <a href="<?= gdpr('helpers')->docs('developer-docs'); ?>" class="button button-secondary button-side" target="_blank">
-              <?= __('Developer Docs', 'gdpr-admin'); ?>
+              <?= _x('Developer Docs', '(Admin)', 'gdpr'); ?>
             </a>
           </div>
         </div>
         <div class="gdpr-breadcrumbs">
           <div class="gdpr-breadcrumbs_unit <?= $activeSteps > 0 ? 'active' : ''; ?>">
             <div class="gdpr-breadcrumbs_item">
-              <?= __('Configuration', 'gdpr-admin'); ?>
+              <?= _x('Configuration', '(Admin)', 'gdpr'); ?>
             </div>
           </div>
           <div class="gdpr-breadcrumbs_unit <?= $activeSteps > 1 ? 'active' : ''; ?>">
             <div class="gdpr-breadcrumbs_item">
-              <?= __('Privacy Policy', 'gdpr-admin'); ?>
+              <?= _x('Privacy Policy', '(Admin)', 'gdpr'); ?>
             </div>
           </div>
           <div class="gdpr-breadcrumbs_unit <?= $activeSteps > 2 ? 'active' : ''; ?>">
             <div class="gdpr-breadcrumbs_item">
-              <?= __('Forms & Consent', 'gdpr-admin'); ?>
+              <?= _x('Forms & Consent', '(Admin)', 'gdpr'); ?>
             </div>
           </div>
           <div class="gdpr-breadcrumbs_unit <?= $activeSteps > 3 ? 'active' : ''; ?>">
             <div class="gdpr-breadcrumbs_item">
-              <?= __('Integrations', 'gdpr-admin'); ?>
+              <?= _x('Integrations', '(Admin)', 'gdpr'); ?>
             </div>
           </div>
         </div>

@@ -1,10 +1,10 @@
 <p>
-    <?= __('The The GDPR Framework setup has not been finalized yet.', 'gdpr-admin'); ?> <br>
-    <?= __('You can continue the setup at any time.', 'gdpr-admin'); ?>
+    <?= _x('The The GDPR Framework setup has not been finalized yet.', '(Admin)', 'gdpr'); ?> <br>
+    <?= _x('You can continue the setup at any time.', '(Admin)', 'gdpr'); ?>
 </p>
 <a class="button button-primary" href="<?= $buttonUrl; ?>">
-    <?= __('Continue the setup wizard', 'gdpr-admin'); ?>
+    <?= _x('Continue the setup wizard', '(Admin)', 'gdpr'); ?>
 </a>
 <a class="button button-secondary" href="<?= $skipUrl; ?>">
-    <?= __('Hide this message', 'gdpr-admin'); ?>
+    <?= _x('Hide this message', '(Admin)', 'gdpr'); ?>
 </a>

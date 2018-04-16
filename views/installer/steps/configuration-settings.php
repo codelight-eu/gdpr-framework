@@ -20,7 +20,7 @@
     </select>
     <span class="hidden js-gdpr-export-action-email">
         <label for="export_action_email">
-            <?= __('Enter the email address to notify', 'gdpr-admin'); ?>
+            <?= _x('Enter the email address to notify', '(Admin)', 'gdpr'); ?>
         </label>
         <input
                 type="email"
@@ -47,10 +47,10 @@
         <label for="gdpr_delete_action_reassign">If the user has created any content (posts or pages), should it be deleted or reassigned?</label>
         <select id="gdpr_delete_action_reassign" name="gdpr_delete_action_reassign" class="gdpr-select js-gdpr-conditional">
             <option value="delete" <?= selected($reassign, 'delete'); ?>>
-                <?= __('Delete content', 'gdpr-admin'); ?>
+                <?= _x('Delete content', '(Admin)', 'gdpr'); ?>
             </option>
             <option value="reassign" <?= selected($reassign, 'reassign'); ?> data-show=".js-gdpr-delete-action-reassign-user">
-                <?= __('Reassign content to a user', 'gdpr-admin'); ?>
+                <?= _x('Reassign content to a user', '(Admin)', 'gdpr'); ?>
             </option>
         </select>
     </span>
@@ -59,7 +59,7 @@
         <label for="gdpr_delete_action_reassign_user">Select the user to reassign content to</label>
         <?php wp_dropdown_users([
             'name'              => 'gdpr_delete_action_reassign_user',
-            'show_option_none'  => __('&mdash; Select &mdash;'),
+            'show_option_none'  => _x('&mdash; Select &mdash;', '(Admin)', 'gdpr'),
             'option_none_value' => '0',
             'selected'          => $reassignUser,
             'class'             => 'js-gdpr-select2 gdpr-select',
@@ -70,7 +70,7 @@
 
     <span class="hidden js-gdpr-delete-action-email">
         <label for="delete_action_email">
-            <?= __('Enter the email address to notify', 'gdpr-admin'); ?>
+            <?= _x('Enter the email address to notify', '(Admin)', 'gdpr'); ?>
         </label>
         <input
             type="email"

@@ -2,25 +2,25 @@
     <tr>
         <th>
             <label>
-                <?= __('Delete this user and all data', 'gdpr-admin') ?>
+                <?= _x('Delete this user and all data', '(Admin)', 'gdpr') ?>
             </label>
         </th>
         <td>
             <?php if ($showDelete): ?>
                 <a class="button" href="<?= esc_url($deleteUrl); ?>">
-                    <?= __('Delete user and all data', 'gdpr-admin') ?>
+                    <?= _x('Delete user and all data', '(Admin)', 'gdpr') ?>
                 </a>
                 <a class="button" href="<?= esc_url($anonymizeUrl); ?>">
-                    <?= __('Anonymize user and all data', 'gdpr-admin') ?>
+                    <?= _x('Anonymize user and all data', '(Admin)', 'gdpr') ?>
                 </a>
                 <br/>
                 <p class="description">
-                    <?= __('Be careful - this action is permanent and CANNOT be undone.', 'gdpr') ?>
+                    <?= _z('Be careful - this action is permanent and CANNOT be undone.', 'gdpr') ?>
                 </p>
             <?php else: ?>
                 <p>
                     <em>
-                        <?= __('You seem to have an administrator or equivalent role, so deleting/anonymizing via this page is disabled.'); ?>
+                        <?= _x('You seem to have an administrator or equivalent role, so deleting/anonymizing via this page is disabled.', '(Admin)', 'gdpr'); ?>
                     </em>
                 </p>
             <?php endif; ?>

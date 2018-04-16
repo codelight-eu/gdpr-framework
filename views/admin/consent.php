@@ -1,13 +1,13 @@
 <hr>
 
-<h3><?= __('Default consent types', 'gdpr-admin'); ?></h3>
-<p><?= __('These are the consent types that have been automatically registered by the framework or a plugin.', 'gdpr-admin'); ?></p>
+<h3><?= _x('Default consent types', '(Admin)', 'gdpr'); ?></h3>
+<p><?= _x('These are the consent types that have been automatically registered by the framework or a plugin.', '(Admin)', 'gdpr'); ?></p>
 <?php if (count($defaultConsentTypes)): ?>
     <table class="gdpr-consent">
-        <th><?= __('Slug', 'gdpr-admin'); ?></th>
-        <th><?= __('Title', 'gdpr-admin'); ?></th>
-        <th><?= __('Description', 'gdpr-admin'); ?></th>
-        <th><?= __('Visibility', 'gdpr-admin'); ?></th>
+        <th><?= _x('Slug', '(Admin)', 'gdpr'); ?></th>
+        <th><?= _x('Title', '(Admin)', 'gdpr'); ?></th>
+        <th><?= _x('Description', '(Admin)', 'gdpr'); ?></th>
+        <th><?= _x('Visibility', '(Admin)', 'gdpr'); ?></th>
     <?php foreach ($defaultConsentTypes as $consentType): ?>
         <tr>
             <td class="gdpr-consent-table-input"><?= $consentType['slug']; ?></td>
@@ -15,9 +15,9 @@
             <td class="gdpr-consent-table-desc"><?= $consentType['description']; ?></td>
             <td>
                 <?php if ($consentType['visible']): ?>
-                    <?= __('Visible', 'gdpr-admin'); ?>
+                    <?= _x('Visible', '(Admin)', 'gdpr'); ?>
                 <?php else: ?>
-                    <?= __('Hidden', 'gdpr-admin'); ?>
+                    <?= _x('Hidden', '(Admin)', 'gdpr'); ?>
                 <?php endif; ?>
             </td>
         </tr>
@@ -26,22 +26,22 @@
 <?php endif; ?>
 <br>
 <hr>
-<h3><?= __('Custom consent types', 'gdpr-admin'); ?></h3>
-<p><?= __('Here you can add custom consent types to track. They will not be used anywhere by default - you will need to build an integration for each of them.', 'gdpr-admin'); ?></p>
+<h3><?= _x('Custom consent types', '(Admin)', 'gdpr'); ?></h3>
+<p><?= _x('Here you can add custom consent types to track. They will not be used anywhere by default - you will need to build an integration for each of them.', '(Admin)', 'gdpr'); ?></p>
 <div class="js-gdpr-repeater" data-name="gdpr_consent_types">
     <table class="gdpr-consent-admin" data-repeater-list="gdpr_consent_types">
         <thead>
             <th>
-                <?= __('Machine-readable slug', 'gdpr-admin'); ?>*
+                <?= _x('Machine-readable slug', '(Admin)', 'gdpr'); ?>*
             </th>
             <th>
-                <?= __('Title', 'gdpr-admin'); ?>*
+                <?= _x('Title', '(Admin)', 'gdpr'); ?>*
             </th>
             <th>
-                <?= __('Description', 'gdpr-admin'); ?>
+                <?= _x('Description', '(Admin)', 'gdpr'); ?>
             </th>
             <th>
-                <?= __('Visible?', 'gdpr-admin'); ?>
+                <?= _x('Visible?', '(Admin)', 'gdpr'); ?>
             </th>
         </thead>
         <tr data-repeater-item>
@@ -49,7 +49,7 @@
                 <input
                         type="text"
                         name="slug"
-                        placeholder="<?= __('Slug', 'gdpr-admin'); ?>"
+                        placeholder="<?= _x('Slug', '(Admin)', 'gdpr'); ?>"
                         pattern="^[A-Za-z0-9_-]+$"
                         oninvalid="setCustomValidity('Please fill in this field using alphanumeric characters, dashes and underscores.')"
                         oninput="setCustomValidity('')"
@@ -57,19 +57,19 @@
                 />
             </td>
             <td class="gdpr-consent-table-input">
-                <input type="text" name="title" placeholder="<?= __('Title', 'gdpr-admin'); ?>" required />
+                <input type="text" name="title" placeholder="<?= _x('Title', '(Admin)', 'gdpr'); ?>" required />
             </td>
             <td class="gdpr-consent-table-desc">
-                <textarea type="text" name="description" placeholder="<?= __('Description', 'gdpr-admin'); ?>"></textarea>
+                <textarea type="text" name="description" placeholder="<?= _x('Description', '(Admin)', 'gdpr'); ?>"></textarea>
             </td>
             <td>
                 <label>
                     <input type="checkbox" name="visible" value="1"/>
-                    <?= __('Visible?', 'gdpr-admin'); ?>
+                    <?= _x('Visible?', '(Admin)', 'gdpr'); ?>
                 </label>
             </td>
             <td>
-              <input data-repeater-delete class="button button-primary" type="button" value="<?= __('Remove', 'gdpr-admin'); ?>"/>
+              <input data-repeater-delete class="button button-primary" type="button" value="<?= _x('Remove', '(Admin)', 'gdpr'); ?>"/>
             </td>
         </tr>
 
@@ -90,9 +90,9 @@
 
 <br>
 <hr>
-<h3><?= __('Additional info', 'gdpr-admin'); ?></h3>
+<h3><?= _x('Additional info', '(Admin)', 'gdpr'); ?></h3>
 <p>
-    <?= __('This text will be displayed to your data subjects on the Privacy Tools page.', 'gdpr-admin'); ?>
+    <?= _x('This text will be displayed to your data subjects on the Privacy Tools page.', '(Admin)', 'gdpr'); ?>
 </p>
 <?php wp_editor(
     wp_kses_post($consentInfo),

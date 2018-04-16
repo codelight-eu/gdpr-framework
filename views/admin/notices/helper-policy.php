@@ -1,9 +1,9 @@
 <p>
-    <?= __('Heads up - your Privacy Policy still requires some attention. Find the places marked with [TODO] and replace them with real content!', 'gdpr-admin'); ?>
+    <?= _x('Heads up - your Privacy Policy still requires some attention. Find the places marked with [TODO] and replace them with real content!', '(Admin)', 'gdpr'); ?>
 </p>
 <p>
-    <?= __(
+    <?= _x(
         sprintf('Read more about editing your Privacy Policy %shere%s', "<a href='{$helpUrl}'>", "</a>"),
-        'gdpr-admin'
+        '(Admin)','gdpr'
     ); ?>
 </p>

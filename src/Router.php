@@ -146,7 +146,7 @@ class Router
             } else {
                 wp_die(
                     sprintf(
-                        __('You do not have the required permissions to perform this action!', 'gdpr-admin'),
+                        _x('You do not have the required permissions to perform this action!', '(Admin)', 'gdpr'),
                         esc_html($action)
                     )
                 );

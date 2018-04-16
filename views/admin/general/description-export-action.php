@@ -1,3 +1,3 @@
 <p class="description">
-    <?= __('What should happen if a data subject requests viewing or exporting their data.', 'gdpr-admin'); ?>
+    <?php _ex('What should happen if a data subject requests viewing or exporting their data.', '(Admin)', 'gdpr'); ?>
 </p>

@@ -47,7 +47,7 @@ class ConsentManager
                 "<a href='{$policyPageUrl}' target='_blank'>",
                 "</a>"
             ),
-            __('This consent is not visible by default. If someone wishes to withdraw it, they should simply request to delete all their data.', 'gdpr-admin'),
+            _x('This consent is not visible by default. If someone wishes to withdraw it, they should simply request to delete all their data.', '(Admin)', 'gdpr'),
             false
         );
 
@@ -66,7 +66,7 @@ class ConsentManager
                     "<a href='{$termsPageUrl}' target='_blank'>",
                     "</a>"
                 ),
-                __('This consent is not visible by default. If someone wishes to withdraw it, they should simply request to delete all their data.', 'gdpr-admin'),
+                _x('This consent is not visible by default. If someone wishes to withdraw it, they should simply request to delete all their data.', '(Admin)', 'gdpr'),
                 false
             );
         }

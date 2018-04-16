@@ -1,9 +1,10 @@
 <p>
-    <?= __('The contents of this page should contain the [gdpr_tools] shortcode.', 'gdpr-admin'); ?>
+    <?= _x('The contents of this page should contain the [gdpr_tools] shortcode.', '(Admin)', 'gdpr'); ?>
 </p>
 <p>
-    <?= __(
+    <?= _x(
         sprintf('Read more %shere%s', "<a href='{$helpUrl}'>", "</a>"),
-        'gdpr-admin'
+        '(Admin)',
+        'gdpr'
     ); ?>
 </p>

@@ -1,10 +1,12 @@
 <h2><?= __('Delete my user and data', 'gdpr') ?></h2>
 
-<form method="GET">
-    <input type="hidden" name="gdpr_nonce" value="<?= $nonce; ?>" />
-    <input type="hidden" name="gdpr_action" value="<?= $action; ?>" />
-    <input type="submit" class="button button-primary" value="<?= __('Delete my data', 'gdpr') ?>" />
-</form>
+<div class="gdpr-delete-button">
+    <form method="GET">
+        <input type="hidden" name="gdpr_nonce" value="<?= $nonce; ?>"/>
+        <input type="hidden" name="gdpr_action" value="<?= $action; ?>"/>
+        <input type="submit" class="button button-primary" value="<?= __('Delete my data', 'gdpr') ?>"/>
+    </form>
+</div>
 
 <br/>
 <p class="description">

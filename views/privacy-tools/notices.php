@@ -18,4 +18,8 @@
     <?php if ('request_sent' === $_REQUEST['gdpr_notice']): ?>
         <?= __('We have received your request and will reply within 30 days.', 'gdpr'); ?>
     <?php endif; ?>
+
+    <?php if ('data_deleted' === $_REQUEST['gdpr_notice']): ?>
+        <?= __('Your personal data has been removed!', 'gdpr'); ?>
+    <?php endif; ?>
 </div>

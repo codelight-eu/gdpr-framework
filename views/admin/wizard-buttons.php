@@ -1,5 +1,5 @@
 <a class="button button-primary" href="<?= esc_url($restartUrl); ?>">
-    <?= __('Restart setup wizard', 'gdpr-admin'); ?>
+    <?= _x('Restart setup wizard', '(Admin)', 'gdpr'); ?>
 </a>
 <br><br>
 <hr>

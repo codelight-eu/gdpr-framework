@@ -18,7 +18,7 @@
                 value="yes"
                 <?= checked($enableThemeCompatibility, true); ?>
             />
-            <?= __('Automatically add Privacy Policy and Privacy Tools links to your site footer.', 'gdpr-admin'); ?>
+            <?= _x('Automatically add Privacy Policy and Privacy Tools links to your site footer.', '(Admin)', 'gdpr'); ?>
         </label>
     </p>
 <?php endif; ?>

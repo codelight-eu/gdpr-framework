@@ -2,13 +2,13 @@
     <tr>
         <th>
             <label>
-                <?= __('Delete this user and all data', 'gdpr-admin') ?>
+                <?= _x('Delete this user and all data', '(Admin)', 'gdpr') ?>
             </label>
         </th>
         <td>
             <?php if ($showDelete): ?>
                 <a class="button" href="<?= esc_url($url); ?>">
-                    <?= __('Delete my data', 'gdpr-admin') ?>
+                    <?= _x('Delete my data', '(Admin)', 'gdpr') ?>
                 </a>
                 <br/>
                 <p class="description">
@@ -19,7 +19,7 @@
             <?php else: ?>
                 <p>
                     <em>
-                        <?= __('You seem to have an administrator or equivalent role, so deleting/anonymizing via this page is disabled.'); ?>
+                        <?= _x('You seem to have an administrator or equivalent role, so deleting/anonymizing via this page is disabled.', '(Admin)', 'gdpr'); ?>
                     </em>
                 </p>
             <?php endif; ?>

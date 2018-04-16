@@ -60,8 +60,8 @@ class WordpressUser
     public function registerDashboardDataPage()
     {
         add_users_page(
-            __('Privacy Tools', 'gdpr-admin'),
-            __('Privacy Tools', 'gdpr-admin'),
+            _x('Privacy Tools', '(Admin)', 'gdpr'),
+            _x('Privacy Tools', '(Admin)', 'gdpr'),
             'read',
             'gdpr-profile',
             [$this, 'renderDashboardDataPage']

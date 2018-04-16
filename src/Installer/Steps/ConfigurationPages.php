@@ -20,7 +20,7 @@ class ConfigurationPages extends InstallerStep implements InstallerStepInterface
         $privacyToolsPage         = gdpr('options')->get('tools_page');
         $privacyToolsPageSelector = wp_dropdown_pages([
             'name'              => 'gdpr_tools_page',
-            'show_option_none'  => __('&mdash; Create a new page &mdash;'),
+            'show_option_none'  => _x('&mdash; Create a new page &mdash;', '(Admin)', 'gdpr'),
             'option_none_value' => 'new',
             'selected'          => $privacyToolsPage ? $privacyToolsPage : 'new',
             'echo'              => false,

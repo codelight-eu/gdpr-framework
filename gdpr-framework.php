@@ -4,7 +4,7 @@
  * Plugin Name:       The GDPR Framework
  * Plugin URI:        https://codelight.eu/wordpress-gdpr-framework/
  * Description:       The easiest way to make your website GDPR-compliant. Fully documented, extendable and developer-friendly.
- * Version:           1.0.0
+ * Version:           1.0.2
  * Author:            Codelight
  * Author URI:        https://codelight.eu/
  * Text Domain:       gdpr
@@ -23,7 +23,7 @@ if (!defined('WPINC')) {
  * @param string $title
  */
 $gdpr_error = function($message, $subtitle = '', $title = '') {
-    $title = $title ?: __('WordPress GDPR &rsaquo; Error', 'gdpr-admin');
+    $title = $title ?: _x('WordPress GDPR &rsaquo; Error', '(Admin)', 'gdpr');
     $message = "<h1>{$title}<br><small>{$subtitle}</small></h1><p>{$message}</p>";
     wp_die($message, $title);
 };
@@ -32,14 +32,14 @@ $gdpr_error = function($message, $subtitle = '', $title = '') {
  * Ensure compatible version of PHP is used
  */
 if (version_compare(phpversion(), '5.6.33', '<')) {
-    $gdpr_error(__('You must be using PHP 5.6.33 or greater.', 'gdpr-admin'), __('Invalid PHP version', 'gdpr-admin'));
+    $gdpr_error(_x('You must be using PHP 5.6.33 or greater.', '(Admin)', 'gdpr'), _x('Invalid PHP version', '(Admin)', 'gdpr'));
 }
 
 /**
  * Ensure compatible version of WordPress is used
  */
 if (version_compare(get_bloginfo('version'), '4.3', '<')) {
-    $gdpr_error(__('You must be using WordPress 4.3.0 or greater.', 'gdpr-admin'), __('Invalid WordPress version', 'gdpr-admin'));
+    $gdpr_error(_x('You must be using WordPress 4.3.0 or greater.', '(Admin)', 'gdpr'), _x('Invalid WordPress version', '(Admin)', 'gdpr'));
 }
 
 /**
@@ -49,8 +49,8 @@ if (!class_exists('\Codelight\GDPR\Container')) {
 
     if (!file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
         $gdpr_error(
-            __('You appear to be running a development version of GDPR. You must run <code>composer install</code> from the plugin directory.', 'gdpr-admin'),
-            __('Autoloader not found.', 'gdpr-admin')
+            _x('You appear to be running a development version of GDPR. You must run <code>composer install</code> from the plugin directory.', '(Admin)', 'gdpr'),
+            _x('Autoloader not found.', '(Admin)', 'gdpr')
         );
     }
     require_once $composer;
@@ -112,8 +112,10 @@ register_activation_hook(__FILE__, function () {
 
         add_role(
             'anonymous',
-            __('Anonymous', 'gdpr-admin'),
+            _x('Anonymous', '(Admin)', 'gdpr'),
             []
         );
     }
+
+    update_option('gdpr_enable_stylesheet', true);
 });

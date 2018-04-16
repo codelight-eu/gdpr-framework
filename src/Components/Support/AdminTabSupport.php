@@ -10,14 +10,14 @@ class AdminTabSupport extends AdminTab
 
     public function __construct()
     {
-        $this->title = __('Support', 'gdpr-admin');
+        $this->title = _x('Support', '(Admin)', 'gdpr');
     }
 
     public function init()
     {
         $this->registerSettingSection(
             'gdpr-section-support',
-            __('Support', 'gdpr-admin'),
+            _x('Support', '(Admin)', 'gdpr'),
             [$this, 'renderTab']
         );
     }

@@ -4,13 +4,13 @@
 </p>
 
 <a class="button button-primary" href="<?= $installerUrl; ?>">
-    <?= __('Run the setup wizard', 'gdpr-admin'); ?>
+    <?= _x('Run the setup wizard', '(Admin)', 'gdpr'); ?>
 </a>
 
 <a class="button button-secondary" href="<?= $autoInstallUrl; ?>">
-    <?= __('Auto-install pages', 'gdpr-admin'); ?>
+    <?= _x('Auto-install pages', '(Admin)', 'gdpr'); ?>
 </a>
 
 <a class="button button-secondary" href="<?= $skipUrl; ?>">
-    <?= __('Skip and install manually', 'gdpr-admin'); ?>
+    <?= _x('Skip and install manually', '(Admin)', 'gdpr'); ?>
 </a>

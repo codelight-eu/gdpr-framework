@@ -27,7 +27,7 @@ class AdminTabConsent extends AdminTab
     {
         $this->consentManager = $consentManager;
 
-        $this->title = __('Consent', 'gdpr-admin');
+        $this->title = _x('Consent', '(Admin)', 'gdpr');
 
         // If we don't register the settings, WP will not allow this page to be submitted
         $this->registerSetting('consent_types');
@@ -46,7 +46,7 @@ class AdminTabConsent extends AdminTab
     {
         $this->registerSettingSection(
             'gdpr_section_consent',
-            __('Consent', 'gdpr-admin'),
+            _x('Consent', '(Admin)', 'gdpr'),
             [$this, 'renderConsentForm']
         );
     }
@@ -154,17 +154,17 @@ class AdminTabConsent extends AdminTab
 
             foreach ($_GET['errors'] as $error) {
                 if ('slug-empty' === $error) {
-                    $message = __("Consent slug is a required field!", 'gdpr-admin');
+                    $message = _x("Consent slug is a required field!", '(Admin)', 'gdpr');
                     gdpr('admin-error')->add('admin/notices/error', compact('message'));
                 }
 
                 if ('slug-invalid' === $error) {
-                    $message = __("You may only use alphanumeric characters, dash and underscore in the consent slug field.", 'gdpr-admin');
+                    $message = _x("You may only use alphanumeric characters, dash and underscore in the consent slug field.", '(Admin)', 'gdpr');
                     gdpr('admin-error')->add('admin/notices/error', compact('message'));
                 }
 
                 if ('title-empty' === $error) {
-                    $message = __("Consent title is a required field!", 'gdpr-admin');
+                    $message = _x("Consent title is a required field!", '(Admin)', 'gdpr');
                     gdpr('admin-error')->add('admin/notices/error', compact('message'));
                 }
             }

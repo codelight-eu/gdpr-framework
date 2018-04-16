@@ -1,3 +1,3 @@
 <h2>
-    <?= __('Privacy Tools', 'gdpr-admin'); ?>
+    <?= _x('Privacy Tools', '(Admin)', 'gdpr'); ?>
 </h2>

@@ -132,7 +132,7 @@ class Installer
          */
         $this->adminTab->registerSettingSection(
             'gdpr-section-wizard',
-            __('Setup Wizard', 'gdpr-admin'),
+            _x('Setup Wizard', '(Admin)', 'gdpr'),
             [$this, 'renderWizardButtons']
         );
     }

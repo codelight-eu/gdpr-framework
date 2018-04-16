@@ -106,7 +106,7 @@ class DataSubjectAuthenticator
     /**
      * Remove the cookie
      */
-    public function deleteSession()
+    public function deleteSession($logout = true)
     {
         unset($_COOKIE['gdpr_key']);
 
@@ -120,6 +120,11 @@ class DataSubjectAuthenticator
             true
         );
 
-        wp_logout();
+        if ($logout) {
+            wp_logout();
+        } else {
+            wp_destroy_current_session();
+            wp_clear_auth_cookie();
+        }
     }
 }

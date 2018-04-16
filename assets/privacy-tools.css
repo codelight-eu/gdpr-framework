@@ -1,0 +1,30 @@
+.gdpr-framework-privacy-tools .gdpr-notice {
+  padding: 10px 20px;
+  border: 1px solid #666;
+}
+
+.gdpr-framework-privacy-tools .gdpr-consent td {
+  padding: 0.6em;
+}
+
+.gdpr-framework-privacy-tools .gdpr-consent td:first-child {
+  padding-left: 0;
+}
+
+.gdpr-framework-privacy-tools .gdpr-consent td:last-child {
+  padding-right: 0;
+}
+
+.gdpr-framework-privacy-tools .gdpr-download-button,
+.gdpr-framework-privacy-tools .gdpr-export-button,
+.gdpr-framework-privacy-tools .gdpr-delete-button {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.gdpr-framework-privacy-tools .gdpr-download-button input.button,
+.gdpr-framework-privacy-tools .gdpr-export-button input.button,
+.gdpr-framework-privacy-tools .gdpr-delete-button input.button {
+  min-width: 200px;
+}
