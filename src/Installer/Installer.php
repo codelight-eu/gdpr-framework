@@ -132,7 +132,7 @@ class Installer
          */
         $this->adminTab->registerSettingSection(
             'gdpr-section-wizard',
-            _x('Setup Wizard', '(Admin)', 'gdpr'),
+            _x('Setup Wizard', '(Admin)', 'gdpr-framework'),
             [$this, 'renderWizardButtons']
         );
     }
@@ -268,7 +268,7 @@ class Installer
     public function autoInstall()
     {
         $policyPageId = wp_insert_post([
-            'post_title'   => __('Privacy Policy', 'gdpr'),
+            'post_title'   => __('Privacy Policy', 'gdpr-framework'),
             'post_type'    => 'page',
         ]);
 
@@ -276,7 +276,7 @@ class Installer
 
         $toolsPageId = wp_insert_post([
             'post_content' => '[gdpr_privacy_tools]',
-            'post_title'   => __('Privacy Tools', 'gdpr'),
+            'post_title'   => __('Privacy Tools', 'gdpr-framework'),
             'post_type'    => 'page',
         ]);
         gdpr('options')->set('tools_page', $toolsPageId);

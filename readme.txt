@@ -9,11 +9,11 @@ Stable tag: 1.0.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-The easiest way to make your website GDPR-compliant. Fully documented, extendable and developer-friendly.
+Easy to use tools to help make your website GDPR-compliant. Fully documented, extendable and developer-friendly.
 
 == Description ==
 
-The easiest way to make your WordPress site GDPR compliant!
+Easy to use tools to help make your website GDPR-compliant.
 
 GDPR is a whopping 88 pages of legal text. Becoming compliant takes a lot more than just adding a couple of checkboxes to your forms! But worry not, we’ve got it covered. With help from [Triniti](https://triniti.eu), one of the top business and IT law firms in Europe, we’ve put together this plugin and written a thorough guide for making WordPress sites compliant with minimal effort.
 
@@ -40,10 +40,10 @@ We're just getting started. There's lots more to come!
 ### Plugin support:
 The GDPR Framework currently works with the following plugins
 &#9745; Contact Form 7
+&#9744; Gravity Forms - [download the gdpr add-on](https://wordpress.org/plugins/gdpr-for-gravity-forms/)
 &#9745; WPML
 
 Coming in April 2018:
-&#9744; Gravity Forms (Release: 17.04)
 &#9744; Formidable Forms (Release: 19.04)
 &#9744; Ninja Forms (Release: 25.04)
 &#9744; Contact Form 7 Flamingo
@@ -60,14 +60,17 @@ We're happy to add support for other major plugins as well. If you have a reques
 
 == Changelog ==
 
+= 1.0.3 =
+* Add proper support for translations
+* Change text domain to 'gdpr-framework' to avoid conflict with other plugins
+* Add Portuguese translation (Thanks @kativiti)
+
 = 1.0.2 =
 * Fix T&C and Privacy Policy URLs on registration and comments forms
 * Add basic styling and separate stylesheet for Privacy Tools page
 * Allow disabling styles for Privacy Tools page via admin
 * Add confirmation notice on deleting data via front-end Privacy Tools
-* Add support for translations
 * Change strings with 'gdpr-admin' domain back to 'gdpr'. Add context to all admin strings.
-* Add Portuguese translation (Thanks Vitor Lima!)
 
 = 1.0.1 =
 * Fix PHP notice on Privacy Tools frontend page if logged in as admin

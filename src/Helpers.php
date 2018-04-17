@@ -24,34 +24,34 @@ class Helpers
     public function getEUCountryList()
     {
         return [
-            'AT' => _x('Austria', '(Admin)', 'gdpr'),
-            'BE' => _x('Belgium', '(Admin)', 'gdpr'),
-            'BG' => _x('Bulgaria', '(Admin)', 'gdpr'),
-            'HR' => _x('Croatia','(Admin)', 'gdpr'),
-            'CY' => _x('Cyprus', '(Admin)', 'gdpr'),
-            'CZ' => _x('Czech Republic', '(Admin)', 'gdpr'),
-            'DK' => _x('Denmark', '(Admin)', 'gdpr'),
-            'EE' => _x('Estonia', '(Admin)', 'gdpr'),
-            'FI' => _x('Finland', '(Admin)', 'gdpr'),
-            'FR' => _x('France', '(Admin)', 'gdpr'),
-            'DE' => _x('Germany', '(Admin)', 'gdpr'),
-            'GR' => _x('Greece', '(Admin)', 'gdpr'),
-            'HU' => _x('Hungary', '(Admin)', 'gdpr'),
-            'IE' => _x('Ireland', '(Admin)', 'gdpr'),
-            'IT' => _x('Italy', '(Admin)', 'gdpr'),
-            'LV' => _x('Latvia', '(Admin)', 'gdpr'),
-            'LT' => _x('Lithuania', '(Admin)', 'gdpr'),
-            'LU' => _x('Luxembourg', '(Admin)', 'gdpr'),
-            'MT' => _x('Malta', '(Admin)', 'gdpr'),
-            'NL' => _x('Netherlands', '(Admin)', 'gdpr'),
-            'PL' => _x('Poland', '(Admin)', 'gdpr'),
-            'PT' => _x('Portugal', '(Admin)', 'gdpr'),
-            'RO' => _x('Romania', '(Admin)', 'gdpr'),
-            'SK' => _x('Slovakia', '(Admin)', 'gdpr'),
-            'SI' => _x('Slovenia', '(Admin)', 'gdpr'),
-            'ES' => _x('Spain', '(Admin)', 'gdpr'),
-            'SE' => _x('Sweden', '(Admin)', 'gdpr'),
-            'UK' => _x('United Kingdom', '(Admin)', 'gdpr'),
+            'AT' => _x('Austria', '(Admin)', 'gdpr-framework'),
+            'BE' => _x('Belgium', '(Admin)', 'gdpr-framework'),
+            'BG' => _x('Bulgaria', '(Admin)', 'gdpr-framework'),
+            'HR' => _x('Croatia','(Admin)', 'gdpr-framework'),
+            'CY' => _x('Cyprus', '(Admin)', 'gdpr-framework'),
+            'CZ' => _x('Czech Republic', '(Admin)', 'gdpr-framework'),
+            'DK' => _x('Denmark', '(Admin)', 'gdpr-framework'),
+            'EE' => _x('Estonia', '(Admin)', 'gdpr-framework'),
+            'FI' => _x('Finland', '(Admin)', 'gdpr-framework'),
+            'FR' => _x('France', '(Admin)', 'gdpr-framework'),
+            'DE' => _x('Germany', '(Admin)', 'gdpr-framework'),
+            'GR' => _x('Greece', '(Admin)', 'gdpr-framework'),
+            'HU' => _x('Hungary', '(Admin)', 'gdpr-framework'),
+            'IE' => _x('Ireland', '(Admin)', 'gdpr-framework'),
+            'IT' => _x('Italy', '(Admin)', 'gdpr-framework'),
+            'LV' => _x('Latvia', '(Admin)', 'gdpr-framework'),
+            'LT' => _x('Lithuania', '(Admin)', 'gdpr-framework'),
+            'LU' => _x('Luxembourg', '(Admin)', 'gdpr-framework'),
+            'MT' => _x('Malta', '(Admin)', 'gdpr-framework'),
+            'NL' => _x('Netherlands', '(Admin)', 'gdpr-framework'),
+            'PL' => _x('Poland', '(Admin)', 'gdpr-framework'),
+            'PT' => _x('Portugal', '(Admin)', 'gdpr-framework'),
+            'RO' => _x('Romania', '(Admin)', 'gdpr-framework'),
+            'SK' => _x('Slovakia', '(Admin)', 'gdpr-framework'),
+            'SI' => _x('Slovenia', '(Admin)', 'gdpr-framework'),
+            'ES' => _x('Spain', '(Admin)', 'gdpr-framework'),
+            'SE' => _x('Sweden', '(Admin)', 'gdpr-framework'),
+            'UK' => _x('United Kingdom', '(Admin)', 'gdpr-framework'),
         ];
     }
 
@@ -66,12 +66,12 @@ class Helpers
     {
         $eu      = $this->getEUCountryList();
         $outside = [
-            "IS"    => _x('Iceland', '(Admin)', 'gdpr'),
-            "NO"    => _x('Norway', '(Admin)', 'gdpr'),
-            "LI"    => _x('Liechtenstein', '(Admin)', 'gdpr'),
-            "CH"    => _x('Switzerland', '(Admin)', 'gdpr'),
-            "US"    => _x('United States', '(Admin)', 'gdpr'),
-            "other" => _x('Rest of the world', '(Admin)', 'gdpr'),
+            "IS"    => _x('Iceland', '(Admin)', 'gdpr-framework'),
+            "NO"    => _x('Norway', '(Admin)', 'gdpr-framework'),
+            "LI"    => _x('Liechtenstein', '(Admin)', 'gdpr-framework'),
+            "CH"    => _x('Switzerland', '(Admin)', 'gdpr-framework'),
+            "US"    => _x('United States', '(Admin)', 'gdpr-framework'),
+            "other" => _x('Rest of the world', '(Admin)', 'gdpr-framework'),
         ];
 
         return gdpr('view')->render('global/country-options', compact('eu', 'outside', 'current'));
@@ -142,7 +142,7 @@ class Helpers
     public function error()
     {
         wp_die(
-            __('An error has occurred. Please contact the site administrator.', 'gdpr')
+            __('An error has occurred. Please contact the site administrator.', 'gdpr-framework')
         );
     }
 

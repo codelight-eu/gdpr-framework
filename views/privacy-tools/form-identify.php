@@ -4,23 +4,23 @@
     <p>
         <br>
 
-        <a href="<?= gdpr('helpers')->getPrivacyToolsPageUrl(); ?>">
-            <?= __('Back to Privacy Tools', 'gdpr'); ?>
+        <a href="<?= get_home_url() ?>">
+            <?= __('Back to front page', 'gdpr-framework'); ?>
         </a>
     </p>
 <?php else: ?>
 
     <h3>
-        <?= __('Identify yourself!', 'gdpr'); ?>
+        <?= __('Identify yourself!', 'gdpr-framework'); ?>
     </h3>
     <form>
-        <label for="gdpr_email"><?= __('Enter your email address', 'gdpr') ?></label>
+        <label for="gdpr_email"><?= __('Enter your email address', 'gdpr-framework') ?></label>
         <input type="hidden" name="gdpr_action" value="identify" />
         <input type="hidden" name="gdpr_nonce" value="<?= $nonce ?>" />
-        <input type="email" id="gdpr_email" name="email" placeholder="<?= __('Enter your email address', 'gdpr') ?>" />
+        <input type="email" id="gdpr_email" name="email" placeholder="<?= __('Enter your email address', 'gdpr-framework') ?>" />
         <?php do_action('gdpr/privacy-tools-page/identify'); ?>
 
-        <input type="submit" value="<?= __('Send email', 'gdpr') ?>" />
+        <input type="submit" value="<?= __('Send email', 'gdpr-framework') ?>" />
     </form>
 
 <?php endif; ?>

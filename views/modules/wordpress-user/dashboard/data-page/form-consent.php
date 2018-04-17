@@ -1,11 +1,11 @@
 <?php if (count($consentData) or $consentInfo): ?>
     <hr>
-    <h2><?= __('Manage consents', 'gdpr'); ?></h2>
+    <h2><?= __('Manage consents', 'gdpr-framework'); ?></h2>
     <?php if (count($consentData)): ?>
         <form method="post">
-            <p><?= __('Here you can withdraw any consents you have given.', 'gdpr'); ?></p>
+            <p><?= __('Here you can withdraw any consents you have given.', 'gdpr-framework'); ?></p>
             <table class="gdpr-consent gdpr-consent-user">
-                <th colspan="3"><?= __('Consent types', 'gdpr'); ?></th>
+                <th colspan="3"><?= __('Consent types', 'gdpr-framework'); ?></th>
                 <?php foreach ($consentData as $item): ?>
                     <tr>
                         <td>
@@ -20,7 +20,7 @@
                         <td>
                             <?php if ('privacy-policy' !== $item['slug']): ?>
                                 <a href="<?= esc_url($item['withdraw_url']); ?>" class="button button-primary">
-                                    <?= __('Withdraw', 'gdpr'); ?>
+                                    <?= __('Withdraw', 'gdpr-framework'); ?>
                                 </a>
                             <?php endif; ?>
                         </td>

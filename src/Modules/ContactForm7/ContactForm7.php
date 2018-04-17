@@ -32,7 +32,7 @@ class ContactForm7
 
         $generator->add(
             'gdpr_privacy',
-            _x('gdpr terms txt', '(Admin)', 'gdpr'),
+            _x('gdpr terms txt', '(Admin)', 'gdpr-framework'),
             [$this, 'generatePrivacyTag']
         );
     }
@@ -40,8 +40,8 @@ class ContactForm7
     public function generatePrivacyTag($contactForm, $args)
     {
         //$args = wp_parse_args( $args, array() );
-        //$description = _x( "Generate the default text for your Privacy Policy acceptance checkbox. For more details, see %s.", '(Admin)', 'gdpr' );
-        //$descLink = wpcf7_link( _x( 'https://TODO', '(Admin)', 'gdpr' ), _x( 'GDPR Terms', '(Admin)', 'gdpr' ) );
+        //$description = _x( "Generate the default text for your Privacy Policy acceptance checkbox. For more details, see %s.", '(Admin)', 'gdpr-framework' );
+        //$descLink = wpcf7_link( _x( 'https://TODO', '(Admin)', 'gdpr-framework' ), _x( 'GDPR Terms', '(Admin)', 'gdpr-framework' ) );
         //$content = $this->renderPrivacyTag();
 
         echo gdpr('view')->render(

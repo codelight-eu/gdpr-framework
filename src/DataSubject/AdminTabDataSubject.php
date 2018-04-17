@@ -24,7 +24,7 @@ class AdminTabDataSubject extends AdminTab
      */
     public function __construct(DataSubjectManager $dataSubjectManager)
     {
-        $this->title = _x('Data Subjects', '(Admin)', 'gdpr');
+        $this->title = _x('Data Subjects', '(Admin)', 'gdpr-framework');
         $this->dataSubjectManager = $dataSubjectManager;
 
         // Workaround to allow this page to be submitted
@@ -38,7 +38,7 @@ class AdminTabDataSubject extends AdminTab
     {
         $this->registerSettingSection(
             'gdpr-section-data-subjects',
-            _x('Data Subjects', '(Admin)', 'gdpr'),
+            _x('Data Subjects', '(Admin)', 'gdpr-framework'),
             [$this, 'renderTab']
         );
     }

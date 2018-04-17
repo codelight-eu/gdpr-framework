@@ -20,7 +20,7 @@ class ConfigurationPages extends InstallerStep implements InstallerStepInterface
         $privacyToolsPage         = gdpr('options')->get('tools_page');
         $privacyToolsPageSelector = wp_dropdown_pages([
             'name'              => 'gdpr_tools_page',
-            'show_option_none'  => _x('&mdash; Create a new page &mdash;', '(Admin)', 'gdpr'),
+            'show_option_none'  => _x('&mdash; Create a new page &mdash;', '(Admin)', 'gdpr-framework'),
             'option_none_value' => 'new',
             'selected'          => $privacyToolsPage ? $privacyToolsPage : 'new',
             'echo'              => false,
@@ -52,7 +52,7 @@ class ConfigurationPages extends InstallerStep implements InstallerStepInterface
     {
         $id = wp_insert_post([
             'post_content' => '[gdpr_privacy_tools]',
-            'post_title'   => __('Privacy Tools', 'gdpr'),
+            'post_title'   => __('Privacy Tools', 'gdpr-framework'),
             'post_type'    => 'page',
         ]);
 

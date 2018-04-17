@@ -1,6 +1,6 @@
-<h3><?= _x('Privacy Policy', '(Admin)', 'gdpr'); ?></h3>
+<h3><?= _x('Privacy Policy', '(Admin)', 'gdpr-framework'); ?></h3>
 <p>
-    <?= _x('Your Privacy Policy has been generated.', '(Admin)', 'gdpr'); ?>
+    <?= _x('Your Privacy Policy has been generated.', '(Admin)', 'gdpr-framework'); ?>
     <?php if ($policyUrl): ?>
         <?= __(
             sprintf(
@@ -9,7 +9,7 @@
                 "</a>"
             ),
             '(Admin)',
-            'gdpr'
+            'gdpr-framework'
         ); ?>
     <?php endif; ?>
 </p>
@@ -17,5 +17,5 @@
 <?= $editor; ?>
 
 <br>
-<a href="<?= $backUrl; ?>" class="button button-secondary"><?= _x('&laquo; Back', '(Admin)', 'gdpr'); ?></a>
+<a href="<?= $backUrl; ?>" class="button button-secondary"><?= _x('&laquo; Back', '(Admin)', 'gdpr-framework'); ?></a>
 <br><br>

@@ -62,7 +62,7 @@ class DataSubjectIdentificator
         // todo: handle or log email sending errors
         wp_mail(
             $email,
-            __("Your personal data on", 'gdpr') . ' ' . $siteName,
+            __("Your personal data on", 'gdpr-framework') . ' ' . $siteName,
             gdpr('view')->render('email/identify-data-subject', compact('identificationUrl', 'siteName')),
             ['Content-Type: text/html; charset=UTF-8']
         );
@@ -79,7 +79,7 @@ class DataSubjectIdentificator
 
         wp_mail(
             $email,
-            __("Your personal data on", 'gdpr') . ' ' . $siteName,
+            __("Your personal data on", 'gdpr-framework') . ' ' . $siteName,
             gdpr('view')->render('email/no-data', compact('siteName')),
             ['Content-Type: text/html; charset=UTF-8']
         );

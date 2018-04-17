@@ -6,5 +6,5 @@
     <?php echo checked($enabled, true); ?>
 />
 <label for="gdpr_enable_stylesheet">
-    <?php _ex('Enable basic styling for Privacy Tools page.', '(Admin)', 'gdpr'); ?>
+    <?php _ex('Enable basic styling for Privacy Tools page.', '(Admin)', 'gdpr-framework'); ?>
 </label>

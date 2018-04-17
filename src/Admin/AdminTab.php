@@ -112,7 +112,7 @@ abstract class AdminTab implements AdminTabInterface
      */
     public function renderSubmitButton()
     {
-        submit_button(_x('Save', '(Admin)', 'gdpr'));
+        submit_button(_x('Save', '(Admin)', 'gdpr-framework'));
     }
 
     /**
@@ -148,7 +148,7 @@ abstract class AdminTab implements AdminTabInterface
         }
 
         if ('policy_generated' === $_REQUEST['gdpr_notice']) {
-            $message = _x('Policy generated!', '(Admin)', 'gdpr');
+            $message = _x('Policy generated!', '(Admin)', 'gdpr-framework');
             $class = 'notice notice-success';
         }
 

@@ -16,7 +16,7 @@ class PrivacyToolsPageShortcode
     public function renderPage()
     {
         if (!gdpr('options')->get('enable')) {
-            return __('This page is currently disabled.', 'gdpr');
+            return __('This page is currently disabled.', 'gdpr-framework');
         }
 
         ob_start();
@@ -32,7 +32,7 @@ class PrivacyToolsPageShortcode
     public function renderLinkShortcode($attributes)
     {
         $attributes = shortcode_atts([
-            'title' => __('Privacy Tools', 'gdpr'),
+            'title' => __('Privacy Tools', 'gdpr-framework'),
         ], $attributes);
 
         $url = gdpr('helpers')->getPrivacyToolsPageUrl();

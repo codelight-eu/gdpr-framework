@@ -8,7 +8,7 @@ class AdminTabGeneral extends AdminTab
 
     public function __construct()
     {
-        $this->title = _x('General', '(Admin)', 'gdpr');
+        $this->title = _x('General', '(Admin)', 'gdpr-framework');
 
         $this->registerSetting('gdpr_enable');
 
@@ -35,12 +35,12 @@ class AdminTabGeneral extends AdminTab
          */
         $this->registerSettingSection(
             'gdpr_section_general',
-            _x('General Settings', '(Admin)', 'gdpr')
+            _x('General Settings', '(Admin)', 'gdpr-framework')
         );
 
         $this->registerSettingField(
             'gdpr_enable',
-            _x('Enable Privacy Tools', '(Admin)', 'gdpr'),
+            _x('Enable Privacy Tools', '(Admin)', 'gdpr-framework'),
             [$this, 'renderEnableCheckbox'],
             'gdpr_section_general'
         );
@@ -50,26 +50,26 @@ class AdminTabGeneral extends AdminTab
          */
         $this->registerSettingSection(
             'gdpr_section_pages',
-            _x('Pages', '(Admin)', 'gdpr')
+            _x('Pages', '(Admin)', 'gdpr-framework')
         );
 
         $this->registerSettingField(
             'gdpr_tools_page',
-            _x('Privacy Tools Page', '(Admin)', 'gdpr') . '*',
+            _x('Privacy Tools Page', '(Admin)', 'gdpr-framework') . '*',
             [$this, 'renderPrivacyToolsPageSelector'],
             'gdpr_section_pages'
         );
 
         $this->registerSettingField(
             'gdpr_policy_page',
-            _x('Privacy Policy Page', '(Admin)', 'gdpr') . '*',
+            _x('Privacy Policy Page', '(Admin)', 'gdpr-framework') . '*',
             [$this, 'renderPolicyPageSelector'],
             'gdpr_section_pages'
         );
 
         $this->registerSettingField(
             'gdpr_terms_page',
-            _x('Terms & Conditions Page', '(Admin)', 'gdpr'),
+            _x('Terms & Conditions Page', '(Admin)', 'gdpr-framework'),
             [$this, 'renderTermsPageSelector'],
             'gdpr_section_pages'
         );
@@ -79,19 +79,19 @@ class AdminTabGeneral extends AdminTab
          */
         $this->registerSettingSection(
             'gdpr_section_export',
-            _x('View & Export Data', '(Admin)', 'gdpr')
+            _x('View & Export Data', '(Admin)', 'gdpr-framework')
         );
 
         $this->registerSettingField(
             'gdpr_export_action',
-            _x('Export action', '(Admin)', 'gdpr'),
+            _x('Export action', '(Admin)', 'gdpr-framework'),
             [$this, 'renderExportActionSelector'],
             'gdpr_section_export'
         );
 
         $this->registerSettingField(
             'gdpr_export_action_email',
-            _x('Email to notify', '(Admin)', 'gdpr'),
+            _x('Email to notify', '(Admin)', 'gdpr-framework'),
             [$this, 'renderExportActionEmail'],
             'gdpr_section_export',
             ['class' => 'js-gdpr-export-action-email hidden']
@@ -102,19 +102,19 @@ class AdminTabGeneral extends AdminTab
          */
         $this->registerSettingSection(
             'gdpr_section_delete',
-            _x('Delete & Anonymize Data', '(Admin)', 'gdpr')
+            _x('Delete & Anonymize Data', '(Admin)', 'gdpr-framework')
         );
 
         $this->registerSettingField(
             'gdpr_delete_action',
-            _x('Delete action', '(Admin)', 'gdpr'),
+            _x('Delete action', '(Admin)', 'gdpr-framework'),
             [$this, 'renderDeleteActionSelector'],
             'gdpr_section_delete'
         );
 
         $this->registerSettingField(
             'gdpr_delete_action_reassign',
-            _x('Delete or reassign content?', '(Admin)', 'gdpr'),
+            _x('Delete or reassign content?', '(Admin)', 'gdpr-framework'),
             [$this, 'renderDeleteActionReassign'],
             'gdpr_section_delete',
             ['class' => 'js-gdpr-delete-action-reassign hidden']
@@ -122,7 +122,7 @@ class AdminTabGeneral extends AdminTab
 
         $this->registerSettingField(
             'gdpr_delete_action_reassign_user',
-            _x('Reassign content to', '(Admin)', 'gdpr'),
+            _x('Reassign content to', '(Admin)', 'gdpr-framework'),
             [$this, 'renderDeleteActionReassignUser'],
             'gdpr_section_delete',
             ['class' => 'js-gdpr-delete-action-reassign-user hidden']
@@ -130,7 +130,7 @@ class AdminTabGeneral extends AdminTab
 
         $this->registerSettingField(
             'gdpr_delete_action_email',
-            _x('Email to notify', '(Admin)', 'gdpr'),
+            _x('Email to notify', '(Admin)', 'gdpr-framework'),
             [$this, 'renderDeleteActionEmail'],
             'gdpr_section_delete',
             ['class' => 'js-gdpr-delete-action-email hidden']
@@ -142,12 +142,12 @@ class AdminTabGeneral extends AdminTab
 
         $this->registerSettingSection(
             'gdpr_section_stylesheet',
-            _x('Styling', '(Admin)', 'gdpr')
+            _x('Styling', '(Admin)', 'gdpr-framework')
         );
 
         $this->registerSettingField(
             'gdpr_enable_theme_compatibility',
-            _x('Enable basic styling on Privacy Tools page', '(Admin)', 'gdpr'),
+            _x('Enable basic styling on Privacy Tools page', '(Admin)', 'gdpr-framework'),
             [$this, 'renderStylesheetSelector'],
             'gdpr_section_stylesheet'
         );
@@ -159,12 +159,12 @@ class AdminTabGeneral extends AdminTab
              */
             $this->registerSettingSection(
                 'gdpr_section_compatibility',
-                _x('Compatibility', '(Admin)', 'gdpr')
+                _x('Compatibility', '(Admin)', 'gdpr-framework')
             );
 
             $this->registerSettingField(
                 'gdpr_enable_theme_compatibility',
-                _x('Enable automatic theme compatibility', '(Admin)', 'gdpr'),
+                _x('Enable automatic theme compatibility', '(Admin)', 'gdpr-framework'),
                 [$this, 'renderThemeCompatibilitySelector'],
                 'gdpr_section_compatibility'
             );
@@ -181,7 +181,7 @@ class AdminTabGeneral extends AdminTab
     {
         wp_dropdown_pages([
             'name'              => 'gdpr_tools_page',
-            'show_option_none'  => _x('&mdash; Select &mdash;', '(Admin)', 'gdpr'),
+            'show_option_none'  => _x('&mdash; Select &mdash;', '(Admin)', 'gdpr-framework'),
             'option_none_value' => '0',
             'selected'          => gdpr('options')->get('tools_page'),
             'class'             => 'js-gdpr-select2 gdpr-select',
@@ -197,7 +197,7 @@ class AdminTabGeneral extends AdminTab
     {
         wp_dropdown_pages([
             'name'              => 'gdpr_policy_page',
-            'show_option_none'  => _x('&mdash; Select &mdash;', '(Admin)', 'gdpr'),
+            'show_option_none'  => _x('&mdash; Select &mdash;', '(Admin)', 'gdpr-framework'),
             'option_none_value' => '0',
             'selected'          => gdpr('options')->get('policy_page'),
             'class'             => 'js-gdpr-select2 gdpr-select',
@@ -210,7 +210,7 @@ class AdminTabGeneral extends AdminTab
     {
         wp_dropdown_pages([
             'name'              => 'gdpr_terms_page',
-            'show_option_none'  => _x('&mdash; Select &mdash;', '(Admin)', 'gdpr'),
+            'show_option_none'  => _x('&mdash; Select &mdash;', '(Admin)', 'gdpr-framework'),
             'option_none_value' => '0',
             'selected'          => gdpr('options')->get('terms_page'),
             'class'             => 'js-gdpr-select2 gdpr-select',
@@ -249,7 +249,7 @@ class AdminTabGeneral extends AdminTab
     {
         wp_dropdown_users([
             'name'              => 'gdpr_delete_action_reassign_user',
-            'show_option_none'  => _x('&mdash; Select &mdash;', '(Admin)', 'gdpr'),
+            'show_option_none'  => _x('&mdash; Select &mdash;', '(Admin)', 'gdpr-framework'),
             'option_none_value' => '0',
             'selected'          => gdpr('options')->get('delete_action_reassign_user'),
             'class'             => 'js-gdpr-select2 gdpr-select',

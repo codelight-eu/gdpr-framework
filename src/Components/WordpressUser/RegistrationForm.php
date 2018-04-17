@@ -39,7 +39,7 @@ class RegistrationForm
     public function validate(\WP_Error $errors)
     {
         if (empty($_POST['gdpr_terms']) || !$_POST['gdpr_terms']) {
-            $errors->add('gdpr_error', __('<strong>ERROR</strong>: You must accept the terms and conditions.', 'gdpr'));
+            $errors->add('gdpr_error', __('<strong>ERROR</strong>: You must accept the terms and conditions.', 'gdpr-framework'));
         } else {
             $dataSubject = $this->dataSubjectManager->getByEmail($_POST['user_email']);
             $dataSubject->giveConsent('privacy-policy');

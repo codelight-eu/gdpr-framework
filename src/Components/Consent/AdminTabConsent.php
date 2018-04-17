@@ -27,7 +27,7 @@ class AdminTabConsent extends AdminTab
     {
         $this->consentManager = $consentManager;
 
-        $this->title = _x('Consent', '(Admin)', 'gdpr');
+        $this->title = _x('Consent', '(Admin)', 'gdpr-framework');
 
         // If we don't register the settings, WP will not allow this page to be submitted
         $this->registerSetting('consent_types');
@@ -46,7 +46,7 @@ class AdminTabConsent extends AdminTab
     {
         $this->registerSettingSection(
             'gdpr_section_consent',
-            _x('Consent', '(Admin)', 'gdpr'),
+            _x('Consent', '(Admin)', 'gdpr-framework'),
             [$this, 'renderConsentForm']
         );
     }
@@ -154,17 +154,17 @@ class AdminTabConsent extends AdminTab
 
             foreach ($_GET['errors'] as $error) {
                 if ('slug-empty' === $error) {
-                    $message = _x("Consent slug is a required field!", '(Admin)', 'gdpr');
+                    $message = _x("Consent slug is a required field!", '(Admin)', 'gdpr-framework');
                     gdpr('admin-error')->add('admin/notices/error', compact('message'));
                 }
 
                 if ('slug-invalid' === $error) {
-                    $message = _x("You may only use alphanumeric characters, dash and underscore in the consent slug field.", '(Admin)', 'gdpr');
+                    $message = _x("You may only use alphanumeric characters, dash and underscore in the consent slug field.", '(Admin)', 'gdpr-framework');
                     gdpr('admin-error')->add('admin/notices/error', compact('message'));
                 }
 
                 if ('title-empty' === $error) {
-                    $message = _x("Consent title is a required field!", '(Admin)', 'gdpr');
+                    $message = _x("Consent title is a required field!", '(Admin)', 'gdpr-framework');
                     gdpr('admin-error')->add('admin/notices/error', compact('message'));
                 }
             }
@@ -176,6 +176,6 @@ class AdminTabConsent extends AdminTab
      */
     public function getDefaultConsentInfo()
     {
-        return 'To use this website, you accepted our Privacy Policy. If you wish to withdraw your acceptance, please use the "Delete my data" button below.';
+        return __('To use this website, you accepted our Privacy Policy. If you wish to withdraw your acceptance, please use the "Delete my data" button below.', 'gdpr-framework');
     }
 }

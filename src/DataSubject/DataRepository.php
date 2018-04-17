@@ -140,7 +140,7 @@ class DataRepository
     {
         wp_mail(
             gdpr('options')->get('export_action_email'),
-            __("Data exported", 'gdpr'),
+            __("Data exported", 'gdpr-framework'),
             gdpr('view')->render('email/action-export', compact('email', 'format')),
             ['Content-Type: text/html; charset=UTF-8']
         );
@@ -155,7 +155,7 @@ class DataRepository
 
         wp_mail(
             gdpr('options')->get('export_action_email'),
-            __("Data export request", 'gdpr'),
+            __("Data export request", 'gdpr-framework'),
             gdpr('view')->render('email/request-export', compact('email', 'format', 'adminTabLink')),
             ['Content-Type: text/html; charset=UTF-8']
         );
@@ -168,7 +168,7 @@ class DataRepository
     {
         wp_mail(
             gdpr('options')->get('delete_action_email'),
-            __("Data removed", 'gdpr'),
+            __("Data removed", 'gdpr-framework'),
             gdpr('view')->render('email/action-forget', compact('email', 'userId')),
             ['Content-Type: text/html; charset=UTF-8']
         );
@@ -183,7 +183,7 @@ class DataRepository
 
         wp_mail(
             gdpr('options')->get('delete_action_email'),
-            __("Data removal request", 'gdpr'),
+            __("Data removal request", 'gdpr-framework'),
             gdpr('view')->render('email/request-forget', compact('email', 'adminTabLink')),
             ['Content-Type: text/html; charset=UTF-8']
         );

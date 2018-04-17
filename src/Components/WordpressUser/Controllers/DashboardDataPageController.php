@@ -51,12 +51,12 @@ class DashboardDataPageController
         }
 
         if ('request_sent' === $_REQUEST['gdpr_notice']) {
-            $message = __('We have received your request and will reply within 30 days.', 'gdpr');
+            $message = __('We have received your request and will reply within 30 days.', 'gdpr-framework');
             $class = 'notice notice-success';
         }
 
         if ('consent_withdrawn' === $_REQUEST['gdpr_notice']) {
-            $message = __('Consent withdrawn.', 'gdpr');
+            $message = __('Consent withdrawn.', 'gdpr-framework');
             $class = 'notice notice-success';
         }
 

@@ -77,7 +77,7 @@ class Router
             } else {
                 wp_die(
                     sprintf(
-                        __('Nonce error for action "%s". Please go back and try again!', 'gdpr'),
+                        __('Nonce error for action "%s". Please go back and try again!', 'gdpr-framework'),
                         esc_html($action)
                     )
                 );
@@ -89,7 +89,7 @@ class Router
             } else {
                 wp_die(
                     sprintf(
-                        __('Nonce error for action "%s". Please go back and try again!', 'gdpr'),
+                        __('Nonce error for action "%s". Please go back and try again!', 'gdpr-framework'),
                         esc_html($action)
                     )
                 );
@@ -122,7 +122,7 @@ class Router
                 } else {
                     wp_die(
                         sprintf(
-                            __('Nonce error for action "%s". Please go back and try again!', 'gdpr'),
+                            __('Nonce error for action "%s". Please go back and try again!', 'gdpr-framework'),
                             esc_html($action)
                         )
                     );
@@ -138,7 +138,7 @@ class Router
                 } else {
                     wp_die(
                         sprintf(
-                            __('Nonce error for action "%s". Please go back and try again!', 'gdpr'),
+                            __('Nonce error for action "%s". Please go back and try again!', 'gdpr-framework'),
                             esc_html($action)
                         )
                     );
@@ -146,7 +146,7 @@ class Router
             } else {
                 wp_die(
                     sprintf(
-                        _x('You do not have the required permissions to perform this action!', '(Admin)', 'gdpr'),
+                        _x('You do not have the required permissions to perform this action!', '(Admin)', 'gdpr-framework'),
                         esc_html($action)
                     )
                 );

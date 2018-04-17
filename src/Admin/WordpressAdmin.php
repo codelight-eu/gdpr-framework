@@ -62,8 +62,8 @@ class WordpressAdmin
     public function registerGDPROptionsPage()
     {
         add_management_page(
-            _x('Privacy & GDPR Settings', '(Admin)', 'gdpr'),
-            _x('Privacy', '(Admin)', 'gdpr'),
+            _x('Privacy & GDPR Settings', '(Admin)', 'gdpr-framework'),
+            _x('Privacy', '(Admin)', 'gdpr-framework'),
             'manage_options',
             'privacy',
             [$this->adminPage, 'renderPage']
@@ -144,11 +144,11 @@ class WordpressAdmin
     public function registerPostStates($postStates, $post)
     {
         if (gdpr('options')->get('policy_page') == $post->ID) {
-            $postStates['gdpr_policy_page'] = _x('Privacy Policy Page', '(Admin)', 'gdpr');
+            $postStates['gdpr_policy_page'] = _x('Privacy Policy Page', '(Admin)', 'gdpr-framework');
         }
 
         if (gdpr('options')->get('tools_page') == $post->ID) {
-            $postStates['gdpr_tools_page'] = _x('Privacy Tools Page', '(Admin)', 'gdpr');
+            $postStates['gdpr_tools_page'] = _x('Privacy Tools Page', '(Admin)', 'gdpr-framework');
         }
 
         return $postStates;

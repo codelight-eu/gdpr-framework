@@ -1,7 +1,7 @@
 <hr>
 <?php if (count($consentData)): ?>
     <table class="gdpr-consent">
-        <th colspan="2"><?= _x('Consents given', '(Admin)', 'gdpr'); ?></th>
+        <th colspan="2"><?= _x('Consents given', '(Admin)', 'gdpr-framework'); ?></th>
         <?php foreach ($consentData as $item): ?>
             <tr>
                 <td>
@@ -14,5 +14,5 @@
         <?php endforeach; ?>
     </table>
 <?php else: ?>
-    <p><?= _x('No consents given', '(Admin)', 'gdpr'); ?>.</p>
+    <p><?= _x('No consents given', '(Admin)', 'gdpr-framework'); ?>.</p>
 <?php endif; ?>

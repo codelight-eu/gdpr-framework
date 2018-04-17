@@ -2,7 +2,7 @@
     <?php do_action('gdpr/frontend/privacy-tools-page/content/before', $dataSubject); ?>
 
     <p>
-        <?= __('You are identified as', 'gdpr'); ?> <strong><?= esc_html($email); ?></strong>
+        <?= __('You are identified as', 'gdpr-framework'); ?> <strong><?= esc_html($email); ?></strong>
     </p>
 
     <hr>

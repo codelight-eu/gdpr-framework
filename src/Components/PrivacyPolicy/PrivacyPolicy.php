@@ -79,7 +79,7 @@ class PrivacyPolicy
     public function renderLinkShortcode($attributes)
     {
         $attributes = shortcode_atts([
-            'title' => __('Privacy Policy', 'gdpr'),
+            'title' => __('Privacy Policy', 'gdpr-framework'),
         ], $attributes);
 
         $url = gdpr('helpers')->getPrivacyPolicyPageUrl();

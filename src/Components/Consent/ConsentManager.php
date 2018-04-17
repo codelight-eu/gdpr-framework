@@ -43,11 +43,11 @@ class ConsentManager
         gdpr('consent')->register(
             'privacy-policy',
             sprintf(
-                __('I accept the %sPrivacy Policy%s', 'gdpr'),
+                __('I accept the %sPrivacy Policy%s', 'gdpr-framework'),
                 "<a href='{$policyPageUrl}' target='_blank'>",
                 "</a>"
             ),
-            _x('This consent is not visible by default. If someone wishes to withdraw it, they should simply request to delete all their data.', '(Admin)', 'gdpr'),
+            _x('This consent is not visible by default. If someone wishes to withdraw it, they should simply request to delete all their data.', '(Admin)', 'gdpr-framework'),
             false
         );
 
@@ -62,11 +62,11 @@ class ConsentManager
             gdpr('consent')->register(
                 'terms-conditions',
                 sprintf(
-                    __('I accept the %sTerms & Conditions%s', 'gdpr'),
+                    __('I accept the %sTerms & Conditions%s', 'gdpr-framework'),
                     "<a href='{$termsPageUrl}' target='_blank'>",
                     "</a>"
                 ),
-                _x('This consent is not visible by default. If someone wishes to withdraw it, they should simply request to delete all their data.', '(Admin)', 'gdpr'),
+                _x('This consent is not visible by default. If someone wishes to withdraw it, they should simply request to delete all their data.', '(Admin)', 'gdpr-framework'),
                 false
             );
         }

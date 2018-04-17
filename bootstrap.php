@@ -57,7 +57,7 @@ register_activation_hook(__FILE__, function () {
 
         add_role(
             'anonymous',
-            _x('Anonymous', '(Admin)', 'gdpr'),
+            _x('Anonymous', '(Admin)', 'gdpr-framework'),
             []
         );
     }

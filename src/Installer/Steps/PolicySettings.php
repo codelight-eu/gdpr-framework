@@ -20,7 +20,7 @@ class PolicySettings extends InstallerStep implements InstallerStepInterface
         $policyPage         = gdpr('options')->get('policy_page');
         $policyPageSelector = wp_dropdown_pages([
             'name'              => 'gdpr_policy_page',
-            'show_option_none'  => _x('&mdash; Create a new page &mdash;', '(Admin)', 'gdpr'),
+            'show_option_none'  => _x('&mdash; Create a new page &mdash;', '(Admin)', 'gdpr-framework'),
             'option_none_value' => 'new',
             'selected'          => $policyPage ? $policyPage : 'new',
             'echo'              => false,
@@ -37,7 +37,7 @@ class PolicySettings extends InstallerStep implements InstallerStepInterface
             $termsPageNote = _x(
                 'We have automatically selected your WooCommerce Terms & Conditions page.',
                 '(Admin)',
-                'gdpr'
+                'gdpr-framework'
             );
         } else {
             $termsPageNote = false;
@@ -45,7 +45,7 @@ class PolicySettings extends InstallerStep implements InstallerStepInterface
 
         $termsPageSelector = wp_dropdown_pages([
             'name'              => 'gdpr_terms_page',
-            'show_option_none'  => _x('&mdash; Create a new page &mdash;', '(Admin)', 'gdpr'),
+            'show_option_none'  => _x('&mdash; Create a new page &mdash;', '(Admin)', 'gdpr-framework'),
             'option_none_value' => 'new',
             'selected'          => $termsPage ? $termsPage : 'new',
             'echo'              => false,
@@ -196,7 +196,7 @@ class PolicySettings extends InstallerStep implements InstallerStepInterface
     protected function createPolicyPage()
     {
         $id = wp_insert_post([
-            'post_title'   => __('Privacy Policy', 'gdpr'),
+            'post_title'   => __('Privacy Policy', 'gdpr-framework'),
             'post_type'    => 'page',
         ]);
 
