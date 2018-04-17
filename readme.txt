@@ -61,9 +61,9 @@ We're happy to add support for other major plugins as well. If you have a reques
 == Changelog ==
 
 = 1.0.3 =
-* Add proper support for translations
 * Change text domain to 'gdpr-framework' to avoid conflict with other plugins
 * Add Portuguese translation (Thanks @kativiti)
+* Add partial Estonian translation
 
 = 1.0.2 =
 * Fix T&C and Privacy Policy URLs on registration and comments forms
