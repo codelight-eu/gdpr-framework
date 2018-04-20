@@ -150,4 +150,21 @@ class Helpers
     {
         return 'https://codelight.eu/wordpress-gdpr-framework/' . $url;
     }
+
+    /**
+     * Wrapper around wp_mail() to filter the headers
+     * Example code for changing the sender email:
+     *
+     *  add_filter('gdpr/mail/headers', function($headers) {
+            $headers[] = 'From: Firstname Lastname <test@example.com>';
+            return $headers;
+        });
+     *
+     *
+     */
+    public function mail($to, $subject, $message, $headers = '', $attachments = [])
+    {
+        $headers = apply_filters('gdpr/mail/headers', $headers);
+        wp_mail($to, $subject, $message, $headers, $attachments);
+    }
 }
