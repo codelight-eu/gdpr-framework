@@ -67,4 +67,5 @@ register_activation_hook(__FILE__, function () {
     }
 
     update_option('gdpr_enable_stylesheet', true);
+    update_option('gdpr_enable', true);
 });
