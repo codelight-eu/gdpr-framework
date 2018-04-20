@@ -5,7 +5,7 @@ Tags: gdpr
 Requires at least: 4.7
 Tested up to: 4.9.4
 Requires PHP: 5.6.33
-Stable tag: 1.0.3
+Stable tag: 1.0.5
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -59,6 +59,9 @@ Other integrations coming soon:
 We're happy to add support for other major plugins as well. If you have a request, get in touch!
 
 == Changelog ==
+
+= 1.0.5 =
+* Add Spanish support (Thanks @elarequi!)
 
 = 1.0.4 =
 * Fix translations, for real this time
