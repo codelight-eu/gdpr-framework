@@ -32,6 +32,14 @@
                     '<a href="https://codelight.eu/" target="_blank">',
                         '</a>'
                 ); ?>
+                &nbsp;
+                |
+                &nbsp;
+                <?= sprintf(
+                    _x("Support our development efforts with a %s5-star rating%s.", '(Admin)', 'gdpr-framework'),
+                    '<a href="https://wordpress.org/plugins/gdpr-framework/#reviews" target="_blank">',
+                    '</a>'
+                ); ?>
             </em>
         </p>
     <?php endif; ?>

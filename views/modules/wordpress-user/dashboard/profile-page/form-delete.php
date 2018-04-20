@@ -15,7 +15,7 @@
                 </a>
                 <br/>
                 <p class="description">
-                    <?= _z('Be careful - this action is permanent and CANNOT be undone.', 'gdpr-framework') ?>
+                    <?= _x('Be careful - this action is permanent and CANNOT be undone.', 'gdpr-framework') ?>
                 </p>
             <?php else: ?>
                 <p>
