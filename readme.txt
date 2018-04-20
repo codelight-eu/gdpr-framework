@@ -40,7 +40,7 @@ We're just getting started. There's lots more to come!
 ### Plugin support:
 The GDPR Framework currently works with the following plugins
 &#9745; Contact Form 7
-&#9744; Gravity Forms - [download the gdpr add-on](https://wordpress.org/plugins/gdpr-for-gravity-forms/)
+&#9745; Gravity Forms - [Download the GDPR add-on](https://wordpress.org/plugins/gdpr-for-gravity-forms/)
 &#9745; WPML
 
 Coming in April 2018:
@@ -59,6 +59,8 @@ Other integrations coming soon:
 We're happy to add support for other major plugins as well. If you have a request, get in touch!
 
 == Changelog ==
+
+= 1.0.4 =
 
 = 1.0.3 =
 * Add proper support for translations
