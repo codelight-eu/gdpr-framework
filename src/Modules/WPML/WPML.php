@@ -78,23 +78,25 @@ class WPML
         $code                 = ICL_LANGUAGE_CODE;
         $filteredConsentTypes = [];
 
-        foreach ($consentTypes as $consentType) {
+        if (count($consentTypes)) {
+            foreach ($consentTypes as $consentType) {
 
-        	if ('privacy-policy' === $consentType['slug'] or 'terms-condition' === $consentType['slug']) {
-				$filteredConsentTypes[] = [
-	                'slug'        => isset($consentType['slug']) ? $consentType['slug'] : '',
-	                'visible'     => isset($consentType['visible']) ? $consentType['visible'] : 0,
-	                'title'       => isset($consentType["title"]) ? $consentType["title"] : '',
-	                'description' => isset($consentType["description"]) ? $consentType["description"] : '',
-	            ];
-        	} else {
-        		$filteredConsentTypes[] = [
-	                'slug'        => isset($consentType['slug']) ? $consentType['slug'] : '',
-	                'visible'     => isset($consentType['visible']) ? $consentType['visible'] : 0,
-	                'title'       => isset($consentType["{$code}_title"]) ? $consentType["{$code}_title"] : '',
-	                'description' => isset($consentType["{$code}_description"]) ? $consentType["{$code}_description"] : '',
-	            ];
-        	}            
+                if ('privacy-policy' === $consentType['slug'] or 'terms-condition' === $consentType['slug']) {
+                    $filteredConsentTypes[] = [
+                        'slug'        => isset($consentType['slug']) ? $consentType['slug'] : '',
+                        'visible'     => isset($consentType['visible']) ? $consentType['visible'] : 0,
+                        'title'       => isset($consentType["title"]) ? $consentType["title"] : '',
+                        'description' => isset($consentType["description"]) ? $consentType["description"] : '',
+                    ];
+                } else {
+                    $filteredConsentTypes[] = [
+                        'slug'        => isset($consentType['slug']) ? $consentType['slug'] : '',
+                        'visible'     => isset($consentType['visible']) ? $consentType['visible'] : 0,
+                        'title'       => isset($consentType["{$code}_title"]) ? $consentType["{$code}_title"] : '',
+                        'description' => isset($consentType["{$code}_description"]) ? $consentType["{$code}_description"] : '',
+                    ];
+                }
+            }
         }
 
         return $filteredConsentTypes;
@@ -103,36 +105,38 @@ class WPML
     public function saveConsentTypes($newConsentTypes)
     {
         if (!defined('ICL_LANGUAGE_CODE')) {
-            return $consentTypes;
+            return $newConsentTypes;
         }
 
         $code = ICL_LANGUAGE_CODE;
         $translatedConsentTypes = [];
         $currentConsentTypes = gdpr('options')->get('consent_types', null, false);
 
-        foreach ($newConsentTypes as &$newConsentType) {
-        	
-        	// Match an existing consent type with the new one
-        	$slug = $newConsentType['slug'];
-        	$existingConsentType = current(array_filter($currentConsentTypes, function($value) use ($slug) {
-        		return $value['slug'] === $slug;
-        	}));
+        if (count($newConsentTypes)) {
+            foreach ($newConsentTypes as &$newConsentType) {
 
-        	if ($existingConsentType) {
-        		// We have a matching existing consent - update translations, keep the rest
-        		$existingConsentType["{$code}_title"] = $newConsentType['title'];
-        		$existingConsentType["{$code}_description"] = $newConsentType['description'];
+                // Match an existing consent type with the new one
+                $slug = $newConsentType['slug'];
+                $existingConsentType = current(array_filter($currentConsentTypes, function($value) use ($slug) {
+                    return $value['slug'] === $slug;
+                }));
 
-        		$translatedConsentTypes[] = $existingConsentType;
-        	} else {
-        		// We do not have a matching existin consent - just adjust the keys for language
-        		$newConsentType["{$code}_title"] = $newConsentType['title'];
-        		$newConsentType["{$code}_description"] = $newConsentType['description'];
-        		unset($newConsentType['title']);
-        		unset($newConsentType['description']);
+                if ($existingConsentType) {
+                    // We have a matching existing consent - update translations, keep the rest
+                    $existingConsentType["{$code}_title"] = $newConsentType['title'];
+                    $existingConsentType["{$code}_description"] = $newConsentType['description'];
 
-        		$translatedConsentTypes[] = $newConsentType;
-        	}
+                    $translatedConsentTypes[] = $existingConsentType;
+                } else {
+                    // We do not have a matching existin consent - just adjust the keys for language
+                    $newConsentType["{$code}_title"] = $newConsentType['title'];
+                    $newConsentType["{$code}_description"] = $newConsentType['description'];
+                    unset($newConsentType['title']);
+                    unset($newConsentType['description']);
+
+                    $translatedConsentTypes[] = $newConsentType;
+                }
+            }
         }
 
         return $translatedConsentTypes;

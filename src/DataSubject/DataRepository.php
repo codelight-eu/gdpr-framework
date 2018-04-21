@@ -138,7 +138,7 @@ class DataRepository
      */
     protected function notifyExportAction($email, $format)
     {
-        wp_mail(
+        gdpr('helpers')->mail(
             gdpr('options')->get('export_action_email'),
             __("Data exported", 'gdpr-framework'),
             gdpr('view')->render('email/action-export', compact('email', 'format')),
@@ -153,7 +153,7 @@ class DataRepository
     {
         $adminTabLink = esc_url(gdpr('helpers')->getAdminUrl('&gdpr-tab=data-subject&search=' . $email));
 
-        wp_mail(
+        gdpr('helpers')->mail(
             gdpr('options')->get('export_action_email'),
             __("Data export request", 'gdpr-framework'),
             gdpr('view')->render('email/request-export', compact('email', 'format', 'adminTabLink')),
@@ -166,7 +166,7 @@ class DataRepository
      */
     protected function notifyForgetAction($email, $userId = null)
     {
-        wp_mail(
+        gdpr('helpers')->mail(
             gdpr('options')->get('delete_action_email'),
             __("Data removed", 'gdpr-framework'),
             gdpr('view')->render('email/action-forget', compact('email', 'userId')),
@@ -181,7 +181,7 @@ class DataRepository
     {
         $adminTabLink = esc_url(gdpr('helpers')->getAdminUrl('&gdpr-tab=data-subject&search=' . $email));
 
-        wp_mail(
+        gdpr('helpers')->mail(
             gdpr('options')->get('delete_action_email'),
             __("Data removal request", 'gdpr-framework'),
             gdpr('view')->render('email/request-forget', compact('email', 'adminTabLink')),

@@ -43,7 +43,11 @@ function gdpr($abstract = null, $parameters = [], Codelight\GDPR\Container $cont
  * Start the plugin on plugins_loaded at priority 0.
  */
 add_action('plugins_loaded', function () use ($gdpr_error) {
+
+    load_plugin_textdomain('gdpr-framework', false, basename( dirname( __FILE__ ) ) . '/languages/');
+
     new \Codelight\GDPR\Setup();
+
 }, 0);
 
 /**

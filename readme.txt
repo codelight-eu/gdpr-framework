@@ -5,7 +5,7 @@ Tags: gdpr
 Requires at least: 4.7
 Tested up to: 4.9.4
 Requires PHP: 5.6.33
-Stable tag: 1.0.2
+Stable tag: 1.0.5
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -44,7 +44,7 @@ The GDPR Framework currently works with the following plugins
 &#9745; WPML
 
 Coming in April 2018:
-&#9744; Formidable Forms (Release: 19.04)
+&#9744; Formidable Forms (Release: 21.04)
 &#9744; Ninja Forms (Release: 25.04)
 &#9744; Contact Form 7 Flamingo
 &#9744; WP Rocket
@@ -60,11 +60,18 @@ We're happy to add support for other major plugins as well. If you have a reques
 
 == Changelog ==
 
+= 1.0.5 =
+* Add Spanish support (Thanks @elarequi!)
+
 = 1.0.4 =
+* Fix translations, for real this time
+* Add French translations (Thanks @datagitateur!)
+* Fix PHP warning if WPML is activated
+* Add filter around $headers array for all outgoing emails sent via this plugin
 
 = 1.0.3 =
 * Change text domain to 'gdpr-framework' to avoid conflict with other plugins
-* Add Portuguese translation (Thanks @kativiti)
+* Add Portuguese translation (Thanks @kativiti!)
 * Add partial Estonian translation
 
 = 1.0.2 =
