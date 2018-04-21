@@ -7,7 +7,7 @@
  * Version:           1.0.2
  * Author:            Codelight
  * Author URI:        https://codelight.eu/
- * Text Domain:       gdpr
+ * Text Domain:       gdpr-framework
  * Domain Path:       /languages
  */
 
