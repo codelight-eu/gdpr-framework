@@ -62,6 +62,7 @@ We're happy to add support for other major plugins as well. If you have a reques
 
 = 1.0.5 =
 * Add Spanish support (Thanks @elarequi!)
+* Lower required PHP version to 5.6.0
 
 = 1.0.4 =
 * Fix translations, for real this time

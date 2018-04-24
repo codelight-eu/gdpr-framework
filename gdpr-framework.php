@@ -31,9 +31,9 @@ $gdpr_error = function($message, $subtitle = '', $title = '') {
 /**
  * Ensure compatible version of PHP is used
  */
-if (version_compare(phpversion(), '5.6.33', '<')) {
+if (version_compare(phpversion(), '5.6.0', '<')) {
     $gdpr_error(
-        _x('You must be using PHP 5.6.33 or greater.', '(Admin)', 'gdpr-framework'),
+        _x('You must be using PHP 5.6.0 or greater.', '(Admin)', 'gdpr-framework'),
         _x('Invalid PHP version', '(Admin)', 'gdpr-framework')
     );
 }

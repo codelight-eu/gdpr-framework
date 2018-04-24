@@ -69,6 +69,7 @@ class Setup
         gdpr()->alias(ConsentManager::class, 'consent');
         gdpr()->alias(Helpers::class, 'helpers');
         gdpr()->alias(Themes::class, 'themes');
+        gdpr()->alias(DataSubjectManager::class, 'data-subject');
     }
 
     /**
