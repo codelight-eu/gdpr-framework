@@ -12,7 +12,7 @@
 
     <h3>
         <?=
-            __('Identify yourself via e-mail', 'gdpr-framework');
+            __('Please identify yourself via e-mail', 'gdpr-framework');
         ?>
     </h3>
     <form>
