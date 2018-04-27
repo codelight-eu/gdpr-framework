@@ -11,7 +11,9 @@
 <?php else: ?>
 
     <h3>
-        <?= __('Identify yourself!', 'gdpr-framework'); ?>
+        <?=
+            __('Identify yourself via e-mail', 'gdpr-framework');
+        ?>
     </h3>
     <form>
         <label for="gdpr_email"><?= __('Enter your email address', 'gdpr-framework') ?></label>

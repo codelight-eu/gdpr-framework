@@ -46,26 +46,8 @@ add_action('plugins_loaded', function () use ($gdpr_error) {
 
     load_plugin_textdomain('gdpr-framework', false, basename( dirname( __FILE__ ) ) . '/languages/');
 
+    new \Codelight\GDPR\Updater\Updater();
+
     new \Codelight\GDPR\Setup();
 
 }, 0);
-
-/**
- * Install the database table and custom role
- */
-register_activation_hook(__FILE__, function () {
-    $model = new \Codelight\GDPR\Components\Consent\UserConsentModel();
-    $model->createTable();
-
-    if (apply_filters('gdpr/data-subject/anonymize/change_role', true) && ! get_role('anonymous')) {
-
-        add_role(
-            'anonymous',
-            _x('Anonymous', '(Admin)', 'gdpr-framework'),
-            []
-        );
-    }
-
-    update_option('gdpr_enable_stylesheet', true);
-    update_option('gdpr_enable', true);
-});

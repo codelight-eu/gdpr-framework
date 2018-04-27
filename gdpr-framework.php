@@ -15,6 +15,8 @@ if (!defined('WPINC')) {
     die;
 }
 
+define('GDPR_FRAMEWORK_VERSION', '1.0.5');
+
 /**
  * Helper function for prettying up errors
  *
@@ -69,5 +71,25 @@ if (!class_exists('\Codelight\GDPR\Container')) {
     }
     require_once $composer;
 }
+
+/**
+ * Install the database table and custom role
+ */
+register_activation_hook(__FILE__, function () {
+    $model = new \Codelight\GDPR\Components\Consent\UserConsentModel();
+    $model->createTable();
+
+    if (apply_filters('gdpr/data-subject/anonymize/change_role', true) && ! get_role('anonymous')) {
+
+        add_role(
+            'anonymous',
+            _x('Anonymous', '(Admin)', 'gdpr-framework'),
+            []
+        );
+    }
+
+    update_option('gdpr_enable_stylesheet', true);
+    update_option('gdpr_enable', true);
+});
 
 require_once('bootstrap.php');
