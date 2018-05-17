@@ -1,6 +1,7 @@
 <p>
     The GDPR Framework has not been set up yet. Would you like to do that? <br>
-    Our setup wizard will guide you through the process.
+    Our setup wizard will guide you through the process. <br>
+    You can also configure the plugin manually by going to <a href="<?= gdpr('helpers')->getAdminUrl(); ?>">Tools > Privacy</a>.
 </p>
 
 <a class="button button-primary" href="<?= $installerUrl; ?>">

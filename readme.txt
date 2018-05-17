@@ -58,10 +58,35 @@ Other integrations coming soon:
 
 We're happy to add support for other major plugins as well. If you have a request, get in touch!
 
+== Frequently Asked Questions ==
+= Help, the identification emails are not sent! =
+The GDPR Framework uses the exact same mechanism for sending emails as the rest of your WordPress site. Please test if your site sends out emails at all using the Forgot Password form, for example.
+If you get the forgot password email but not the identification email, please make a post in the support forums.
+
+= Help, the link in the identification email doesn't work! =
+Are you using SendGrid or another email delivery service? This might corrupt the link in the email.
+In case you're using Sendgrid, make sure to turn off "click tracking". Otherwise, please post in the support forum!
+
+= What about cookies? =
+We are working on this and will hopefully have a solution before May 25th.
+
 == Changelog ==
 
+= 1.0.6 =
+* Fix administrative roles not being able to comment via admin interface
+* Fix trashed or spam comments not being deleted
+* Minor usability tweaks everywhere
+* Fix PHP5.6 not properly saving custom consent (Thanks @paulnewson!)
+* Fix CF7 always showing as enabled in wizard
+* In Tools > Privacy > Data Subjects, add the display of given consents
+* Add warning about Sendgrid compatibility in the installer
+* Fix issue with installer wizard not properly saving export action
+* Add notice in case the settings are not properly configured
+
 = 1.0.5 =
-* Add Spanish support (Thanks @elarequi!)
+* Fix installing consent tables and roles properly
+* Add Spanish translations (Thanks @elarequi!)
+* Add partial German translations (Thanks @knodderdachs!)
 
 = 1.0.4 =
 * Fix translations, for real this time

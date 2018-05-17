@@ -108,7 +108,9 @@ class AdminTabDataSubject extends AdminTab
             ]);
         }
 
-        return gdpr('view')->render('admin/data-subjects/search-results', compact('email', 'hasData', 'links', 'userName', 'adminCap'));
+        $consentData = $dataSubject->getConsentData();
+
+        return gdpr('view')->render('admin/data-subjects/search-results', compact('email', 'hasData', 'links', 'userName', 'adminCap', 'consentData'));
     }
 
     public function renderSubmitButton()

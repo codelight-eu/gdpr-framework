@@ -2,6 +2,13 @@
     Configuration (1/2)
 </h1>
 
+<h2>Plugin settings</h2>
+<p>In WordPress admin, there is now a new page under the Tools menu item called "Privacy." Once you've finished the wizard, you can modify the plugin settings there.</p>
+<div>
+    <img src="<?= gdpr('config')->get('plugin.url') . 'assets/menu.jpg'; ?>" />
+</div>
+
+
 <h2>Privacy Tools page</h2>
 <p>
     The first major requirement of GDPR is that your customers need to be in control of their data. They have the

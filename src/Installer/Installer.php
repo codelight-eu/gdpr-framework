@@ -270,6 +270,7 @@ class Installer
         $policyPageId = wp_insert_post([
             'post_title'   => __('Privacy Policy', 'gdpr-framework'),
             'post_type'    => 'page',
+            'post_status'  => 'publish',
         ]);
 
         gdpr('options')->set('policy_page', $policyPageId);
@@ -278,6 +279,7 @@ class Installer
             'post_content' => '[gdpr_privacy_tools]',
             'post_title'   => __('Privacy Tools', 'gdpr-framework'),
             'post_type'    => 'page',
+            'post_status'  => 'publish',
         ]);
         gdpr('options')->set('tools_page', $toolsPageId);
 

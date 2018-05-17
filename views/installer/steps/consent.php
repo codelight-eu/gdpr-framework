@@ -45,20 +45,21 @@
     <hr>
 <?php endif; ?>
 
-<h2>&#10004; Contact Form 7</h2>
-<p>
-    We have detected that Contact Form 7 is enabled on your site. The GDPR Framework is
-    compatible with Contact Form 7.
-</p>
-<p>
-    Each of the forms requires either a <strong>disclaimer</strong> or a <strong>consent checkbox</strong>.
-    We have created some tools to help you out!
-</p>
-<p>
-    <a href="<?= gdpr('helpers')->docs('guide/making-your-forms-compliant/'); ?>" target="_blank">Read about making your Contact Form 7 forms GDPR compliant.</a>
-</p>
-
-<hr>
+<?php if ($hasCF7): ?>
+    <h2>&#10004; Contact Form 7</h2>
+    <p>
+        We have detected that Contact Form 7 is enabled on your site. The GDPR Framework is
+        compatible with Contact Form 7.
+    </p>
+    <p>
+        Each of the forms requires either a <strong>disclaimer</strong> or a <strong>consent checkbox</strong>.
+        We have created some tools to help you out!
+    </p>
+    <p>
+        <a href="<?= gdpr('helpers')->docs('guide/making-your-forms-compliant/'); ?>" target="_blank">Read about making your Contact Form 7 forms GDPR compliant.</a>
+    </p>
+    <hr>
+<?php endif; ?>
 
 <h2>Custom forms</h2>
 <p>

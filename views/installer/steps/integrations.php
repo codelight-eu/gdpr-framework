@@ -24,6 +24,14 @@
 <?php endif; ?>
 <hr>
 
+<?php if ($hasSendgrid): ?>
+    <h2>IMPORTANT: Sendgrid compatibility</h2>
+    <p>
+        It looks like you are using Sendgrid to send emails. Note that the links in identification emails will not work properly unless you have click tracking turned off in Sendgrid.
+    </p>
+    <hr>
+<?php endif; ?>
+
 <?php if ($hasWooCommerce): ?>
     <h2>WooCommerce compatibility</h2>
     <p>

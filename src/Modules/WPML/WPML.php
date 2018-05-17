@@ -45,8 +45,8 @@ class WPML
             }
         }
 
-        if (isset($option[ICL_LANGUAGE_CODE])) {
-        	return $option[ICL_LANGUAGE_CODE];
+        if (isset($option[(string)ICL_LANGUAGE_CODE])) {
+        	return $option[(string)ICL_LANGUAGE_CODE];
         } else {
         	return '';
         }
@@ -64,7 +64,7 @@ class WPML
         	$value = [];
         }
 
-        $value[ICL_LANGUAGE_CODE] = $newValue;
+        $value[(string)ICL_LANGUAGE_CODE] = $newValue;
 
         return $value;
     }
@@ -75,7 +75,7 @@ class WPML
             return $consentTypes;
         }
 
-        $code                 = ICL_LANGUAGE_CODE;
+        $code                 = (string)ICL_LANGUAGE_CODE;
         $filteredConsentTypes = [];
 
         if (count($consentTypes)) {
@@ -108,7 +108,7 @@ class WPML
             return $newConsentTypes;
         }
 
-        $code = ICL_LANGUAGE_CODE;
+        $code = (string)ICL_LANGUAGE_CODE;
         $translatedConsentTypes = [];
         $currentConsentTypes = gdpr('options')->get('consent_types', null, false);
 

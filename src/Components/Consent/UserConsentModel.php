@@ -170,10 +170,20 @@ class UserConsentModel
     {
         global $wpdb;
 
-        return array_column($wpdb->get_results($wpdb->prepare(
-            "SELECT * FROM {$this->tableName} WHERE email = %s and status = 1;",
-            $email
-        )), 'consent');
+        /**
+         * Workaround to an issue with array_column in PHP5.6 - thanks @paulnewson
+         */
+        if (version_compare(PHP_VERSION, '7') >= 0) {
+            return array_column($wpdb->get_results($wpdb->prepare(
+                "SELECT * FROM {$this->tableName} WHERE email = %s and status = 1;",
+                $email
+            )), 'consent');
+        } else {
+            return array_column(json_decode(json_encode($wpdb->get_results($wpdb->prepare(
+                "SELECT * FROM {$this->tableName} WHERE email = %s and status = 1;",
+                $email
+            ))), true), 'consent');
+        }
     }
 
     /**

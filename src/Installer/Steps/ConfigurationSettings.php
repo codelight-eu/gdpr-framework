@@ -45,11 +45,11 @@ class ConfigurationSettings extends InstallerStep implements InstallerStepInterf
     public function submit()
     {
         if (isset($_POST['gdpr_export_action'])) {
-            gdpr('options')->set('delete_action', $_POST['gdpr_export_action']);
+            gdpr('options')->set('export_action', $_POST['gdpr_export_action']);
         }
 
         if (isset($_POST['gdpr_export_action_email'])) {
-            gdpr('options')->set('delete_action_email', $_POST['gdpr_export_action_email']);
+            gdpr('options')->set('export_action_email', $_POST['gdpr_export_action_email']);
         }
 
         if (isset($_POST['gdpr_delete_action'])) {

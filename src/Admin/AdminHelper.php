@@ -9,6 +9,7 @@ class AdminHelper
         $this->toolsHelper();
         $this->autoinstallHelper();
         $this->policyHelper();
+        $this->settingsHelper();
     }
 
     protected function toolsHelper()
@@ -35,6 +36,7 @@ class AdminHelper
         }
 
         $helpUrl = gdpr('helpers')->docs();
+
         gdpr('admin-notice')->add('admin/notices/helper-autoinstall', compact('helpUrl'));
     }
 
@@ -53,5 +55,30 @@ class AdminHelper
         if (stristr($post->post_content, '[TODO]')) {
             gdpr('admin-notice')->add('admin/notices/helper-policy', compact('helpUrl'));
         }
+    }
+
+    protected function settingsHelper()
+    {
+
+        if ('download_and_notify' === gdpr('options')->get('export_action') || 'notify' === gdpr('options')->get('export_action')) {
+            if (!gdpr('options')->get('export_action_email')) {
+                $this->renderSettingsHelperNotice();
+            }
+        }
+
+
+        if ('anonymize_and_notify' === gdpr('options')->get('delete_action') ||
+            'delete_and_notify' === gdpr('options')->get('delete_action') ||
+            'notify' === gdpr('options')->get('delete_action')
+        ) {
+            if (!gdpr('options')->get('delete_action_email')) {
+                $this->renderSettingsHelperNotice();
+            }
+        }
+    }
+
+    protected function renderSettingsHelperNotice()
+    {
+        gdpr('admin-notice')->add('admin/notices/helper-settings');
     }
 }

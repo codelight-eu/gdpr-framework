@@ -1,6 +1,6 @@
 <p class="gdpr-terms-container" style="margin-bottom: 10px">
     <label>
-        <input type="checkbox" name="gdpr_terms" id="gdpr_terms" value="1" />
+        <input type="checkbox" required name="gdpr_terms" id="gdpr_terms" value="1" />
 
         <?php if ($termsUrl): ?>
             <?= sprintf(

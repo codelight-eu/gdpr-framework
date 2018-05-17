@@ -43,6 +43,7 @@ class WordpressComments
         } else {
             $dataSubject = $this->dataSubjectManager->getByLoggedInUser();
         }
+
         return !($dataSubject && $dataSubject->hasConsented('privacy-policy'));
     }
 
@@ -60,7 +61,7 @@ class WordpressComments
         }
 
         $privacyPolicyUrl = get_permalink(gdpr('options')->get('policy_page'));
-        $termsPage = gdpr('options')->get('terms_page');
+        $termsPage        = gdpr('options')->get('terms_page');
         if ($termsPage) {
             $termsUrl = get_permalink($termsPage);
         } else {
@@ -78,6 +79,16 @@ class WordpressComments
      */
     public function validate($commentData)
     {
+        if (is_user_logged_in() && is_admin()) {
+            $allowedRoles = apply_filters('gdpr/roles/comments', ['administrator', 'editor', 'shop_manager']);
+
+            foreach (wp_get_current_user()->roles as $userRole) {
+                if (in_array($userRole, $allowedRoles)) {
+                    return $commentData;
+                }
+            }
+        }
+
         $email = isset($_POST['email']) ? $_POST['email'] : null;
 
         if (!$this->needsConsent($email)) {
@@ -122,15 +133,15 @@ class WordpressComments
                 /* @var $comment \WP_Comment */
 
                 $commentData = [
-                    'comment_author' => $comment->comment_author,
+                    'comment_author'       => $comment->comment_author,
                     'comment_author_email' => $comment->comment_author_email,
-                    'comment_author_url' => $comment->comment_author_url,
-                    'comment_author_IP' => $comment->comment_author_IP,
-                    'comment_date' => $comment->comment_date,
-                    'comment_date_gmt' => $comment->comment_date_gmt,
-                    'comment_content' => $comment->comment_content,
-                    'comment_approved' => $comment->comment_approved,
-                    'comment_agent' => $comment->comment_agent,
+                    'comment_author_url'   => $comment->comment_author_url,
+                    'comment_author_IP'    => $comment->comment_author_IP,
+                    'comment_date'         => $comment->comment_date,
+                    'comment_date_gmt'     => $comment->comment_date_gmt,
+                    'comment_content'      => $comment->comment_content,
+                    'comment_approved'     => $comment->comment_approved,
+                    'comment_agent'        => $comment->comment_agent,
                 ];
 
                 $commentMeta = get_comment_meta($comment->comment_ID);
@@ -159,6 +170,12 @@ class WordpressComments
         }
     }
 
+    /**
+     * Todo: this currently doesn't include spam or trashed comments
+     *
+     * @param $email
+     * @return array|int
+     */
     public function getCommentsByEmail($email)
     {
         if (!$email || !is_email($email)) {
@@ -166,8 +183,13 @@ class WordpressComments
         }
 
         $query = new \WP_Comment_Query;
-        return $query->query([
+
+        $comments = $query->query([
             'author_email' => $email,
+            'include_unapproved' => true,
+            'status' => 'all',
         ]);
+
+        return $comments;
     }
 }

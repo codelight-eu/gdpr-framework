@@ -24,6 +24,7 @@ class Integrations extends InstallerStep implements InstallerStepInterface
 
         $hasWooCommerce = false;
         $hasEDD = false;
+        $hasSendGrid = class_exists('\Sendgrid_Tools');
 
         echo gdpr('view')->render(
             $this->template,
@@ -32,7 +33,8 @@ class Integrations extends InstallerStep implements InstallerStepInterface
                 'hasEDD',
                 'hasWooCommerce',
                 'currentTheme',
-                'isThemeSupported'
+                'isThemeSupported',
+                'hasSendGrid'
             )
         );
     }

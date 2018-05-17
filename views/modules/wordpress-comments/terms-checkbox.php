@@ -1,6 +1,6 @@
 <p class="gdpr-terms-container">
     <label>
-        <input type="checkbox" name="gdpr_terms" id="gdpr_terms" value="1" required/>
+        <input type="checkbox" required name="gdpr_terms" id="gdpr_terms" value="1" />
         <?php if ($termsUrl): ?>
             <?= sprintf(
                 __('I accept the %sTerms and Conditions%s and the %sPrivacy Policy%s', 'gdpr-framework'),

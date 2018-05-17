@@ -9,9 +9,14 @@
             </p>
         <?php else: ?>
             <p>
-                <em><?= esc_html($email); ?> <?= _x('is not a registered user.', '(Admin)', 'gdpr-framework'); ?></em>
+                <em>
+                    <?= _x('Data found.', '(Admin)', 'gdpr-framework'); ?>
+                    <strong><?= esc_html($email); ?></strong> <?= _x('is not a registered user.', '(Admin)', 'gdpr-framework'); ?>
+                </em>
             </p>
         <?php endif; ?>
+
+        <hr>
 
         <a class="button button-primary" href="<?= esc_url($links['view']); ?>"><?= _x('Download data (html)', '(Admin)', 'gdpr-framework'); ?></a>
         <a class="button button-primary" href="<?= esc_url($links['export']); ?>"><?= _x('Export data (json)', '(Admin)', 'gdpr-framework'); ?></a>
@@ -28,6 +33,27 @@
     <?php else: ?>
         <p><?= _x('No data found!', '(Admin)', 'gdpr-framework'); ?></p>
     <?php endif; ?>
+
+    <hr>
+
+    <?php if (count($consentData)): ?>
+        <table class="gdpr-consent">
+            <th colspan="2"><?= _x('Consents given', '(Admin)', 'gdpr-framework'); ?></th>
+            <?php foreach ($consentData as $item): ?>
+                <tr>
+                    <td>
+                        &#10004;
+                    </td>
+                    <td>
+                        <?= $item['title']; ?>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    <?php else: ?>
+        <p><?= _x('No consents given!', '(Admin)', 'gdpr-framework'); ?>.</p>
+    <?php endif; ?>
+
 </div>
 <br>
 <hr>
