@@ -7,7 +7,7 @@
  * Version:           1.0.5
  * Author:            Codelight
  * Author URI:        https://codelight.eu/
- * Text Domain:       gdpr
+ * Text Domain:       gdpr-framework
  * Domain Path:       /languages
  */
 
@@ -15,7 +15,7 @@ if (!defined('WPINC')) {
     die;
 }
 
-define('GDPR_FRAMEWORK_VERSION', '1.0.5');
+define('GDPR_FRAMEWORK_VERSION', '1.0.6');
 
 /**
  * Helper function for prettying up errors
@@ -33,9 +33,9 @@ $gdpr_error = function($message, $subtitle = '', $title = '') {
 /**
  * Ensure compatible version of PHP is used
  */
-if (version_compare(phpversion(), '5.6.33', '<')) {
+if (version_compare(phpversion(), '5.6.0', '<')) {
     $gdpr_error(
-        _x('You must be using PHP 5.6.33 or greater.', '(Admin)', 'gdpr-framework'),
+        _x('You must be using PHP 5.6.0 or greater.', '(Admin)', 'gdpr-framework'),
         _x('Invalid PHP version', '(Admin)', 'gdpr-framework')
     );
 }
@@ -71,7 +71,6 @@ if (!class_exists('\Codelight\GDPR\Container')) {
     }
     require_once $composer;
 }
-
 /**
  * Install the database table and custom role
  */
@@ -84,7 +83,7 @@ register_activation_hook(__FILE__, function () {
         add_role(
             'anonymous',
             _x('Anonymous', '(Admin)', 'gdpr-framework'),
-            []
+            array()
         );
     }
 

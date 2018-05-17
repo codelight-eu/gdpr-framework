@@ -20,7 +20,6 @@ class Integrations extends InstallerStep implements InstallerStepInterface
         $enableThemeCompatibility = gdpr('options')->get('enable_theme_compatibility');
         $currentTheme = gdpr('themes')->getCurrentThemeName();
         $isThemeSupported = gdpr('themes')->isCurrentThemeSupported();
-        $isThemeSupported = true;
 
         $hasWooCommerce = false;
         $hasEDD = false;

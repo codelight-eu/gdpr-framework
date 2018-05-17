@@ -3,7 +3,7 @@
 Contributors: codelight
 Tags: gdpr
 Requires at least: 4.7
-Tested up to: 4.9.4
+Tested up to: 4.9.5
 Requires PHP: 5.6.33
 Stable tag: 1.0.5
 License: GPLv3
@@ -41,13 +41,12 @@ We're just getting started. There's lots more to come!
 The GDPR Framework currently works with the following plugins
 &#9745; Contact Form 7
 &#9745; Gravity Forms - [Download the GDPR add-on](https://wordpress.org/plugins/gdpr-for-gravity-forms/)
+&#9745; Formidable Forms - [Download the GDPR add-on](https://wordpress.org/plugins/gdpr-for-formidable-forms/)
 &#9745; WPML
 
-Coming in April 2018:
-&#9744; Formidable Forms (Release: 21.04)
-&#9744; Ninja Forms (Release: 25.04)
+Coming soon:
+&#9744; Ninja Forms
 &#9744; Contact Form 7 Flamingo
-&#9744; WP Rocket
 
 Still free and open-source.
 
@@ -87,6 +86,10 @@ We are working on this and will hopefully have a solution before May 25th.
 * Fix installing consent tables and roles properly
 * Add Spanish translations (Thanks @elarequi!)
 * Add partial German translations (Thanks @knodderdachs!)
+* Lower required PHP version to 5.6.0
+* Re-add container alias for DataSubjectManager
+* Fix for installer giving the option to add links to footer for unsupported themes
+* Fix PHP notice in WPML module
 
 = 1.0.4 =
 * Fix translations, for real this time

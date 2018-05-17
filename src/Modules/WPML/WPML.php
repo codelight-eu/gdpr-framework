@@ -81,7 +81,7 @@ class WPML
         if (count($consentTypes)) {
             foreach ($consentTypes as $consentType) {
 
-                if ('privacy-policy' === $consentType['slug'] or 'terms-condition' === $consentType['slug']) {
+                if (isset($consentType['slug']) && ('privacy-policy' === $consentType['slug'] or 'terms-condition' === $consentType['slug'])) {
                     $filteredConsentTypes[] = [
                         'slug'        => isset($consentType['slug']) ? $consentType['slug'] : '',
                         'visible'     => isset($consentType['visible']) ? $consentType['visible'] : 0,
