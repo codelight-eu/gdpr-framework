@@ -1,11 +1,10 @@
-
 === The GDPR Framework ===
 Contributors: codelight
 Tags: gdpr
 Requires at least: 4.7
 Tested up to: 4.9.5
 Requires PHP: 5.6.33
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -27,7 +26,7 @@ Full documentation: [The WordPress Site Owner's Guide to GDPR](https://codelight
 For developers: [Developer Docs](https://codelight.eu/wordpress-gdpr-framework/developer-docs/)
 
 ### Features
-&#9745; Allow both users and visitors without an account to view, export and delete their personal data;
+&#9745; Allow both users and visitors without an account to automatically view, export and delete their personal data;
 &#9745; Configure the plugin to delete or anonymize personal data automatically or send a notification and allow admins to do it manually;
 &#9745; Track, manage and withdraw consent;
 &#9745; Generate a GDPR-compatible Privacy Policy template for your site;
@@ -35,7 +34,7 @@ For developers: [Developer Docs](https://codelight.eu/wordpress-gdpr-framework/d
 &#9745; Fully documented;
 &#9745; Developer-friendly. Everything can be extended, every feature and template can be overridden.
 
-We're just getting started. There's lots more to come!
+GDPR is here to stay and we are just getting started. There's lots more to come!
 
 ### Plugin support:
 The GDPR Framework currently works with the following plugins
@@ -50,7 +49,7 @@ Coming soon:
 
 Still free and open-source.
 
-Other integrations coming soon:
+Other integrations coming up:
 &#9744; WP Migrate DB
 &#9744; WooCommerce (postponed until the launch of their own compliance toolkit)
 &#9744; Easy Digital Downloads
@@ -66,8 +65,17 @@ If you get the forgot password email but not the identification email, please ma
 Are you using SendGrid or another email delivery service? This might corrupt the link in the email.
 In case you're using Sendgrid, make sure to turn off "click tracking". Otherwise, please post in the support forum!
 
+= Help, the Privacy Tools page acts weirdly or always displays the "link expired" message! =
+Check if you're using any caching plugins. If yes, then make sure the Privacy Tools page is excluded.
+Also check if a server side cache is enabled by your web host.
+
+= How is this plugin different from the tools in WordPress v4.9.6? =
+WordPress 4.9.6 provides tools to allow administrators to manually handle GDPR requests. However, the GDPR framework allows visitors to automatically download and export data to reduce administrative work load.
+In addition to that, we provide tools to manage and track custom consent types and also a privacy policy generator.
+We are also planning to add other important privacy-related features missing from WordPress core over time.
+
 = What about cookies? =
-We are working on this and will hopefully have a solution before May 25th.
+This is a very important aspect of GDPR which we will definitely find a solution for. We are currently working on it and will hopefully have something before May 25th.
 
 == Changelog ==
 
