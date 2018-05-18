@@ -18,6 +18,9 @@ GDPR is a whopping 88 pages of legal text. Becoming compliant takes a lot more t
 
 You don't need to drown your customers in pointless acceptance checkboxes if you know what you're doing!
 
+## IMPORTANT
+The current version of the GDPR Framework fixes a ton of minor bugs. However, it's not yet compatible with WordPress v4.9.6. This will be added in the next major release. (Everything will still work, though.)
+
 ## Disclaimer
 Using The GDPR Framework does NOT guarantee compliance to GDPR. This plugin gives you general information and tools, but is NOT meant to serve as complete compliance package. Compliance to GDPR is risk-based ongoing process that involves your whole business. Codelight is not eligible for any claim or action based on any information or functionality provided by this plugin.
 
@@ -89,6 +92,8 @@ This is a very important aspect of GDPR which we will definitely find a solution
 * Add warning about Sendgrid compatibility in the installer
 * Fix issue with installer wizard not properly saving export action
 * Add notice in case the settings are not properly configured
+* Added Bulgarian translation (thanks Zankov Group!)
+* Added partial Italian translation (thanks Matteo Bruno!)
 
 = 1.0.5 =
 * Fix installing consent tables and roles properly
