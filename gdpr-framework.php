@@ -4,7 +4,7 @@
  * Plugin Name:       The GDPR Framework
  * Plugin URI:        https://codelight.eu/wordpress-gdpr-framework/
  * Description:       Tools to help make your website GDPR-compliant. Fully documented, extendable and developer-friendly.
- * Version:           1.0.7
+ * Version:           1.0.8
  * Author:            Codelight
  * Author URI:        https://codelight.eu/
  * Text Domain:       gdpr-framework
@@ -15,7 +15,7 @@ if (!defined('WPINC')) {
     die;
 }
 
-define('GDPR_FRAMEWORK_VERSION', '1.0.7');
+define('GDPR_FRAMEWORK_VERSION', '1.0.8');
 
 /**
  * Helper function for prettying up errors
