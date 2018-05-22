@@ -60,6 +60,9 @@ Other integrations coming up:
 
 We're happy to add support for other major plugins as well. If you have a request, get in touch!
 
+== Support the development! ==
+[Donate!](https://codelight.eu/wordpress-gdpr-framework/donate/)
+
 == Frequently Asked Questions ==
 = Help, the identification emails are not sent! =
 The GDPR Framework uses the exact same mechanism for sending emails as the rest of your WordPress site. Please test if your site sends out emails at all using the Forgot Password form, for example.
@@ -85,7 +88,7 @@ This is a very important aspect of GDPR which we will definitely find a solution
 
 = 1.0.7 =
 * Update translation pot file
-* Add partial Greek translations (Thanks Konstantinos Efeolgou!)
+* Add partial Greek translations (Thanks @webace-creative-studio)
 
 = 1.0.6 =
 * Fix administrative roles not being able to comment via admin interface
