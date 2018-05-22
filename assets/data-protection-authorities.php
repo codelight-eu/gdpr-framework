@@ -164,12 +164,7 @@
     ],
 
     /* Others - default to Ireland */
-
-    'UK' => [
-        'phone'   => '+353 57 868 4800',
-        'email'   => 'info@dataprotection.ie',
-        'website' => 'https://www.dataprotection.ie/',
-    ],
+    
     'US' => [
         'phone'   => '+353 57 868 4800',
         'email'   => 'info@dataprotection.ie',
