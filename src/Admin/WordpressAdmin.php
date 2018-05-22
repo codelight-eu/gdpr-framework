@@ -95,9 +95,7 @@ class WordpressAdmin
             'gdpr-admin',
             gdpr('config')->get('plugin.url') . 'assets/gdpr-admin.css'
         );
-
-
-
+        
         /**
          * jQuery UI dialog for modals
          */
@@ -122,12 +120,12 @@ class WordpressAdmin
          */
         wp_enqueue_style(
             'select2css',
-            '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css'
+            gdpr('config')->get('plugin.url') . 'assets/select2-4.0.5.css'
         );
 
         wp_enqueue_script(
             'select2',
-            '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js',
+            gdpr('config')->get('plugin.url') . 'assets/select2-4.0.5.js',
             ['jquery']
         );
 
