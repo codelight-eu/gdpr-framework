@@ -1,5 +1,5 @@
 === The GDPR Framework ===
-Contributors: codelight
+Contributors: codelight, indrek_k
 Donate link: https://www.paypal.me/gdprframework
 Tags: gdpr
 Requires at least: 4.7
