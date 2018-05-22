@@ -1,6 +1,6 @@
 === The GDPR Framework ===
 Contributors: codelight
-Donate link:
+Donate link: https://www.paypal.me/gdprframework
 Tags: gdpr
 Requires at least: 4.7
 Tested up to: 4.9.5
@@ -21,6 +21,9 @@ You don't need to drown your customers in pointless acceptance checkboxes if you
 
 ## IMPORTANT
 The current version of the GDPR Framework fixes a ton of minor bugs. However, it's not yet compatible with WordPress v4.9.6. This will be added in the next major release. (Everything will still work, though.)
+
+## IMPORTANT
+IF you're using a caching plugin, please make sure you exclude the Privacy Tools page from your cache. Otherwise, it won't work!
 
 ## Disclaimer
 Using The GDPR Framework does NOT guarantee compliance to GDPR. This plugin gives you general information and tools, but is NOT meant to serve as complete compliance package. Compliance to GDPR is risk-based ongoing process that involves your whole business. Codelight is not eligible for any claim or action based on any information or functionality provided by this plugin.
