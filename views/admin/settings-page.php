@@ -36,7 +36,9 @@
                 |
                 &nbsp;
                 <?= sprintf(
-                    _x("Support our development efforts with a %s5-star rating%s.", '(Admin)', 'gdpr-framework'),
+                    _x("Support our development efforts! %sDonate%s or leave a %s5-star rating%s.", '(Admin)', 'gdpr-framework'),
+                    '<a href="https://paypal.me/gdprframework" target="_blank">',
+                    '</a>',
                     '<a href="https://wordpress.org/plugins/gdpr-framework/#reviews" target="_blank">',
                     '</a>'
                 ); ?>

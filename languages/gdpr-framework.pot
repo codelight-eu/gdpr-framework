@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The GDPR Framework 1.0\n"
 "Report-Msgid-Bugs-To: gdpr@codelight.eu\n"
-"POT-Creation-Date: 2018-04-16 10:50+0000\n"
+"POT-Creation-Date: 2018-05-22 15:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,44 +17,44 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: gdpr-framework.php:26
+#: gdpr-framework.php:28
 msgctxt "(Admin)"
 msgid "WordPress GDPR &rsaquo; Error"
 msgstr ""
 
-#: gdpr-framework.php:35
+#: gdpr-framework.php:38
+msgctxt "(Admin)"
+msgid "You must be using PHP 5.6.0 or greater."
+msgstr ""
+
+#: gdpr-framework.php:39
 msgctxt "(Admin)"
 msgid "Invalid PHP version"
 msgstr ""
 
-#: gdpr-framework.php:35
-msgctxt "(Admin)"
-msgid "You must be using PHP 5.6.33 or greater."
-msgstr ""
-
-#: gdpr-framework.php:42
-msgctxt "(Admin)"
-msgid "Invalid WordPress version"
-msgstr ""
-
-#: gdpr-framework.php:42
+#: gdpr-framework.php:48
 msgctxt "(Admin)"
 msgid "You must be using WordPress 4.3.0 or greater."
 msgstr ""
 
-#: gdpr-framework.php:52
+#: gdpr-framework.php:49
+msgctxt "(Admin)"
+msgid "Invalid WordPress version"
+msgstr ""
+
+#: gdpr-framework.php:61
 msgctxt "(Admin)"
 msgid ""
 "You appear to be running a development version of GDPR. You must run "
 "<code>composer install</code> from the plugin directory."
 msgstr ""
 
-#: gdpr-framework.php:53
+#: gdpr-framework.php:66
 msgctxt "(Admin)"
 msgid "Autoloader not found."
 msgstr ""
 
-#: gdpr-framework.php:115
+#: gdpr-framework.php:86 src/Updater/Updater.php:40
 msgctxt "(Admin)"
 msgid "Anonymous"
 msgstr ""
@@ -197,6 +197,12 @@ msgstr ""
 #: src/Components/Consent/AdminTabConsent.php:167
 msgctxt "(Admin)"
 msgid "Consent title is a required field!"
+msgstr ""
+
+#: src/Components/Consent/AdminTabConsent.php:179
+msgid ""
+"To use this website, you accepted our Privacy Policy. If you wish to "
+"withdraw your acceptance, please use the \"Delete my data\" button below."
 msgstr ""
 
 #: src/Components/Consent/ConsentManager.php:46
@@ -803,6 +809,23 @@ msgid ""
 "contain the [gdpr_privacy_tools] shortcode."
 msgstr ""
 
+#: views/admin/general/description-delete-action.php:2
+msgctxt "(Admin)"
+msgid "What should happen if a data subject requests deleting their data."
+msgstr ""
+
+#: views/admin/general/description-export-action.php:2
+msgctxt "(Admin)"
+msgid ""
+"What should happen if a data subject requests viewing or exporting their "
+"data."
+msgstr ""
+
+#: views/admin/general/description-terms-page.php:2
+msgctxt "(Admin)"
+msgid "Optional. Select the page which contains your Terms & Conditions"
+msgstr ""
+
 #: views/admin/general/enable.php:9
 msgctxt "(Admin)"
 msgid "Enable the view, export and forget functionality for users and visitors"
@@ -814,6 +837,11 @@ msgid ""
 "Enable the Privacy Tools page on front-end and dashboard. This allows "
 "visitors to request viewing and deleting their personal data and withdraw "
 "consents."
+msgstr ""
+
+#: views/admin/general/stylesheet.php:9
+msgctxt "(Admin)"
+msgid "Enable basic styling for Privacy Tools page."
 msgstr ""
 
 #: views/admin/general/theme-compatibility.php:9
@@ -870,10 +898,21 @@ msgid ""
 "you entered below."
 msgstr ""
 
+#: views/admin/settings-page.php:8
+msgctxt "(Admin)"
+msgid "GDPR settings saved!"
+msgstr ""
+
 #: views/admin/settings-page.php:31
 #, php-format
 msgctxt "(Admin)"
 msgid "The GDPR Framework. Built with &#9829; by %sCodelight%s."
+msgstr ""
+
+#: views/admin/settings-page.php:39
+#, php-format
+msgctxt "(Admin)"
+msgid "Support our development efforts with a %s5-star rating%s."
 msgstr ""
 
 #: views/admin/support/contents.php:5 views/installer/steps/finish.php:10
@@ -1119,7 +1158,8 @@ msgid "I accept the %sTerms and Conditions%s and the %sPrivacy Policy%s"
 msgstr ""
 
 #: views/modules/wordpress-user/dashboard/data-page/form-consent.php:3
-msgid "Manage consents"
+#: views/privacy-tools/form-consent.php:2
+msgid "Consent"
 msgstr ""
 
 #: views/modules/wordpress-user/dashboard/data-page/form-consent.php:6
@@ -1128,8 +1168,7 @@ msgid "Here you can withdraw any consents you have given."
 msgstr ""
 
 #: views/modules/wordpress-user/dashboard/data-page/form-consent.php:8
-#: views/privacy-tools/form-consent.php:9
-msgid "Consent types"
+msgid "Consents"
 msgstr ""
 
 #: views/modules/wordpress-user/dashboard/data-page/form-consent.php:23
@@ -1206,6 +1245,11 @@ msgctxt "(Admin)"
 msgid "Anonymize user and all data"
 msgstr ""
 
+#: views/modules/wordpress-user/dashboard/profile-page/form-delete.php:18
+msgctxt "gdpr-framework"
+msgid "Be careful - this action is permanent and CANNOT be undone."
+msgstr ""
+
 #: views/modules/wordpress-user/dashboard/profile-page/header.php:2
 msgctxt "(Admin)"
 msgid "GDPR Data"
@@ -1226,8 +1270,8 @@ msgctxt "(Admin)"
 msgid "No consents given"
 msgstr ""
 
-#: views/privacy-tools/form-consent.php:2
-msgid "Consent"
+#: views/privacy-tools/form-consent.php:9
+msgid "Consent types"
 msgstr ""
 
 #: views/privacy-tools/form-delete.php:1
@@ -1240,19 +1284,19 @@ msgid "Delete my data"
 msgstr ""
 
 #: views/privacy-tools/form-identify.php:8
-msgid "Back to Privacy Tools"
+msgid "Back to front page"
 msgstr ""
 
-#: views/privacy-tools/form-identify.php:14
-msgid "Identify yourself!"
+#: views/privacy-tools/form-identify.php:15
+msgid "Please identify yourself via e-mail"
 msgstr ""
 
-#: views/privacy-tools/form-identify.php:17
-#: views/privacy-tools/form-identify.php:20
+#: views/privacy-tools/form-identify.php:19
+#: views/privacy-tools/form-identify.php:22
 msgid "Enter your email address"
 msgstr ""
 
-#: views/privacy-tools/form-identify.php:23
+#: views/privacy-tools/form-identify.php:25
 msgid "Send email"
 msgstr ""
 

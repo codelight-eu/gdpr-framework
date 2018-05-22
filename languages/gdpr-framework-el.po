@@ -7,55 +7,55 @@ msgid ""
 msgstr ""
 "Project-Id-Version: The GDPR Framework 1.0\n"
 "Report-Msgid-Bugs-To: gdpr@codelight.eu\n"
-"POT-Creation-Date: 2018-05-22 15:47+0300\n"
-"PO-Revision-Date: 2018-05-22 15:48+0300\n"
-"Last-Translator: Codelight <team@codelight.eu>\n"
+"POT-Creation-Date: 2018-04-16 10:50+0000\n"
+"PO-Revision-Date: 2018-05-22 16:45+0300\n"
 "Language-Team: \n"
-"Language: et_EE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.6\n"
+"Last-Translator: Codelight <team@codelight.eu>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: el_GR\n"
 
-#: gdpr-framework.php:28
+#: gdpr-framework.php:26
 msgctxt "(Admin)"
 msgid "WordPress GDPR &rsaquo; Error"
 msgstr ""
 
-#: gdpr-framework.php:38
-msgctxt "(Admin)"
-msgid "You must be using PHP 5.6.0 or greater."
-msgstr ""
-
-#: gdpr-framework.php:39
+#: gdpr-framework.php:35
 msgctxt "(Admin)"
 msgid "Invalid PHP version"
 msgstr ""
 
-#: gdpr-framework.php:48
+#: gdpr-framework.php:35
 msgctxt "(Admin)"
-msgid "You must be using WordPress 4.3.0 or greater."
+msgid "You must be using PHP 5.6.33 or greater."
 msgstr ""
 
-#: gdpr-framework.php:49
+#: gdpr-framework.php:42
 msgctxt "(Admin)"
 msgid "Invalid WordPress version"
 msgstr ""
 
-#: gdpr-framework.php:61
+#: gdpr-framework.php:42
 msgctxt "(Admin)"
-msgid ""
-"You appear to be running a development version of GDPR. You must run "
-"<code>composer install</code> from the plugin directory."
+msgid "You must be using WordPress 4.3.0 or greater."
 msgstr ""
 
-#: gdpr-framework.php:66
+#: gdpr-framework.php:52
+msgctxt "(Admin)"
+msgid ""
+"You appear to be running a development version of GDPR. You must run <code>composer install</code> "
+"from the plugin directory."
+msgstr ""
+
+#: gdpr-framework.php:53
 msgctxt "(Admin)"
 msgid "Autoloader not found."
 msgstr ""
 
-#: gdpr-framework.php:86 src/Updater/Updater.php:40
+#: gdpr-framework.php:115
 msgctxt "(Admin)"
 msgid "Anonymous"
 msgstr ""
@@ -160,9 +160,8 @@ msgctxt "(Admin)"
 msgid "Enable automatic theme compatibility"
 msgstr ""
 
-#: src/Admin/AdminTabGeneral.php:184 src/Admin/AdminTabGeneral.php:200
-#: src/Admin/AdminTabGeneral.php:213 src/Admin/AdminTabGeneral.php:252
-#: views/installer/steps/configuration-settings.php:62
+#: src/Admin/AdminTabGeneral.php:184 src/Admin/AdminTabGeneral.php:200 src/Admin/AdminTabGeneral.php:213
+#: src/Admin/AdminTabGeneral.php:252 views/installer/steps/configuration-settings.php:62
 msgctxt "(Admin)"
 msgid "&mdash; Select &mdash;"
 msgstr ""
@@ -177,8 +176,7 @@ msgctxt "(Admin)"
 msgid "Privacy"
 msgstr ""
 
-#: src/Components/Consent/AdminTabConsent.php:30
-#: src/Components/Consent/AdminTabConsent.php:49
+#: src/Components/Consent/AdminTabConsent.php:30 src/Components/Consent/AdminTabConsent.php:49
 msgctxt "(Admin)"
 msgid "Consent"
 msgstr ""
@@ -190,9 +188,7 @@ msgstr ""
 
 #: src/Components/Consent/AdminTabConsent.php:162
 msgctxt "(Admin)"
-msgid ""
-"You may only use alphanumeric characters, dash and underscore in the consent "
-"slug field."
+msgid "You may only use alphanumeric characters, dash and underscore in the consent slug field."
 msgstr ""
 
 #: src/Components/Consent/AdminTabConsent.php:167
@@ -200,36 +196,28 @@ msgctxt "(Admin)"
 msgid "Consent title is a required field!"
 msgstr ""
 
-#: src/Components/Consent/AdminTabConsent.php:179
-msgid ""
-"To use this website, you accepted our Privacy Policy. If you wish to "
-"withdraw your acceptance, please use the \"Delete my data\" button below."
-msgstr ""
-
-#: src/Components/Consent/ConsentManager.php:46
-#: views/modules/contact-form-7/content-privacy.php:2
+#: src/Components/Consent/ConsentManager.php:46 views/modules/contact-form-7/content-privacy.php:2
 #: views/modules/wordpress-comments/terms-checkbox.php:14
 #: views/modules/wordpress-user/registration-terms-checkbox.php:15
 #, php-format
 msgid "I accept the %sPrivacy Policy%s"
-msgstr "Nõustun %sprivaatsustingimustega%s"
+msgstr "Συμφωνώ με την %sπολιτική απορρήτου%s"
 
-#: src/Components/Consent/ConsentManager.php:50
-#: src/Components/Consent/ConsentManager.php:69
+#: src/Components/Consent/ConsentManager.php:50 src/Components/Consent/ConsentManager.php:69
 msgctxt "(Admin)"
 msgid ""
-"This consent is not visible by default. If someone wishes to withdraw it, "
-"they should simply request to delete all their data."
+"This consent is not visible by default. If someone wishes to withdraw it, they should simply request "
+"to delete all their data."
 msgstr ""
 
 #: src/Components/Consent/ConsentManager.php:65
 #, php-format
 msgid "I accept the %sTerms & Conditions%s"
-msgstr "Nõustun %stingimustega%s"
+msgstr "Αποδέχομαι τους %sΓενικούς Όρους και Προϋποθέσεις%s"
 
 #: src/Components/PrivacyPolicy/AdminTabPrivacyPolicy.php:19
-#: src/Components/PrivacyPolicy/AdminTabPrivacyPolicy.php:61
-#: views/admin/privacy-policy/generated.php:1 views/installer/header.php:41
+#: src/Components/PrivacyPolicy/AdminTabPrivacyPolicy.php:61 views/admin/privacy-policy/generated.php:1
+#: views/installer/header.php:41
 msgctxt "(Admin)"
 msgid "Privacy Policy"
 msgstr ""
@@ -343,86 +331,77 @@ msgctxt "(Admin)"
 msgid "Save & Generate Policy"
 msgstr ""
 
-#: src/Components/PrivacyPolicy/PrivacyPolicy.php:82
-#: src/Installer/Installer.php:271 src/Installer/Steps/PolicySettings.php:199
-#: views/themes/storefront/footer.php:3
-#: views/themes/twentyseventeen/footer.php:3
-#: views/themes/twentysixteen/footer.php:4
+#: src/Components/PrivacyPolicy/PrivacyPolicy.php:82 src/Installer/Installer.php:271
+#: src/Installer/Steps/PolicySettings.php:199 views/themes/storefront/footer.php:3
+#: views/themes/twentyseventeen/footer.php:3 views/themes/twentysixteen/footer.php:4
 msgid "Privacy Policy"
-msgstr "Privaatsustingimused"
+msgstr "Πολιτική Προστασίας Προσωπικών Δεδομένων"
 
 #: src/Components/PrivacyToolsPage/PrivacyToolsPageShortcode.php:19
 msgid "This page is currently disabled."
-msgstr "See leht on hetkel välja lülitatud."
+msgstr "Αυτήν τη στιγμή η σελίδα είναι απενεργοποιημένη."
 
-#: src/Components/PrivacyToolsPage/PrivacyToolsPageShortcode.php:35
-#: src/Installer/Installer.php:279
-#: src/Installer/Steps/ConfigurationPages.php:55
-#: views/themes/storefront/footer.php:7
-#: views/themes/twentyseventeen/footer.php:7
-#: views/themes/twentysixteen/footer.php:9
+#: src/Components/PrivacyToolsPage/PrivacyToolsPageShortcode.php:35 src/Installer/Installer.php:279
+#: src/Installer/Steps/ConfigurationPages.php:55 views/themes/storefront/footer.php:7
+#: views/themes/twentyseventeen/footer.php:7 views/themes/twentysixteen/footer.php:9
 msgid "Privacy Tools"
-msgstr "Privaatsustööriistad"
+msgstr "Εργαλεία απορρήτου"
 
-#: src/Components/Support/AdminTabSupport.php:13
-#: src/Components/Support/AdminTabSupport.php:20
+#: src/Components/Support/AdminTabSupport.php:13 src/Components/Support/AdminTabSupport.php:20
 msgctxt "(Admin)"
 msgid "Support"
 msgstr ""
 
 #: src/Components/WordpressComments/WordpressComments.php:90
 #, php-format
-msgid ""
-"%sERROR:%s You need to accept the terms and conditions to post a comment."
-msgstr "%sVIGA%s Kommenteerimiseks peate nõustuma tingimustega."
+msgid "%sERROR:%s You need to accept the terms and conditions to post a comment."
+msgstr ""
+"%sΣΦΑΛΜΑ:%s Πρέπει να αποδεχτείτε τους όρους και τις προϋποθέσεις για να δημοσιεύσετε ένα σχόλιο."
 
 #: src/Components/WordpressUser/Controllers/DashboardDataPageController.php:54
 #: views/privacy-tools/notices.php:19
 msgid "We have received your request and will reply within 30 days."
-msgstr "Saime teie taotluse kätte ning vastame 30 päeva jooksul."
+msgstr "Λάβαμε το αίτημά σας και θα απαντήσουμε εντός 30 ημερών."
 
 #: src/Components/WordpressUser/Controllers/DashboardDataPageController.php:59
 #: views/privacy-tools/notices.php:15
 msgid "Consent withdrawn."
-msgstr "Nõusolek tagasi võetud."
+msgstr "Ανάκληση συγκατάθεσης."
 
 #: src/Components/WordpressUser/RegistrationForm.php:42
 msgid "<strong>ERROR</strong>: You must accept the terms and conditions."
-msgstr "<strong>VIGA</strong>: Tingimustega nõustumine on kohustuslik."
+msgstr "<strong>ΣΦΑΛΜΑ</strong>: Πρέπει να αποδεχτείτε τους όρους και τις προϋποθέσεις."
 
-#: src/Components/WordpressUser/WordpressUser.php:63
-#: src/Components/WordpressUser/WordpressUser.php:64
+#: src/Components/WordpressUser/WordpressUser.php:63 src/Components/WordpressUser/WordpressUser.php:64
 #: views/modules/wordpress-user/dashboard/data-page/header.php:2
 msgctxt "(Admin)"
 msgid "Privacy Tools"
 msgstr ""
 
-#: src/DataSubject/AdminTabDataSubject.php:27
-#: src/DataSubject/AdminTabDataSubject.php:41
+#: src/DataSubject/AdminTabDataSubject.php:27 src/DataSubject/AdminTabDataSubject.php:41
 msgctxt "(Admin)"
 msgid "Data Subjects"
 msgstr ""
 
 #: src/DataSubject/DataRepository.php:143
 msgid "Data exported"
-msgstr "Andmed eksporditud"
+msgstr "Εξάγονται δεδομένα"
 
 #: src/DataSubject/DataRepository.php:158
 msgid "Data export request"
-msgstr "Andmete eksportimise taotlus"
+msgstr "Ζητήθηκε εξαγωγή δεδομένων"
 
 #: src/DataSubject/DataRepository.php:171
 msgid "Data removed"
-msgstr "Andmed kustutatud"
+msgstr "Τα δεδομένα καταργήθηκαν"
 
 #: src/DataSubject/DataRepository.php:186
 msgid "Data removal request"
-msgstr "Andmete kustutamise taotlus"
+msgstr "Απαιτείται διαγραφή δεδομένων"
 
-#: src/DataSubject/DataSubjectIdentificator.php:65
-#: src/DataSubject/DataSubjectIdentificator.php:82
+#: src/DataSubject/DataSubjectIdentificator.php:65 src/DataSubject/DataSubjectIdentificator.php:82
 msgid "Your personal data on"
-msgstr "Sinu isiklikud andmed lehel"
+msgstr "Τα προσωπικά σας στοιχεία"
 
 #: src/Helpers.php:27
 msgctxt "(Admin)"
@@ -596,15 +575,15 @@ msgstr ""
 
 #: src/Helpers.php:145
 msgid "An error has occurred. Please contact the site administrator."
-msgstr "Süsteemis tekkis viga. Palun võtke ühendust lehe haldajaga."
+msgstr ""
+"Es ist ein Fehler aufgetreten. Bitte setzen Sie sich mit dem Website Administrator in Verbindung."
 
 #: src/Installer/Installer.php:135
 msgctxt "(Admin)"
 msgid "Setup Wizard"
 msgstr ""
 
-#: src/Installer/Steps/ConfigurationPages.php:23
-#: src/Installer/Steps/PolicySettings.php:23
+#: src/Installer/Steps/ConfigurationPages.php:23 src/Installer/Steps/PolicySettings.php:23
 #: src/Installer/Steps/PolicySettings.php:48
 msgctxt "(Admin)"
 msgid "&mdash; Create a new page &mdash;"
@@ -612,8 +591,7 @@ msgstr ""
 
 #: src/Installer/Steps/PolicySettings.php:38
 msgctxt "(Admin)"
-msgid ""
-"We have automatically selected your WooCommerce Terms & Conditions page."
+msgid "We have automatically selected your WooCommerce Terms & Conditions page."
 msgstr ""
 
 #: src/Modules/ContactForm7/ContactForm7.php:35
@@ -624,7 +602,7 @@ msgstr ""
 #: src/Router.php:80 src/Router.php:92 src/Router.php:125 src/Router.php:141
 #, php-format
 msgid "Nonce error for action \"%s\". Please go back and try again!"
-msgstr "VIGA \"%s\". Palun minge tagasi ja proovige uuesti!"
+msgstr "Nonce σφάλμα για ενέργεια \"%s\". Επιστρέψτε και δοκιμάστε ξανά!"
 
 #: src/Router.php:149
 msgctxt "(Admin)"
@@ -639,8 +617,7 @@ msgstr ""
 #: views/admin/consent.php:4
 msgctxt "(Admin)"
 msgid ""
-"These are the consent types that have been automatically registered by the "
-"framework or a plugin."
+"These are the consent types that have been automatically registered by the framework or a plugin."
 msgstr ""
 
 #: views/admin/consent.php:7 views/admin/consent.php:52
@@ -648,14 +625,12 @@ msgctxt "(Admin)"
 msgid "Slug"
 msgstr ""
 
-#: views/admin/consent.php:8 views/admin/consent.php:38
-#: views/admin/consent.php:60
+#: views/admin/consent.php:8 views/admin/consent.php:38 views/admin/consent.php:60
 msgctxt "(Admin)"
 msgid "Title"
 msgstr ""
 
-#: views/admin/consent.php:9 views/admin/consent.php:41
-#: views/admin/consent.php:63
+#: views/admin/consent.php:9 views/admin/consent.php:41 views/admin/consent.php:63
 msgctxt "(Admin)"
 msgid "Description"
 msgstr ""
@@ -683,8 +658,8 @@ msgstr ""
 #: views/admin/consent.php:30
 msgctxt "(Admin)"
 msgid ""
-"Here you can add custom consent types to track. They will not be used "
-"anywhere by default - you will need to build an integration for each of them."
+"Here you can add custom consent types to track. They will not be used anywhere by default - you will "
+"need to build an integration for each of them."
 msgstr ""
 
 #: views/admin/consent.php:35
@@ -709,15 +684,14 @@ msgstr ""
 
 #: views/admin/consent.php:95
 msgctxt "(Admin)"
-msgid ""
-"This text will be displayed to your data subjects on the Privacy Tools page."
+msgid "This text will be displayed to your data subjects on the Privacy Tools page."
 msgstr ""
 
 #: views/admin/data-subjects/search-form.php:2
 msgctxt "(Admin)"
 msgid ""
-"On this page, you can find which data subjects personal data you are storing "
-"and download, export or delete it."
+"On this page, you can find which data subjects personal data you are storing and download, export or "
+"delete it."
 msgstr ""
 
 #: views/admin/data-subjects/search-form.php:10
@@ -757,9 +731,7 @@ msgstr ""
 
 #: views/admin/data-subjects/search-results.php:21
 msgctxt "(Admin)"
-msgid ""
-"This user has admin capabilities. Deleting data via this interface is "
-"disabled."
+msgid "This user has admin capabilities. Deleting data via this interface is disabled."
 msgstr ""
 
 #: views/admin/data-subjects/search-results.php:24
@@ -777,21 +749,18 @@ msgctxt "(Admin)"
 msgid "No data found!"
 msgstr ""
 
-#: views/admin/general/delete-action-email.php:5
-#: views/admin/general/export-action-email.php:5
+#: views/admin/general/delete-action-email.php:5 views/admin/general/export-action-email.php:5
 #: views/installer/steps/configuration-settings.php:29
 #: views/installer/steps/configuration-settings.php:79
 msgid "Email address"
-msgstr "E-maili aadress"
+msgstr "Διεύθυνση ηλεκτρονικού ταχυδρομείου"
 
-#: views/admin/general/delete-action-reassign.php:3
-#: views/installer/steps/configuration-settings.php:50
+#: views/admin/general/delete-action-reassign.php:3 views/installer/steps/configuration-settings.php:50
 msgctxt "(Admin)"
 msgid "Delete content"
 msgstr ""
 
-#: views/admin/general/delete-action-reassign.php:6
-#: views/installer/steps/configuration-settings.php:53
+#: views/admin/general/delete-action-reassign.php:6 views/installer/steps/configuration-settings.php:53
 msgctxt "(Admin)"
 msgid "Reassign content to a user"
 msgstr ""
@@ -799,32 +768,15 @@ msgstr ""
 #: views/admin/general/delete-action-reassign.php:10
 msgctxt "(Admin)"
 msgid ""
-"If the user has submitted any content on your site, should it be deleted or "
-"reassigned to another user?"
+"If the user has submitted any content on your site, should it be deleted or reassigned to another "
+"user?"
 msgstr ""
 
 #: views/admin/general/description-data-page.php:2
 msgctxt "(Admin)"
 msgid ""
-"Select the page where users can go to control their data. This page must "
-"contain the [gdpr_privacy_tools] shortcode."
-msgstr ""
-
-#: views/admin/general/description-delete-action.php:2
-msgctxt "(Admin)"
-msgid "What should happen if a data subject requests deleting their data."
-msgstr ""
-
-#: views/admin/general/description-export-action.php:2
-msgctxt "(Admin)"
-msgid ""
-"What should happen if a data subject requests viewing or exporting their "
-"data."
-msgstr ""
-
-#: views/admin/general/description-terms-page.php:2
-msgctxt "(Admin)"
-msgid "Optional. Select the page which contains your Terms & Conditions"
+"Select the page where users can go to control their data. This page must contain the "
+"[gdpr_privacy_tools] shortcode."
 msgstr ""
 
 #: views/admin/general/enable.php:9
@@ -835,25 +787,16 @@ msgstr ""
 #: views/admin/general/enable.php:12
 msgctxt "(Admin)"
 msgid ""
-"Enable the Privacy Tools page on front-end and dashboard. This allows "
-"visitors to request viewing and deleting their personal data and withdraw "
-"consents."
+"Enable the Privacy Tools page on front-end and dashboard. This allows visitors to request viewing and "
+"deleting their personal data and withdraw consents."
 msgstr ""
 
-#: views/admin/general/stylesheet.php:9
+#: views/admin/general/theme-compatibility.php:9 views/installer/steps/integrations.php:21
 msgctxt "(Admin)"
-msgid "Enable basic styling for Privacy Tools page."
+msgid "Automatically add Privacy Policy and Privacy Tools links to your site footer."
 msgstr ""
 
-#: views/admin/general/theme-compatibility.php:9
-#: views/installer/steps/integrations.php:21
-msgctxt "(Admin)"
-msgid ""
-"Automatically add Privacy Policy and Privacy Tools links to your site footer."
-msgstr ""
-
-#: views/admin/notices/header.php:4 views/admin/settings-page.php:3
-#: views/installer/header.php:23
+#: views/admin/notices/header.php:4 views/admin/settings-page.php:3 views/installer/header.php:23
 msgctxt "(Admin)"
 msgid "The GDPR Framework"
 msgstr ""
@@ -861,15 +804,15 @@ msgstr ""
 #: views/admin/notices/helper-autoinstall.php:2
 msgctxt "(Admin)"
 msgid ""
-"A Privacy Policy page has been created, but it is empty. You can generate a "
-"policy template on this page."
+"A Privacy Policy page has been created, but it is empty. You can generate a policy template on this "
+"page."
 msgstr ""
 
 #: views/admin/notices/helper-policy.php:2
 msgctxt "(Admin)"
 msgid ""
-"Heads up - your Privacy Policy still requires some attention. Find the "
-"places marked with [TODO] and replace them with real content!"
+"Heads up - your Privacy Policy still requires some attention. Find the places marked with [TODO] and "
+"replace them with real content!"
 msgstr ""
 
 #: views/admin/notices/helper-tools.php:2
@@ -894,26 +837,13 @@ msgstr ""
 
 #: views/admin/privacy-policy/header.php:2
 msgctxt "(Admin)"
-msgid ""
-"This page allows you to generate a Privacy Policy based on the information "
-"you entered below."
-msgstr ""
-
-#: views/admin/settings-page.php:8
-msgctxt "(Admin)"
-msgid "GDPR settings saved!"
+msgid "This page allows you to generate a Privacy Policy based on the information you entered below."
 msgstr ""
 
 #: views/admin/settings-page.php:31
 #, php-format
 msgctxt "(Admin)"
 msgid "The GDPR Framework. Built with &#9829; by %sCodelight%s."
-msgstr ""
-
-#: views/admin/settings-page.php:39
-#, php-format
-msgctxt "(Admin)"
-msgid "Support our development efforts with a %s5-star rating%s."
 msgstr ""
 
 #: views/admin/support/contents.php:5 views/installer/steps/finish.php:10
@@ -963,9 +893,7 @@ msgstr ""
 
 #: views/admin/support/contents.php:49 views/installer/steps/finish.php:54
 msgctxt "(Admin)"
-msgid ""
-"Found a bug or problem with the plugin? Post in the wordpress.org support "
-"forum."
+msgid "Found a bug or problem with the plugin? Post in the wordpress.org support forum."
 msgstr ""
 
 #: views/admin/support/contents.php:55 views/installer/steps/finish.php:60
@@ -975,9 +903,7 @@ msgstr ""
 
 #: views/admin/support/contents.php:58 views/installer/steps/finish.php:63
 msgctxt "(Admin)"
-msgid ""
-"Need development or legal assistance in making your site compliant? We can "
-"help!"
+msgid "Need development or legal assistance in making your site compliant? We can help!"
 msgstr ""
 
 #: views/admin/wizard-buttons.php:2
@@ -987,8 +913,7 @@ msgstr ""
 
 #: views/email/action-export.php:8 views/email/action-forget.php:12
 msgctxt "(Admin)"
-msgid ""
-"This email is just for your information. You don't need to take any action"
+msgid "This email is just for your information. You don't need to take any action"
 msgstr ""
 
 #: views/email/action-forget.php:8
@@ -998,37 +923,34 @@ msgstr ""
 
 #: views/email/identify-data-subject.php:2
 msgid "Someone has requested access to your data on"
-msgstr "Keegi on taotlenud ligipääsu teie andmetele leheküljel"
+msgstr "Κάποιος έχει ζητήσει πρόσβαση στα δεδομένα σας"
 
 #: views/email/identify-data-subject.php:3
 msgid "If this was a mistake, just ignore this email and nothing will happen."
 msgstr ""
-"Kui see oli viga, siis lihtsalt ignoreerige seda kirja ning mitte midagi ei "
-"juhtu."
+"Εάν αυτό ήταν λάθος, αγνοήστε αυτό το μήνυμα ηλεκτρονικού ταχυδρομείου και τίποτα δεν θα συμβεί."
 
 #: views/email/identify-data-subject.php:4
 msgid "To manage your data, visit the following address:"
-msgstr "Kui soovite oma andmeid hallata, külastage järgnevat aadress:"
+msgstr "Για να διαχειριστείτε τα δεδομένα σας, επισκεφθείτε τη διεύθυνση:"
 
 #: views/email/identify-data-subject.php:10
 msgid "This link is valid for 15 minutes."
-msgstr "See link on aktiivne 15 minutit."
+msgstr "Ο σύνδεσμος ισχύει για 15 λεπτά."
 
 #: views/email/no-data.php:2
 msgid "Someone has requested information about your personal data on"
-msgstr "Keegi on taotlenud infot teie isiklike andmete kohta leheküljel"
+msgstr "Κάποιος έχει ζητήσει πρόσβαση στα προσωπικά σας στοιχεία"
 
 #: views/email/no-data.php:3
 msgid "None of your personal data is stored on"
-msgstr "Leheküljel ei ole kohta isiklikke andmeid"
+msgstr "Δεν υπάρχουν αποθηκευμένες προσωπικές πληροφορίες σε "
 
 #: views/email/no-data.php:5
-msgid ""
-"If this was a mistake or you did not request this email, just ignore it and "
-"nothing will happen."
+msgid "If this was a mistake or you did not request this email, just ignore it and nothing will happen."
 msgstr ""
-"Kui see oli viga, siis lihtsalt ignoreerige seda kirja ning mitte midagi ei "
-"juhtu."
+"Εάν αυτό ήταν λάθος ή δεν ζητήσατε αυτό το μήνυμα ηλεκτρονικού ταχυδρομείου, αγνοήστε το και τίποτα "
+"δεν θα συμβεί."
 
 #: views/email/request-export.php:13 views/email/request-forget.php:13
 msgctxt "(Admin)"
@@ -1092,7 +1014,7 @@ msgstr ""
 
 #: views/installer/footer.php:7
 msgid "Back"
-msgstr "Tagasi"
+msgstr "Πίσω"
 
 #: views/installer/header.php:26
 msgctxt "(Admin)"
@@ -1147,39 +1069,37 @@ msgstr ""
 
 #: views/modules/contact-form-7/generator-privacy.php:6
 msgctxt "(Admin)"
-msgid ""
-"This tag generates the default text for Terms & Conditions and/or Privacy "
-"Policy checkbox."
+msgid "This tag generates the default text for Terms & Conditions and/or Privacy Policy checkbox."
 msgstr ""
 
 #: views/modules/contact-form-7/generator-privacy.php:15
 msgid "Insert"
-msgstr "Sisesta"
+msgstr "Προσθήκη"
 
 #: views/modules/wordpress-comments/terms-checkbox.php:6
 #: views/modules/wordpress-user/registration-terms-checkbox.php:7
 #, php-format
 msgid "I accept the %sTerms and Conditions%s and the %sPrivacy Policy%s"
-msgstr "Nõustun %sKasutustingimustega%s ja %sPrivaatsustingimustega%s"
+msgstr "Αποδέχομαι τους %sΌρους και Προϋποθέσεις%s και την %s πολιτική απορρήτου %s"
 
 #: views/modules/wordpress-user/dashboard/data-page/form-consent.php:3
-#: views/privacy-tools/form-consent.php:2
-msgid "Consent"
-msgstr "Nõusolek"
+msgid "Manage consents"
+msgstr "Διαχειριστείτε τις συγκαταθέσεις"
 
 #: views/modules/wordpress-user/dashboard/data-page/form-consent.php:6
 #: views/privacy-tools/form-consent.php:6
 msgid "Here you can withdraw any consents you have given."
-msgstr "Siin saate tagasi võtta kõik antud nõusolekud"
+msgstr "Εδώ μπορείτε να διαχειριστείτε τις εγκρίσεις που έχετε δώσει."
 
 #: views/modules/wordpress-user/dashboard/data-page/form-consent.php:8
-msgid "Consents"
-msgstr "Nõusolekud"
+#: views/privacy-tools/form-consent.php:9
+msgid "Consent types"
+msgstr "Είδη έγκρισης"
 
 #: views/modules/wordpress-user/dashboard/data-page/form-consent.php:23
 #: views/privacy-tools/form-consent.php:24
 msgid "Withdraw"
-msgstr "Võta tagasi"
+msgstr "Αποσύρω"
 
 #: views/modules/wordpress-user/dashboard/data-page/form-delete.php:5
 #: views/modules/wordpress-user/dashboard/profile-page/form-delete.php:5
@@ -1195,50 +1115,45 @@ msgstr ""
 #: views/modules/wordpress-user/dashboard/data-page/form-delete.php:15
 #: views/privacy-tools/form-delete.php:13
 msgid "Delete all data we have gathered about you."
-msgstr "Kogu info teie kohta kustutatakse."
+msgstr "Ανακαλέστε όλα τα δεδομένα που έχουμε συλλέξει για εσάς."
 
 #: views/modules/wordpress-user/dashboard/data-page/form-delete.php:16
 #: views/privacy-tools/form-delete.php:14
 msgid "If you have a user account on our site, it will also be deleted."
-msgstr "Kui teil on meie lehel kasutajakonto, siis ka see kustutatakse."
+msgstr "Αν έχετε έναν λογαριασμό χρήστη στην ιστοσελίδα μας, θα διαγραφεί επίσης."
 
 #: views/modules/wordpress-user/dashboard/data-page/form-delete.php:17
 #: views/privacy-tools/form-delete.php:15
 msgid "Be careful - this action is permanent and CANNOT be undone."
-msgstr "Ettevaatust - seda tegevust EI SAA tagasi võtta."
+msgstr "Να είστε προσεκτικοί - αυτή η ενέργεια είναι μόνιμη και ΔΕΝ μπορεί να ακυρωθεί."
 
 #: views/modules/wordpress-user/dashboard/data-page/form-delete.php:22
 #: views/modules/wordpress-user/dashboard/profile-page/form-delete.php:23
 msgctxt "(Admin)"
 msgid ""
-"You seem to have an administrator or equivalent role, so deleting/"
-"anonymizing via this page is disabled."
+"You seem to have an administrator or equivalent role, so deleting/anonymizing via this page is "
+"disabled."
 msgstr ""
 
-#: views/modules/wordpress-user/dashboard/form-export.php:7
-#: views/privacy-tools/form-export.php:1
+#: views/modules/wordpress-user/dashboard/form-export.php:7 views/privacy-tools/form-export.php:1
 msgid "Download your data"
-msgstr "Lae oma andmed alla"
+msgstr "Κατεβάστε τα δεδομένα σας"
 
-#: views/modules/wordpress-user/dashboard/form-export.php:12
-#: views/privacy-tools/form-export.php:13
+#: views/modules/wordpress-user/dashboard/form-export.php:12 views/privacy-tools/form-export.php:13
 msgid "Download as table"
-msgstr "Lae oma andmed tabelina alla"
+msgstr "Λήψη ως πίνακας"
 
-#: views/modules/wordpress-user/dashboard/form-export.php:15
-#: views/privacy-tools/form-export.php:22
+#: views/modules/wordpress-user/dashboard/form-export.php:15 views/privacy-tools/form-export.php:22
 msgid "Export as JSON"
-msgstr "Ekspordi JSON failina"
+msgstr "Εξαγωγή ως JSON"
 
-#: views/modules/wordpress-user/dashboard/form-export.php:19
-#: views/privacy-tools/form-export.php:4
+#: views/modules/wordpress-user/dashboard/form-export.php:19 views/privacy-tools/form-export.php:4
 msgid "You can download all your data formatted as a table for viewing."
-msgstr "Saate oma andmed tabeli kujul alla laadida"
+msgstr "Μπορείτε να διαμορφώσετε όλα τα δεδομένα σας ως πίνακα για προβολή λήψης."
 
-#: views/modules/wordpress-user/dashboard/form-export.php:20
-#: views/privacy-tools/form-export.php:5
+#: views/modules/wordpress-user/dashboard/form-export.php:20 views/privacy-tools/form-export.php:5
 msgid "Alternatively, you can export it in machine-readable JSON format."
-msgstr "Alternatiivselt saate eksportida faili masinloetavas JSON formaadis."
+msgstr "Εναλλακτικά, μπορείτε να τα εξαγάγετε σε μορφή JSON αναγνώσιμη από μηχανή"
 
 #: views/modules/wordpress-user/dashboard/profile-page/form-delete.php:11
 msgctxt "(Admin)"
@@ -1249,13 +1164,6 @@ msgstr ""
 msgctxt "(Admin)"
 msgid "Anonymize user and all data"
 msgstr ""
-
-#: views/modules/wordpress-user/dashboard/profile-page/form-delete.php:18
-#, fuzzy
-#| msgid "Be careful - this action is permanent and CANNOT be undone."
-msgctxt "gdpr-framework"
-msgid "Be careful - this action is permanent and CANNOT be undone."
-msgstr "Ettevaatust - seda tegevust EI SAA tagasi võtta."
 
 #: views/modules/wordpress-user/dashboard/profile-page/header.php:2
 msgctxt "(Admin)"
@@ -1277,37 +1185,33 @@ msgctxt "(Admin)"
 msgid "No consents given"
 msgstr ""
 
-#: views/privacy-tools/form-consent.php:9
-msgid "Consent types"
-msgstr "Nõusoleku tüübid"
+#: views/privacy-tools/form-consent.php:2
+msgid "Consent"
+msgstr "Έγκριση"
 
-#: views/privacy-tools/form-delete.php:1
-#: views/privacy-tools/notice-admin-role.php:1
+#: views/privacy-tools/form-delete.php:1 views/privacy-tools/notice-admin-role.php:1
 msgid "Delete my user and data"
-msgstr "Kustuta minu kasutaja ja andmed"
+msgstr "Διαγράψτε το χρήστη και τα δεδομένα μου"
 
 #: views/privacy-tools/form-delete.php:7
 msgid "Delete my data"
-msgstr "Kustuta minu andmed"
+msgstr "Διαγράψτε τα δεδομένα μου"
 
 #: views/privacy-tools/form-identify.php:8
-msgid "Back to front page"
-msgstr ""
+msgid "Back to Privacy Tools"
+msgstr "Επιστροφή στα εργαλεία απορρήτου"
 
-#: views/privacy-tools/form-identify.php:15
-#, fuzzy
-#| msgid "Identify yourself!"
-msgid "Please identify yourself via e-mail"
-msgstr "Tuvasta ennast!"
+#: views/privacy-tools/form-identify.php:14
+msgid "Identify yourself!"
+msgstr "Παρακαλούμε προσδιορίστε τον εαυτό σας"
 
-#: views/privacy-tools/form-identify.php:19
-#: views/privacy-tools/form-identify.php:22
+#: views/privacy-tools/form-identify.php:17 views/privacy-tools/form-identify.php:20
 msgid "Enter your email address"
-msgstr "Sisestage oma e-maili aadress"
+msgstr "Εισαγάγετε τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας"
 
-#: views/privacy-tools/form-identify.php:25
+#: views/privacy-tools/form-identify.php:23
 msgid "Send email"
-msgstr "Saada e-mail"
+msgstr "Στείλτε e-mail"
 
 #: views/privacy-tools/notice-admin-role.php:4
 msgctxt "(Admin)"
@@ -1316,30 +1220,24 @@ msgstr ""
 
 #: views/privacy-tools/notices.php:3
 msgid ""
-"We will send you an email with the link to access your data. Please check "
-"your spam folder as well!"
+"We will send you an email with the link to access your data. Please check your spam folder as well!"
 msgstr ""
-"Saadame teile e-maili koos lingiga mis võimaldab teie isiklikele andmetele "
-"ligi pääseda. Palun kontrollige ka oma rämpsposti!"
+"Θα σας στείλουμε ένα μήνυμα ηλεκτρονικού ταχυδρομείου με έναν σύνδεσμο για να πάρετε τα δεδομένα σας. "
+"Ελέγξτε επίσης τον φάκελο spam."
 
 #: views/privacy-tools/notices.php:7
 msgid "The email you entered does not appear to be a valid email."
-msgstr "Sisestatud e-mail on vigane."
+msgstr ""
+"Η διεύθυνση ηλεκτρονικού ταχυδρομείου δεν φαίνεται να είναι σωστή διεύθυνση ηλεκτρονικού ταχυδρομείου."
 
 #: views/privacy-tools/notices.php:11
 msgid "Sorry - the link seems to have expired. Please try again!"
-msgstr "Vabandame - see link on aegunud. Palun proovige uuesti!"
+msgstr "Sorry - ο σύνδεσμος φαίνεται να έχει λήξει. Δοκιμάστε ξανά."
 
 #: views/privacy-tools/notices.php:23
 msgid "Your personal data has been removed!"
-msgstr "Teie isiklikud andmed on kustutatud!"
+msgstr "Τα προσωπικά σας στοιχεία έχουν καταργηθεί."
 
 #: views/privacy-tools/privacy-tools.php:5
 msgid "You are identified as"
-msgstr "Te olete tuvastatud e-maili aadressiga"
-
-#~ msgid "Manage consents"
-#~ msgstr "Halda nõusolekuid"
-
-#~ msgid "Back to Privacy Tools"
-#~ msgstr "Tagasi privaatsustööriistade juurde"
+msgstr "Έχετε αναγνωριστεί ως"
