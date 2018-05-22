@@ -5,7 +5,7 @@ Tags: gdpr
 Requires at least: 4.7
 Tested up to: 4.9.5
 Requires PHP: 5.6.33
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -88,6 +88,11 @@ We are also planning to add other important privacy-related features missing fro
 This is a very important aspect of GDPR which we will definitely find a solution for. We are currently working on it and will hopefully have something before May 25th.
 
 == Changelog ==
+
+= 1.0.8 =
+* Disable Privacy Tools page if not set via admin (fixes infinite redirect issue)
+* Add additional admin notification if Privacy Tools page is not set
+* Additional minor tweaks
 
 = 1.0.7 =
 * Update translation pot file
