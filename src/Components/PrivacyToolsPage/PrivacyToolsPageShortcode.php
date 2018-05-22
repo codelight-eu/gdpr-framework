@@ -19,6 +19,10 @@ class PrivacyToolsPageShortcode
             return __('This page is currently disabled.', 'gdpr-framework');
         }
 
+        if (!gdpr('options')->get('tools_page') || is_null(get_post(gdpr('options')->get('tools_page')))) {
+            return __('Please configure the Privacy Tools page in the admin interface.', 'gdpr-framework');
+        }
+
         ob_start();
         $this->controller->render();
         return ob_get_clean();

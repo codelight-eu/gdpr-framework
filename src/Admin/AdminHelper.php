@@ -59,13 +59,16 @@ class AdminHelper
 
     protected function settingsHelper()
     {
+        if (gdpr('options')->get('is_installed') &&
+            (!gdpr('options')->get('tools_page') || is_null(get_post(gdpr('options')->get('tools_page'))))) {
+            $this->renderSettingsHelperNotice();
+        }
 
         if ('download_and_notify' === gdpr('options')->get('export_action') || 'notify' === gdpr('options')->get('export_action')) {
             if (!gdpr('options')->get('export_action_email')) {
                 $this->renderSettingsHelperNotice();
             }
         }
-
 
         if ('anonymize_and_notify' === gdpr('options')->get('delete_action') ||
             'delete_and_notify' === gdpr('options')->get('delete_action') ||

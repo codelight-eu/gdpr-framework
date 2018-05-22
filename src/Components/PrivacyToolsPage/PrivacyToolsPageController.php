@@ -269,7 +269,9 @@ class PrivacyToolsPageController
     protected function redirect($args = [], $baseUrl = null)
     {
         if ( ! $baseUrl) {
-            $baseUrl = get_permalink(gdpr('options')->get('tools_page'));
+            $privacyToolsUrl = gdpr('options')->get('tools_page');
+            // Avoid infinite loop redirect
+            $baseUrl = $privacyToolsUrl ? get_permalink($privacyToolsUrl) : home_url();
         }
 
         wp_safe_redirect(add_query_arg($args, $baseUrl));
