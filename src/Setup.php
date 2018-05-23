@@ -15,6 +15,7 @@ use Codelight\GDPR\DataSubject\DataSubjectManager;
 use Codelight\GDPR\Modules\ContactForm7\ContactForm7;
 use Codelight\GDPR\Components\Themes\Themes;
 use Codelight\GDPR\Components\WordpressUser\WordpressUser;
+use Codelight\GDPR\Modules\ContactForm7\Flamingo;
 use Codelight\GDPR\Modules\WPML\WPML;
 use Codelight\GDPR\Options\Options;
 
@@ -90,5 +91,6 @@ class Setup
         // Integrations
         gdpr()->make(Themes::class);
         gdpr()->make(ContactForm7::class);
+        gdpr()->make(Flamingo::class);
     }
 }

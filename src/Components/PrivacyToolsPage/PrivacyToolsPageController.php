@@ -164,7 +164,7 @@ class PrivacyToolsPageController
             ]);
         }
 
-        $consentInfo = apply_filters('the_content', gdpr('options')->get('consent_info'));
+        $consentInfo = wpautop(gdpr('options')->get('consent_info'));
 
         echo gdpr('view')->render(
             "privacy-tools/form-consent",
