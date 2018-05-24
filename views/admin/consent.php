@@ -75,7 +75,7 @@
 
     </table>
     <div class="gdpr-consent-add-button">
-      <input data-repeater-create class="button button-primary" type="button" value="Add consent type"/>
+      <input data-repeater-create class="button button-primary" type="button" value="<?= _x('Add consent type', '(Admin)', 'gdpr-framework'); ?>"/>
     </div>
     <input type="hidden" name="gdpr_nonce" value="<?= $nonce; ?>" />
     <input type="hidden" name="gdpr_action" value="update_consent_data" />

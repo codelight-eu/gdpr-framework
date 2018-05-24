@@ -5,7 +5,7 @@ Tags: gdpr
 Requires at least: 4.7
 Tested up to: 4.9.5
 Requires PHP: 5.6.33
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -41,18 +41,22 @@ For developers: [Developer Docs](https://codelight.eu/wordpress-gdpr-framework/d
 &#9745; Fully documented;
 &#9745; Developer-friendly. Everything can be extended, every feature and template can be overridden.
 
+### Coming up next
+&#9744; Cookie solution
+&#9744; Integration with WP & WooCommerce core tools
+&#9744; Overhaul & improvements on the consent tracking mechanism, re-consent, etc.
+
 GDPR is here to stay and we are just getting started. There's lots more to come!
 
 ### Plugin support:
 The GDPR Framework currently works with the following plugins
-&#9745; Contact Form 7
+&#9745; Contact Form 7 & Contact Form Flamingo
 &#9745; Gravity Forms - [Download the GDPR add-on](https://wordpress.org/plugins/gdpr-for-gravity-forms/)
 &#9745; Formidable Forms - [Download the GDPR add-on](https://wordpress.org/plugins/gdpr-for-formidable-forms/)
 &#9745; WPML
 
 Coming soon:
 &#9744; Ninja Forms
-&#9744; Contact Form 7 Flamingo
 
 Still free and open-source.
 
@@ -88,6 +92,13 @@ We are also planning to add other important privacy-related features missing fro
 This is a very important aspect of GDPR which we will definitely find a solution for. We are currently working on it and will hopefully have something before May 25th.
 
 == Changelog ==
+
+= 1.0.9 =
+* Add support for Contact Form 7 Flamingo
+* Remove nested the_content filter in the consent area editor to avoid potential conflicts with various plugins (Thanks Gary McPherson!)
+* Fix some missing translation strings (Thanks trueqap!)
+* Additional minor tweaks
+* Update Italian translation (Thanks Rienzi Comunica!)
 
 = 1.0.8 =
 * Disable Privacy Tools page if not set via admin (fixes infinite redirect issue)

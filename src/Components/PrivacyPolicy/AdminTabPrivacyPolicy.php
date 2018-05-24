@@ -270,11 +270,13 @@ class AdminTabPrivacyPolicy extends AdminTab
      */
     public function renderDpaJS()
     {
-        echo "<a href='https://codelight.eu/wordpress-gdpr-framework/knowledge-base/do-i-need-to-appoint-an-eu-based-representative/' target='_blank'>";
-        echo 'See the <a href="http://ec.europa.eu/justice/data-protection/article-29/structure/data-protection-authorities/index_en.htm" target="_blank">list of contacts here</a>';
-        echo "</a>";
-
-
+        //echo "<a href='https://codelight.eu/wordpress-gdpr-framework/knowledge-base/do-i-need-to-appoint-an-eu-based-representative/' target='_blank'>";
+        echo sprintf(
+          _x('See the %slist of contacts here%s.', '(Admin)', 'gdpr-framework'),
+          '<a href="http://ec.europa.eu/justice/data-protection/article-29/structure/data-protection-authorities/index_en.htm" target="_blank">',
+          '</a>'
+        );
+        //echo "</a>";
 
         $dpaData = json_encode(gdpr('helpers')->getDataProtectionAuthorities());
         echo gdpr('view')->render('admin/privacy-policy/dpa', compact('dpaData'));

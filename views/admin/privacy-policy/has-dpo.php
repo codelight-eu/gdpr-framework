@@ -8,5 +8,5 @@
         value="yes"
         <?= checked($hasDPO, 'yes'); ?>
     >
-    I have appointed a Data Protection Officer (DPO)
+    <?= _x('I have appointed a Data Protection Officer (DPO)', '(Admin)', 'gdpr-framework'); ?>
 </label>
