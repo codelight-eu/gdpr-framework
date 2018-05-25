@@ -5,7 +5,7 @@ Tags: gdpr
 Requires at least: 4.7
 Tested up to: 4.9.5
 Requires PHP: 5.6.33
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -92,6 +92,9 @@ We are also planning to add other important privacy-related features missing fro
 This is a very important aspect of GDPR which we will definitely find a solution for. We are currently working on it and will hopefully have something before May 25th.
 
 == Changelog ==
+
+= 1.0.10 =
+* Fix fatal error caused by Flamingo integration
 
 = 1.0.9 =
 * Add support for Contact Form 7 Flamingo

@@ -90,7 +90,13 @@ class Setup
 
         // Integrations
         gdpr()->make(Themes::class);
-        gdpr()->make(ContactForm7::class);
-        gdpr()->make(Flamingo::class);
+
+        if (defined('WPCF7_VERSION')) {
+            gdpr()->make(ContactForm7::class);
+        }
+
+        if (defined('FLAMINGO_VERSION')) {
+            gdpr()->make(Flamingo::class);
+        }
     }
 }
