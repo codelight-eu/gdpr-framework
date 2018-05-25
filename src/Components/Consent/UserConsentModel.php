@@ -139,7 +139,7 @@ class UserConsentModel
                     'consent'    => $consent,
                     'status'     => $status,
                     'updated_at' => date("Y-m-d H:i:s"),
-                    'ip'         => $_SERVER['REMOTE_ADDR'],
+                    'ip'         => apply_filters('gdpr/consent/log_ip', $_SERVER['REMOTE_ADDR']),
                 ],
                 [
                     'email'   => $email,
@@ -155,7 +155,7 @@ class UserConsentModel
                     'consent'    => $consent,
                     'status'     => $status,
                     'updated_at' => date("Y-m-d H:i:s"),
-                    'ip'         => $_SERVER['REMOTE_ADDR'],
+                    'ip'         => apply_filters('gdpr/consent/log_ip', $_SERVER['REMOTE_ADDR']),
                 ]
             );
         }
@@ -226,7 +226,7 @@ class UserConsentModel
                     'consent'    => $consent,
                     'status'     => 0,
                     'updated_at' => date("Y-m-d H:i:s"),
-                    'ip'         => $_SERVER['REMOTE_ADDR'],
+                    'ip'         => apply_filters('gdpr/consent/log_ip', $_SERVER['REMOTE_ADDR']),
                 ],
                 [
                     'email'   => $email,

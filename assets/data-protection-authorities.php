@@ -164,7 +164,7 @@
     ],
 
     /* Others - default to Ireland */
-    
+
     'US' => [
         'phone'   => '+353 57 868 4800',
         'email'   => 'info@dataprotection.ie',
