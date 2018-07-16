@@ -15,7 +15,7 @@
             __('Please identify yourself via e-mail', 'gdpr-framework');
         ?>
     </h3>
-    <form>
+    <form class="gdpr-identify-form">
         <label for="gdpr_email"><?= __('Enter your email address', 'gdpr-framework') ?></label>
         <input type="hidden" name="gdpr_action" value="identify" />
         <input type="hidden" name="gdpr_nonce" value="<?= $nonce ?>" />
