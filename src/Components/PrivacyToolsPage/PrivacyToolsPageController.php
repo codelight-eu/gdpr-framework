@@ -68,7 +68,7 @@ class PrivacyToolsPageController
 
     public function enqueue()
     {
-        if ( ! gdpr('options')->get('enable_stylesheet') || ! is_page(gdpr('options')->get('tools_page'))) {
+        if ( ! gdpr('options')->get('enable_stylesheet') || ! (is_page(gdpr('options')->get('tools_page')) || apply_filters('gdpr/styles', true))) {
             return;
         }
 
@@ -269,7 +269,7 @@ class PrivacyToolsPageController
     protected function redirect($args = [], $baseUrl = null)
     {
         if ( ! $baseUrl) {
-            $privacyToolsUrl = gdpr('options')->get('tools_page');
+            $privacyToolsUrl = gdpr('helpers')->getPrivacyToolsPageUrl();
             // Avoid infinite loop redirect
             $baseUrl = $privacyToolsUrl ? get_permalink($privacyToolsUrl) : home_url();
         }

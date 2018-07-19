@@ -65,7 +65,7 @@ class Themes
         }
 
         $privacyPolicyUrl = get_permalink(gdpr('options')->get('policy_page'));
-        $privacyToolsPageUrl = get_permalink(gdpr('options')->get('tools_page'));
+        $privacyToolsPageUrl = gdpr('helpers')->getPrivacyToolsPageUrl();
 
         echo gdpr('view')->render(
             'themes/twentyseventeen/footer',
@@ -76,7 +76,7 @@ class Themes
     public function renderTwentysixteenFooterLinks()
     {
         $privacyPolicyUrl = get_permalink(gdpr('options')->get('policy_page'));
-        $privacyToolsPageUrl = get_permalink(gdpr('options')->get('tools_page'));
+        $privacyToolsPageUrl = gdpr('helpers')->getPrivacyToolsPageUrl();
 
         echo gdpr('view')->render(
             'themes/twentysixteen/footer',
@@ -87,7 +87,7 @@ class Themes
     public function renderStorefrontFooterLinks($value)
     {
         $privacyPolicyUrl = get_permalink(gdpr('options')->get('policy_page'));
-        $privacyToolsPageUrl = get_permalink(gdpr('options')->get('tools_page'));
+        $privacyToolsPageUrl = gdpr('helpers')->getPrivacyToolsPageUrl();
 
         echo gdpr('view')->render(
             'themes/storefront/footer',

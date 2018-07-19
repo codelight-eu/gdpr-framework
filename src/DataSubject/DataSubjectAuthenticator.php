@@ -59,7 +59,7 @@ class DataSubjectAuthenticator
 
         if (isset($_REQUEST['gdpr_key']) && isset($_REQUEST['email'])) {
 
-            $privacyToolsPageUrl = get_permalink(gdpr('options')->get('tools_page'));
+            $privacyToolsPageUrl = gdpr('helpers')->getPrivacyToolsPageUrl();
 
             if ($this->dataSubjectIdentificator->isKeyValid($_REQUEST['email'], $_REQUEST['gdpr_key'])) {
                 $this->setIdentificationCookie($_REQUEST['email']);

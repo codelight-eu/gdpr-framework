@@ -130,7 +130,7 @@ class Helpers
     public function getPrivacyToolsPageUrl()
     {
         $toolsPageId = gdpr('options')->get('tools_page');
-        return $toolsPageId ? get_permalink($toolsPageId) : '';
+        return apply_filters('gdpr/privacy-tools/url', $toolsPageId ? get_permalink($toolsPageId) : '');
     }
 
     public function getPrivacyPolicyPageUrl()
