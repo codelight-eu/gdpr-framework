@@ -78,7 +78,7 @@ class WPML
         $code                 = (string)ICL_LANGUAGE_CODE;
         $filteredConsentTypes = [];
 
-        if (count($consentTypes)) {
+        if (is_array($consentTypes) && count($consentTypes)) {
             foreach ($consentTypes as $consentType) {
 
                 if (isset($consentType['slug']) && ('privacy-policy' === $consentType['slug'] or 'terms-condition' === $consentType['slug'])) {
